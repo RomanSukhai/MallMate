@@ -8,7 +8,7 @@ def home(request):
     return render(request, "home.html")
 
 
-def pima(request):
+def tima(request):
     return render(request, "tima.html", {'name': 'Timon'})
 
 
