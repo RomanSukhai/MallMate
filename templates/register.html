@@ -4,9 +4,23 @@
 {% block title %}Registration{% endblock %}
 
 {% block content %}
+    <style>
+        form {
+            position: relative;
+        }
+        .already-registered {
+            position: absolute;
+            bottom: -20px;
+            right: 0;
+        }
+    </style>
+
     <form method="post">
         {% csrf_token %}
         {{ form.as_p }}
         <button type="submit">register</button>
+        <div class="already-registered">
+            <p>Вже зареєстровані? <a href="{% url 'login' %}">Увійдіть</a></p>
+        </div>
     </form>
 {% endblock %}
