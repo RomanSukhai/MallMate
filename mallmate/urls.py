@@ -24,6 +24,6 @@ urlpatterns = [
     path('home/', views.home, name="home"),
     path('tima/', views.tima, name="tima"),
     path('register/', views.register, name='register'),
-    path('login/', views.user_login, name='login'),
+    path('login/', views.login_view, name='login'),
     path('', views.register, name='register'),
 ]

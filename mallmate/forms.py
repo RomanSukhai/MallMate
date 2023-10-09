@@ -1,13 +1,13 @@
 from django import forms
+from .models import Person
 
 
-class RegistrationForm(forms.Form):
-    first_name = forms.CharField(label='Ім\'я', max_length=30)
-    last_name = forms.CharField(label='Прізвище', max_length=30)
-    email = forms.EmailField(label='Електронна пошта')
-    password = forms.CharField(label='Пароль', widget=forms.PasswordInput)
+class RegistrationForm(forms.ModelForm):
+    class Meta:
+        model = Person
+        fields = ['first_name', 'last_name', 'email', 'password']
 
 
 class LoginForm(forms.Form):
-    username = forms.EmailField(label='Ім\'я користувача ')
-    password = forms.CharField(label='Пароль', widget=forms.PasswordInput)
+    email = forms.EmailField()
+    password = forms.CharField(widget=forms.PasswordInput)
