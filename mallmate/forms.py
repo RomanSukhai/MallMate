@@ -18,12 +18,9 @@ class LoginForm(forms.Form):
         password = cleaned_data.get('password')
 
         if email and password:
-            try:
-                user = Person.objects.filter(email=email).first()
-            except Person.DoesNotExist:
-                raise forms.ValidationError("Емеіл не знайдений або він не правильний")
+            user = Person.objects.filter(email=email).first()
 
-            if user.password != password:
-                raise forms.ValidationError("Неправильний пароль.")
+            if user is None or user.password != password:
+                raise forms.ValidationError("Неправильний емеіл або пароль.")
 
         return cleaned_data
