@@ -7,6 +7,20 @@ class RegistrationForm(forms.ModelForm):
         model = Person
         fields = ['first_name', 'last_name', 'email', 'password']
 
+class PasswordResetRequest(forms.Form):
+    email = forms.EmailField()
+
+    def clean(self):
+        cleaned_data = super().clean()
+        email = cleaned_data.get('email')
+
+        if email:
+            user = Person.objects.filter(email=email).first()
+
+            if user is None:
+                raise forms.ValidationError("Емейл не зареєстрований")
+
+        return cleaned_data
 
 class LoginForm(forms.Form):
     email = forms.EmailField()
