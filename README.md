@@ -28,4 +28,5 @@
     valid TINYINT(1) DEFAULT 1
     );
    ```
-   ![WW2.jpg](..%2F..%2F..%2FDownloads%2FWW2.jpg)
+   ![cat](https://github.com/RomanSukhai/MallMate/assets/118640498/488761ad-a13a-438b-82df-02a00ef1bcc3)
+
