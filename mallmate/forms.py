@@ -50,6 +50,6 @@ class LoginForm(forms.Form):
             user = Person.objects.filter(email=email).first()
 
             if user is None or user.password != password:
-                raise forms.ValidationError("Неправильний емеіл або пароль.")
+                raise forms.ValidationError("Неправильний емейл або пароль.")
 
         return cleaned_data

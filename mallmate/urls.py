@@ -23,9 +23,9 @@ urlpatterns = [
     # path('admin/', admin.site.urls),
     path('home/', views.home, name="home"),
     path('tima/', views.tima, name="tima"),
-    path('register/', views.register, name='register'),
     path('login/', views.login_view, name='login'),
-    path('password_reset_request/', views.password_reset_request, name='password_reset_request'),
-    path('handle_password_reset/<str:request_id>/', views.handle_password_reset, name='handle_password_reset'),
+    path('register/', views.register, name='register'),
     path('', views.register, name='register'),
+    path('request_password_reset/', views.request_password_reset, name='request_password_reset'),
+    path('handle_password_reset/<str:request_id>/', views.handle_password_reset, name='handle_password_reset'),
 ]

@@ -1,14 +1,10 @@
-from django.shortcuts import render, redirect
-from django.http import HttpResponse
+from django.shortcuts import render, redirect, get_object_or_404
+from django.http import HttpResponse, Http404
 from .forms import RegistrationForm, LoginForm, PasswordResetRequest, HandlePasswordReset
-from .models import Person
+from .models import Person, UserPasswordResetRequest
 from django.core.exceptions import ValidationError
-from django.shortcuts import get_object_or_404
-from .models import UserPasswordResetRequest
 from django.contrib.auth.models import User
 from django.utils import timezone
-from django.shortcuts import render
-from django.http import Http404
 from django import forms
 import random
 import string
@@ -44,9 +40,7 @@ def register(request):
         form = RegistrationForm()
     return render(request, 'register.html', {'form': form})
 
-from django.contrib.auth.models import User
-
-def password_reset_request(request):
+def request_password_reset(request):
     if request.method == 'POST':
         form = PasswordResetRequest(request.POST)
 
@@ -64,7 +58,7 @@ def password_reset_request(request):
     else:
         form = PasswordResetRequest()
 
-    return render(request, 'password_reset_request.html', {'form': form})
+    return render(request, 'request_password_request.html', {'form': form})
 
 def handle_password_reset(request, request_id):
     try:
@@ -78,7 +72,7 @@ def handle_password_reset(request, request_id):
     if request.method == 'POST':
         form = HandlePasswordReset(request.POST)
 
-        if form.is_valid() and not req.is_expired():
+        if form.is_valid():
             user = Person.objects.get(email=req.user_email)
             user.password = form.cleaned_data['password']
             user.save()
