@@ -6,7 +6,7 @@ def create_connection():
         connection = mysql.connector.connect(
             host='127.0.0.1',
             user='root',
-            password='namor2004',
+            password='rootnamor2004',
             database='mallmatedb'
         )
         if connection.is_connected():
