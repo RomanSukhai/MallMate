@@ -9,8 +9,8 @@
 1. код для створення БД:
 
    ```sql
-   CREATE DATABASE mallmatebd;
-   USE mallmatebd;
+   CREATE DATABASE mallmatedb;
+   USE mallmatedb;
 
    CREATE TABLE users (
     id INT AUTO_INCREMENT PRIMARY KEY,
