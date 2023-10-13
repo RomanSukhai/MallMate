@@ -8,7 +8,7 @@
 
    ```sql
    CREATE DATABASE mallmatedb;
-   USE mallmatebd;
+   USE mallmatedb;
 
    CREATE TABLE users (
     id INT AUTO_INCREMENT PRIMARY KEY,
