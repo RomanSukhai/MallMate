@@ -17,8 +17,8 @@ def send_password_reset_link(request_id: str, recipient_mail: str):
     # Параметри для підключення до SMTP серверу Gmail
     smtp_server = 'smtp.gmail.com'
     port = 587
-    email = 'artem.duda.shi.2022@lpnu.ua'
-    password = 'MzAV,mpA/Umem-snlus/5682'
+    email = ''
+    password = ''
 
     # Підключення до SMTP серверу Gmail
     server = smtplib.SMTP(smtp_server, port)
