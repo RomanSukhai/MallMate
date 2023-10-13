@@ -6,11 +6,27 @@
 {% block content %}
     <form method="post">
         {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit">register</button>
+        {{ form.first_name.label_tag }}
+        <div class="form-group">
+            {{ form.first_name }}
+        </div>
+        {{ form.last_name.label_tag }}
+        <div class="form-group">
+            {{ form.last_name }}
+        </div>
+        {{ form.email.label_tag }}
+        <div class="form-group">
+            {{ form.email }}
+        </div>
+        {{ form.password.label_tag }}
+        <div class="form-group">
+            {{ form.password }}
+        </div>
+        <p></p>
+        <button type="submit" class="btn btn-primary">Register</button>
         <div class="already-registered">
-            <p>Вже зареєстровані? <a href="{% url 'login' %}">Увійдіть</a></p>
-            <p><a href="{% url 'request_password_reset' %}">Забули пароль?</a></p>
+            <p>Вже зареєстровані? <a href="{% url 'login' %}" class="btn btn-link">Увійдіть</a></p>
+            <p><a href="{% url 'request_password_reset' %}" class="btn btn-link">Забули пароль?</a></p>
         </div>
     </form>
 {% endblock %}
