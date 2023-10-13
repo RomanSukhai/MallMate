@@ -9,6 +9,43 @@ from django import forms
 import random
 import string
 
+import smtplib
+from email.mime.text import MIMEText
+from email.mime.multipart import MIMEMultipart
+
+def send_password_reset_link(request_id: str, recipient_mail: str):
+    # Параметри для підключення до SMTP серверу Gmail
+    smtp_server = 'smtp.gmail.com'
+    port = 587
+    email = 'artem.duda.shi.2022@lpnu.ua'
+    password = 'MzAV,mpA/Umem-snlus/5682'
+
+    # Підключення до SMTP серверу Gmail
+    server = smtplib.SMTP(smtp_server, port)
+    server.starttls()
+    server.login(email, password)
+
+    # Підготовка повідомлення
+    subject = 'Запит на скидання паролю'
+    message = 'Перейдіть за посиланням нижче щоб встановити новий пароль до вашого' \
+              ' акаунту в MallMate або проігноруйте ценй лист, якщо не хочете змінювати пароль.' + request_id
+    from_email = email
+    to_email = recipient_mail
+
+    msg = MIMEMultipart()
+    msg['From'] = from_email
+    msg['To'] = to_email
+    msg['Subject'] = subject
+
+    msg.attach(MIMEText(message, 'plain'))
+
+    # Відправка листа
+    server.sendmail(from_email, to_email, msg.as_string())
+
+    # Завершення з'єднання
+    server.quit()
+
+
 def generate_request_id(length=16):
     characters = string.ascii_letters + string.digits
     random_string = ''.join(random.choice(characters) for _ in range(length))
@@ -54,11 +91,13 @@ def request_password_reset(request):
 
             reset_request.save()
 
+            send_password_reset_link(reset_request.request_id, user_email)
+
             return render(request, 'password_reset_request_success.html', {'email': user_email})
     else:
         form = PasswordResetRequest()
 
-    return render(request, 'request_password_request.html', {'form': form})
+    return render(request, 'request_password_reset.html', {'form': form})
 
 def handle_password_reset(request, request_id):
     try:

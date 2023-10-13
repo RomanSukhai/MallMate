@@ -8,6 +8,6 @@
         {{ form.as_p }}
         <button type="submit">login</button>
         <p>Немає акаунту? <a href="{% url 'register' %}">Зареєструйтеся</a></p>
-        <p><a href="{% url 'request_password_request' %}">Забули пароль?</a></p>
+        <p><a href="{% url 'request_password_reset' %}">Забули пароль?</a></p>
     </form>
 {% endblock %}
