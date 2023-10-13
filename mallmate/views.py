@@ -1,15 +1,19 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
-from .forms import RegistrationForm, LoginForm, PasswordResetRequest
+from .forms import RegistrationForm, LoginForm, PasswordResetRequest, HandlePasswordReset
 from .models import Person
+from django.core.exceptions import ValidationError
 from django.shortcuts import get_object_or_404
 from .models import UserPasswordResetRequest
 from django.contrib.auth.models import User
 from django.utils import timezone
+from django.shortcuts import render
+from django.http import Http404
+from django import forms
 import random
 import string
 
-def generate_request_id(length=24):
+def generate_request_id(length=16):
     characters = string.ascii_letters + string.digits
     random_string = ''.join(random.choice(characters) for _ in range(length))
     return random_string
@@ -27,15 +31,18 @@ def register(request):
     if request.method == 'POST':
         form = RegistrationForm(request.POST)
         if form.is_valid():
-            form.save()
-            return redirect('home')
+            email = form.cleaned_data['email']
+
+            if Person.objects.filter(email=email).exists():
+                form.add_error('email', ValidationError('Ця пошта вже зареєстрована', code='duplicate_email'))
+            else:
+                user = form.save(commit=False)
+                user.password = form.cleaned_data['password']
+                user.save()
+                return redirect('home')
     else:
         form = RegistrationForm()
     return render(request, 'register.html', {'form': form})
-
-
-
-from django.contrib.auth.models import User
 
 from django.contrib.auth.models import User
 
@@ -59,8 +66,31 @@ def password_reset_request(request):
 
     return render(request, 'password_reset_request.html', {'form': form})
 
-def handle_password_reset_request(request, request_id):
-    return HttpResponse(request_id)
+def handle_password_reset(request, request_id):
+    try:
+        req = UserPasswordResetRequest.objects.get(request_id=request_id)
+    except UserPasswordResetRequest.DoesNotExist:
+        raise Http404("Запит на скидання пароля не існує")
+
+    if req.is_expired():
+        raise Http404("Запит на скидання пароля прострочений")
+
+    if request.method == 'POST':
+        form = HandlePasswordReset(request.POST)
+
+        if form.is_valid() and not req.is_expired():
+            user = Person.objects.get(email=req.user_email)
+            user.password = form.cleaned_data['password']
+            user.save()
+
+            req.valid = False
+            req.save()
+
+            return render(request, 'home.html')
+    else:
+        form = HandlePasswordReset()
+
+    return render(request, 'handle_password_reset.html', {'form': form})
 
 def login_view(request):
     if request.method == 'POST':

@@ -7,6 +7,7 @@ class RegistrationForm(forms.ModelForm):
         model = Person
         fields = ['first_name', 'last_name', 'email', 'password']
 
+
 class PasswordResetRequest(forms.Form):
     email = forms.EmailField()
 
@@ -20,6 +21,20 @@ class PasswordResetRequest(forms.Form):
             if user is None:
                 raise forms.ValidationError("Емейл не зареєстрований")
 
+        return cleaned_data
+
+
+class HandlePasswordReset(forms.Form):
+    password = forms.CharField(widget=forms.PasswordInput)
+    confirm_password = forms.CharField(widget=forms.PasswordInput)
+
+    def clean(self):
+        cleaned_data = super().clean()
+        password = cleaned_data.get('password')
+        confirm_password = cleaned_data.get('confirm_password')
+
+        if password != confirm_password:
+            raise forms.ValidationError("Паролі не збігаються.")
         return cleaned_data
 
 class LoginForm(forms.Form):

@@ -26,6 +26,6 @@ urlpatterns = [
     path('register/', views.register, name='register'),
     path('login/', views.login_view, name='login'),
     path('password_reset_request/', views.password_reset_request, name='password_reset_request'),
-    path('handle_password_reset_request/<str:request_id>/', views.handle_password_reset_request, name='handle_password_reset_request'),
+    path('handle_password_reset/<str:request_id>/', views.handle_password_reset, name='handle_password_reset'),
     path('', views.register, name='register'),
 ]

@@ -26,3 +26,10 @@ class UserPasswordResetRequest(models.Model):
    def is_expired(self):
        now = timezone.now()
        return (now - self.create_datetime).seconds > (self.duration * 60)
+   def get(self):
+       return user_email
+
+
+   def get_user_email(self):
+       return self.user_email
+
