@@ -7,7 +7,7 @@
    код для створення БД:
 
    ```sql
-   CREATE DATABASE mallmatebd;
+   CREATE DATABASE mallmatedb;
    USE mallmatebd;
 
    CREATE TABLE users (
