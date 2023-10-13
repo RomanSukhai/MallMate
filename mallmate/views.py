@@ -17,18 +17,20 @@ def send_password_reset_link(request_id: str, recipient_mail: str):
     # Параметри для підключення до SMTP серверу Gmail
     smtp_server = 'smtp.gmail.com'
     port = 587
-    email = ''
-    password = ''
+    email = 'mallmate844@gmail.com'
+    password = 'voya rdoz vmsp lwpx'
 
     # Підключення до SMTP серверу Gmail
     server = smtplib.SMTP(smtp_server, port)
     server.starttls()
     server.login(email, password)
 
+    link = '127.0.0.1:8000/handle_password_reset/' + request_id
+
     # Підготовка повідомлення
     subject = 'Запит на скидання паролю'
     message = 'Перейдіть за посиланням нижче щоб встановити новий пароль до вашого' \
-              ' акаунту в MallMate або проігноруйте ценй лист, якщо не хочете змінювати пароль.' + request_id
+              ' акаунту в MallMate або проігноруйте ценй лист, якщо не хочете змінювати пароль.\n' + link
     from_email = email
     to_email = recipient_mail
 
