@@ -13,6 +13,7 @@ import smtplib
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 
+
 def send_password_reset_link(request_id: str, recipient_mail: str):
     smtp_server = 'smtp.gmail.com'
     port = 587
@@ -26,9 +27,8 @@ def send_password_reset_link(request_id: str, recipient_mail: str):
     link = '127.0.0.1:8000/handle_password_reset/' + request_id
 
     subject = 'Запит на скидання паролю'
-    message = 'Для оновлення паролю до вашого акаунту в MallMate перейдіть за ' \
-              'посиланням нижче, або ігноруйте цей лист, якщо не бажаєте змінювати пароль.' + link \
-              '\n\nПосилання активне протягом 10 хвилин від моменту створення запиту на сайті\n' 
+    message = f'Для оновлення паролю до вашого акаунту в MallMate перейдіть за посиланням нижче, або ігноруйте цей лист, якщо не бажаєте змінювати пароль. \n{link}\n Посилання активне протягом 10 хвилин від моменту створення запиту на сайті.'
+
     from_email = email
     to_email = recipient_mail
 
@@ -73,6 +73,7 @@ def register(request):
         form = RegistrationForm()
     return render(request, 'register.html', {'form': form})
 
+
 def request_password_reset(request):
     if request.method == 'POST':
         form = PasswordResetRequest(request.POST)
@@ -94,6 +95,7 @@ def request_password_reset(request):
         form = PasswordResetRequest()
 
     return render(request, 'request_password_reset.html', {'form': form})
+
 
 def handle_password_reset(request, request_id):
     try:
@@ -120,6 +122,7 @@ def handle_password_reset(request, request_id):
         form = HandlePasswordReset()
 
     return render(request, 'handle_password_reset.html', {'form': form})
+
 
 def login_view(request):
     if request.method == 'POST':
