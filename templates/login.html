@@ -3,11 +3,24 @@
 {% block title %}Login{% endblock %}
 
 {% block content %}
-    <form method="post">
+    <form method="post" class="mx-auto ">
         {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit">login</button>
-        <p>Немає акаунту? <a href="{% url 'register' %}">Зареєструйтеся</a></p>
-        <p><a href="{% url 'request_password_reset' %}">Забули пароль?</a></p>
+        {{ form.email.label_tag }}
+        <div class="form-group d-flex justify-content-center">
+            {{ form.email }}
+        </div>
+        {{ form.password.label_tag }}
+        <div class="form-group d-flex justify-content-center">
+            {{ form.password }}
+        </div>
+        <div class="d-flex justify-content-center">
+            <button type="submit" class="btn btn-primary     justify-content-center ">login</button>
+            <div class="already-registered d-flex justify-content-center">
+                <p>Немає акаунту? <a href="{% url 'register' %}" class="btn btn-link">Зареєструйтеся</a></p>
+                <p><a href="{% url 'request_password_reset' %}" class="btn btn-link">Забули пароль?</a></p>
+
+            </div>
+        </div>
+    
     </form>
 {% endblock %}

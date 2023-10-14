@@ -1,33 +1,28 @@
 {% load static %}
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}MallMate{% endblock %}</title>
-    <link href={% static "bootstrap\css\bootstrap.min.css" %} rel="stylesheet">
-    <script src={% static "static\bootstrap\js\bootstrap.bundle.min.js" %} ></script>
-    <style>
-        .custom-bg {
-            background-color: #b7ba9f;
-        }
-    </style>
-
+    <link href="{% static 'style/reserv.css' %}" rel="stylesheet">
+    <link href="{% static 'style/main.css' %}" rel="stylesheet">
+    <link href="{% static 'bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+    <script src="{% static 'bootstrap/js/bootstrap.bundle.min.js' %}" ></script>
+    
 </head>
-<body class="custom-bg">
-    <header class="container">
-        MallMate
+<body class=" d-flex flex-column min-vh-100" >
+    <header class=" p-3 mb-3 ">
+        <div class="text-center" style="background: b7ba9f;" >
+           <p class="mb-0">MallMate</p>
+        </div>
     </header>
-    <div class="container">
-
-
-
+    <main class="container d-flex flex-grow-1 justify-content-center align-items-center">
         {% block content %}{% endblock %}
-    </div>
-    <footer class="container">
-        MallMate 2023 <br>
-        email@example.com
+    </main>
+    <footer class=" p-3 mt-3 text-center">
+      <p>MallMate 2023 <br>
+        email@example.com</p>  
     </footer>
 </body>
 </html>

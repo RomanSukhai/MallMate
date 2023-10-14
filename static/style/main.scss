@@ -1,0 +1,9 @@
+@mixin back_color{
+    background: #b7ba9f !important;
+}
+body, header,footer{
+    @include back_color;
+}
+.bg-dark{
+    background: #b7ba9f !important;
+}

@@ -4,29 +4,31 @@
 {% block title %}Registration{% endblock %}
 
 {% block content %}
-    <form method="post">
-        {% csrf_token %}
-        {{ form.first_name.label_tag }}
-        <div class="form-group">
-            {{ form.first_name }}
-        </div>
-        {{ form.last_name.label_tag }}
-        <div class="form-group">
-            {{ form.last_name }}
-        </div>
-        {{ form.email.label_tag }}
-        <div class="form-group">
-            {{ form.email }}
-        </div>
-        {{ form.password.label_tag }}
-        <div class="form-group">
-            {{ form.password }}
-        </div>
-        <p></p>
-        <button type="submit" class="btn btn-primary">Register</button>
-        <div class="already-registered">
+<form method="post" class="mx-auto ">
+    {% csrf_token %}
+    {{ form.first_name.label_tag }}
+    <div class=" form-group d-flex justify-content-center">
+        {{ form.first_name }}
+    </div>
+    {{ form.last_name.label_tag }}
+    <div class="form-group d-flex justify-content-center">
+        {{ form.last_name }}
+    </div>
+    {{ form.email.label_tag }}
+    <div class="form-group d-flex justify-content-center">
+        {{ form.email }}
+    </div>
+    {{ form.password.label_tag }}
+    <div class="form-group d-flex justify-content-center">
+        {{ form.password }}
+    </div>
+    <div class="d-flex justify-content-center">
+        <button type="submit" class="btn btn-primary     justify-content-center ">Register</button>
+        <div class="already-registered d-flex justify-content-center">
             <p>Вже зареєстровані? <a href="{% url 'login' %}" class="btn btn-link">Увійдіть</a></p>
             <p><a href="{% url 'request_password_reset' %}" class="btn btn-link">Забули пароль?</a></p>
         </div>
-    </form>
+    </div>
+
+</form>
 {% endblock %}

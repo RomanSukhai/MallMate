@@ -7,6 +7,7 @@ if connection:
     try:
         cursor = connection.cursor()
         create_table_query = """
+        CREATE DATABASE IF NOT EXISTS mallmatedb;
         CREATE TABLE users (
             id INT AUTO_INCREMENT PRIMARY KEY,
             first_name VARCHAR(30),
