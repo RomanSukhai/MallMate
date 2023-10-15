@@ -6,22 +6,26 @@
 {% block content %}
 <form method="post" class="mx-auto ">
     {% csrf_token %}
-    {{ form.first_name.label_tag }}
-    <div class=" form-group d-flex justify-content-center">
-        {{ form.first_name }}
+    <div class=" mb-3 form-group d-flex justify-content-center">
+        <input style="border-radius: 100px;" type="text" name="{{ form.first_name.name }}" id="{{ form.first_name.id_for_label }}"
+            class="myinput form-control my-input user_icon" value="{{ form.first_name.value|default:'' }}" placeholder="First Name">
     </div>
-    {{ form.last_name.label_tag }}
-    <div class="form-group d-flex justify-content-center">
-        {{ form.last_name }}
+
+    <div class="mb-3 form-group d-flex justify-content-center">
+        <input style="border-radius: 100px;"  type="text" name="{{ form.last_name.name }}" id="{{ form.last_name.id_for_label }}"
+            class="my-input form-control my-input" value="{{ form.last_name.value|default:'' }}" placeholder="Last Name">
     </div>
-    {{ form.email.label_tag }}
-    <div class="form-group d-flex justify-content-center">
-        {{ form.email }}
+
+    <div class=" mb-3 form-group d-flex justify-content-center">
+        <input style="border-radius: 100px;" type="email" name="{{ form.email.name }}" id="{{ form.email.id_for_label }}"
+            class="my-input form-control my-input" value="{{ form.email.value|default:'' }}" placeholder="Email">
     </div>
-    {{ form.password.label_tag }}
-    <div class="form-group d-flex justify-content-center">
-        {{ form.password }}
+
+    <div class=" mb-3 form-group d-flex justify-content-center">
+        <input style="border-radius: 100px;" type="password" name="{{ form.password.name }}" id="{{ form.password.id_for_label }}"
+            class="my-input form-control my-input" value="{{ form.password.value|default:'' }}" placeholder="Password">
     </div>
+
     <div class="d-flex justify-content-center">
         <button type="submit" class="btn btn-primary     justify-content-center ">Register</button>
         <div class="already-registered d-flex justify-content-center">

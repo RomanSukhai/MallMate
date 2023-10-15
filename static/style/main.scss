@@ -1,9 +1,27 @@
 @mixin back_color{
     background: #b7ba9f !important;
 }
+@mixin input_svg($image){
+    padding-left: 30px; 
+    background-image: $image;
+    background-position: 5px center; 
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+}
 body, header,footer{
     @include back_color;
 }
 .bg-dark{
     background: #b7ba9f !important;
+}
+
+.my-input {
+    border-radius: 100px;
+}
+
+.user_icon{
+    @include input_svg(url("../svgFiles/person.svg"))
+}
+.texte{
+    color: aqua;
 }
