@@ -1,0 +1,28 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}MallMate{% endblock %}</title>
+    <link href="{% static 'style/reserv.css' %}" rel="stylesheet">
+    <link href="{% static 'style/main.css' %}" rel="stylesheet">
+    <link href="{% static 'bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+    <script src="{% static 'bootstrap/js/bootstrap.bundle.min.js' %}" ></script>
+    
+</head>
+<body class=" d-flex flex-column min-vh-100" >
+    <header class="user_icon p-3 mb-3 ">
+        <div class="text-center"  >
+           <p class="texte fs-1 mb-0">MallMate</p>
+        </div>
+    </header>
+    <main class="container d-flex flex-grow-1 justify-content-center align-items-center">
+        {% block content %}{% endblock %}
+    </main>
+    <footer class=" p-3 mt-3 text-center">
+      <p class="fs-5" >MallMate 2023 <br>
+        email@example.com</p>  
+    </footer>
+</body>
+</html>

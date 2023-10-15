@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}home{% endblock %}
+
+{% block content %}
+    <a href="{% url 'tima' %}"><img src="{% static 'images/R.png' %}" class="image-button"></a>
+    <img src="{% static 'images/1.jpg' %}" class="centered-image">
+{% endblock %}
