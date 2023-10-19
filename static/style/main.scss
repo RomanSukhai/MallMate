@@ -28,11 +28,11 @@ body, header,footer{
     color: aqua;
 }
 input[placeholder="First Name"] {
-    @include input_svg(url("../svgFiles/person.svg"))
+    // @include input_svg(url("../svgFiles/person.svg"))
 }
 
 input[placeholder="Last Name"] {
-    @include input_svg("")
+    // @include input_svg("")
 }
 
 input[placeholder="Email"] {
@@ -41,4 +41,44 @@ input[placeholder="Email"] {
 
 input[placeholder="Password"] {
     @include input_svg(url("../svgFiles/icons8-password.svg"))
+}
+
+.svg-container {
+    background-color: white; /* Колір фону (білий) */
+    max-width: 100%; /* Встановіть бажаний відступ для вашого контенту */
+}
+
+.flex-container {
+    display: flex;
+    justify-content: space-between; /* Adjust alignment as needed */
+}
+
+.flex-item {
+    flex-grow: 1; /* This will make all items grow equally */
+    min-width: 100px; /* Set a minimum width for items */
+}
+
+.svg-person {
+    width: 7%;
+}
+
+.ikonka {
+    width: 75%;
+}
+
+.batya {
+    width: 90%;
+}
+
+.lastname-block {
+    width: 48%;
+}
+
+.firstname-block {
+    width: 48%;
+}
+
+.knopka {
+
+    width: 100%;
 }

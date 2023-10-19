@@ -1,3 +1,4 @@
+@charset "UTF-8";
 body, header, footer {
   background: #b7ba9f !important;
 }
@@ -23,24 +24,6 @@ body, header, footer {
   color: aqua;
 }
 
-input[placeholder="First Name"] {
-  padding-left: 30px;
-  background-image: url("../svgFiles/person.svg");
-  background-position: 5px center;
-  background-repeat: no-repeat;
-  background-size: 20px 20px;
-  padding-right: 10px;
-}
-
-input[placeholder="Last Name"] {
-  padding-left: 30px;
-  background-image: "";
-  background-position: 5px center;
-  background-repeat: no-repeat;
-  background-size: 20px 20px;
-  padding-right: 10px;
-}
-
 input[placeholder=Email] {
   padding-left: 30px;
   background-image: url("../svgFiles/envelope-at.svg");
@@ -57,4 +40,43 @@ input[placeholder=Password] {
   background-repeat: no-repeat;
   background-size: 20px 20px;
   padding-right: 10px;
+}
+
+.svg-container {
+  background-color: white; /* Колір фону (білий) */
+  max-width: 100%; /* Встановіть бажаний відступ для вашого контенту */
+}
+
+.flex-container {
+  display: flex;
+  justify-content: space-between; /* Adjust alignment as needed */
+}
+
+.flex-item {
+  flex-grow: 1; /* This will make all items grow equally */
+  min-width: 100px; /* Set a minimum width for items */
+}
+
+.svg-person {
+  width: 7%;
+}
+
+.ikonka {
+  width: 75%;
+}
+
+.batya {
+  width: 90%;
+}
+
+.lastname-block {
+  width: 48%;
+}
+
+.firstname-block {
+  width: 48%;
+}
+
+.knopka {
+  width: 100%;
 }/*# sourceMappingURL=main.css.map */
