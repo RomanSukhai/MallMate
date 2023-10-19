@@ -6,11 +6,14 @@
 <form method="post" class="mx-auto">
     {% csrf_token %}
     <div class="mb-3 form-group d-flex justify-content-center">
-        <input style="border-radius: 100px;" type="email" name="{{ form.email.name }}" id="{{ form.email.id_for_label }}" class="form-control my-input" value="{{ form.email.value|default:'' }}" placeholder="Електронна пошта">
+        <input type="email" name="{{ form.email.name }}" id="{{ form.email.id_for_label }}"
+            class="rounded form-control my-input" value="{{ form.email.value|default:'' }}" placeholder="Email">
     </div>
 
     <div class="mb-3 form-group d-flex justify-content-center">
-        <input style="border-radius: 100px;" type="password" name="{{ form.password.name }}" id="{{ form.password.id_for_label }}" class="form-control my-input" value="{{ form.password.value|default:'' }}" placeholder="Пароль">
+        <input style="border-radius: 100px;" type="password" name="{{ form.password.name }}"
+            id="{{ form.password.id_for_label }}" class="rounded form-control my-input"
+            value="{{ form.password.value|default:'' }}" placeholder="Password">
     </div>
 
     <div class="d-flex justify-content-center">
