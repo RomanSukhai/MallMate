@@ -5,6 +5,10 @@ __pycache__/
 
 # PyCharm .idea folder and IDE-specific project files
 **/.idea/
+**/virtenv/
+__pycache__/
+**/__pycache__/
+virtenv/
 *.iml
 modules.xml
 workspace.xml
