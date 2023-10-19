@@ -7,6 +7,8 @@
     background-position: 5px center; 
     background-repeat: no-repeat;
     background-size: 20px 20px;
+    padding-right: 10px;
+
 }
 body, header,footer{
     @include back_color;
@@ -15,13 +17,28 @@ body, header,footer{
     background: #b7ba9f !important;
 }
 
-.my-input {
+.bordRegist{
     border-radius: 100px;
 }
 
-.user_icon{
+.user_icon{ 
     @include input_svg(url("../svgFiles/person.svg"))
 }
 .texte{
     color: aqua;
+}
+input[placeholder="First Name"] {
+    @include input_svg(url("../svgFiles/person.svg"))
+}
+
+input[placeholder="Last Name"] {
+    @include input_svg("")
+}
+
+input[placeholder="Email"] {
+    @include input_svg(url("../svgFiles/envelope-at.svg"))
+}
+
+input[placeholder="Password"] {
+    @include input_svg(url("../svgFiles/icons8-password.svg"))
 }

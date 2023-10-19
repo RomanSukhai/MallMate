@@ -6,7 +6,7 @@ body, header, footer {
   background: #b7ba9f !important;
 }
 
-.my-input {
+.bordRegist {
   border-radius: 100px;
 }
 
@@ -16,8 +16,45 @@ body, header, footer {
   background-position: 5px center;
   background-repeat: no-repeat;
   background-size: 20px 20px;
+  padding-right: 10px;
 }
 
 .texte {
   color: aqua;
+}
+
+input[placeholder="First Name"] {
+  padding-left: 30px;
+  background-image: url("../svgFiles/person.svg");
+  background-position: 5px center;
+  background-repeat: no-repeat;
+  background-size: 20px 20px;
+  padding-right: 10px;
+}
+
+input[placeholder="Last Name"] {
+  padding-left: 30px;
+  background-image: "";
+  background-position: 5px center;
+  background-repeat: no-repeat;
+  background-size: 20px 20px;
+  padding-right: 10px;
+}
+
+input[placeholder=Email] {
+  padding-left: 30px;
+  background-image: url("../svgFiles/envelope-at.svg");
+  background-position: 5px center;
+  background-repeat: no-repeat;
+  background-size: 20px 20px;
+  padding-right: 10px;
+}
+
+input[placeholder=Password] {
+  padding-left: 30px;
+  background-image: url("../svgFiles/icons8-password.svg");
+  background-position: 5px center;
+  background-repeat: no-repeat;
+  background-size: 20px 20px;
+  padding-right: 10px;
 }/*# sourceMappingURL=main.css.map */
