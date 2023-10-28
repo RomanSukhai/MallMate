@@ -1,28 +1,80 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}MallMate{% endblock %}</title>
     <link href="{% static 'style/reserv.css' %}" rel="stylesheet">
     <link href="{% static 'style/main.css' %}" rel="stylesheet">
     <link href="{% static 'bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
-    <script src="{% static 'bootstrap/js/bootstrap.bundle.min.js' %}" ></script>
-    
+    <script src="{% static 'bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'jquery.min.js' %}"></script>
+    <script src="{% static 'scripts/home.js' %}"></script>
+
 </head>
-<body class=" d-flex flex-column min-vh-100" >
-    <header class="user_icon p-3 mb-3 ">
-        <div class="text-center"  >
-           <p class="texte fs-1 mb-0">MallMate</p>
+
+<body class=" d-flex flex-column justify-content-center align-items-center ">
+    <header class="home-content animate-slide-up">
+        <menu class="home-content_menu d-flex align-content-start justify-content-center flex-wrap animate-slide-up">
+            <dir
+                class="home-content_menu_location d-flex justify-content-center align-items-center flex-column animate-slide-up">
+                <img src="../static/icons/image 20.png" alt=""
+                    class="home-content_menu_location_icon-location animate-slide-up">
+                <p class="">location</p>
+            </dir>
+            <dir class="home-content_menu_orig-menu animate-slide-up">
+                <ul
+                    class="home-content_menu_orig-menu_menu-list d-flex justify-content-center  align-items-center animate-slide-up">
+                    <li class="home-content_menu_orig-menu_menu-list_menu-item animate-slide-up"><a href="#">home</a>
+                    </li>
+                    <li class="home-content_menu_orig-menu_menu-list_menu-divider animate-slide-up"></li>
+                    <li class="home-content_menu_orig-menu_menu-list_menu-item animate-slide-up"><a href="#">about
+                            Us</a></li>
+                    <li class="home-content_menu_orig-menu_menu-list_menu-divider animate-slide-up"></li>
+                    <li class="home-content_menu_orig-menu_menu-list_menu-item animate-slide-up"><a href="#">service
+                            Profile</a></li>
+                    <li class="home-content_menu_orig-menu_menu-list_menu-divider animate-slide-up"></li>
+                    <li class="home-content_menu_orig-menu_menu-list_menu-item animate-slide-up"><a href="#">useful
+                            information</a></li>
+                </ul>
+            </dir>
+            <dir class="home-content_menu_logSign d-flex justify-content-center align-items-center animate-slide-up">
+                <button class="home-content_menu_logSign_btn animate-slide-up">Log in</button>
+                <button class="home-content_menu_logSign_btn animate-slide-up">register</button>
+            </dir>
+
+            <dir class="home-content_menu_line animate-slide-up">
+
+
+            </dir>
+        </menu>
+        <div class="home-content_header d-flex justify-content-center flex-column  align-items-center animate-slide-up">
+            <div class="d-flex align-items-center home-content_header_container-textanimate-slide-up">
+                <img class="home-content_header_container-text_image animate-slide-up" src="../static/images/M.png" alt="">
+                <p class="home-content_header_container-text_text-header animate-slide-up">all</p>
+                <img class="home-content_header_container-text_image animate-slide-up" src="../static/images/M.png" alt="">
+                <p class="home-content_header_container-text_text-header animate-slide-up">ate</p>
+            </div>
+            <div class="home-content_header_line animate-slide-up"></div>
+
+            <p class="home-content_header_text animate-slide-up">Your best assistant for navigating in a <br> shopping center</p>
         </div>
     </header>
-    <main class="container d-flex flex-grow-1 justify-content-center align-items-center">
-        {% block content %}{% endblock %}
-    </main>
-    <footer class=" p-3 mt-3 text-center">
-      <p class="fs-5" >MallMate 2023 <br>
-        email@example.com</p>  
+
+
+
+    <footer>
+
+
+
+
     </footer>
+
+
+
+
+    <!-- {% block content %}{% endblock %}   -->
 </body>
+
 </html>
