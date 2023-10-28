@@ -78,7 +78,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'mallmatedb',
         'USER': 'root',
-        'PASSWORD': 'namor2004',
+        'PASSWORD': 'messi2016',
         'HOST': '127.0.0.1',
         'PORT': '3306',
     }

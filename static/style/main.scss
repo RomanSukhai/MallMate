@@ -46,6 +46,7 @@ body{
         &_line{
             height: 1px;
             width: 1428.8px;
+            border-radius: 45px;
             background: black;
             @include margin_pading();
         }
@@ -130,6 +131,7 @@ body{
             }
         }
     }
+
     &_header{
         width: 1410.36px;
         height: 452.9px;
@@ -169,6 +171,84 @@ body{
         }
 
     }
+
+    &_footer-content{
+        width: 1429.24px;
+        height: 510.57px;
+        margin: 40px auto 10px auto;
+        background: #F8E1E14D;
+
+        &_image-control{
+            position: relative;
+            
+
+
+            &_image{
+                position: relative;
+                left: 110px;
+                width: 76px;
+                height: 55px;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+
+
+        
+       
+
+        &_add-text{
+            padding: 60px 0 0 0;
+            &_line{
+                height: 100%;
+                width: 400px;
+                height: 4.316px;
+                border-radius: 25px;
+                background: black;
+            }
+    
+            &_text{
+                font-family: 'Urbanist';
+                font-size: 57px;
+                text-align: center;
+                line-height: 1.2;
+            }
+        }
+        
+        &_add-button{
+            padding: 10px 0 0 0;
+            &_btn{
+                background-color: white;
+                width: 340px;
+                padding: 4.9px 30.5px;
+                font-size: 25.5px;
+                border: 1px solid black;
+                border-radius: 10px; 
+                cursor: pointer;
+                transition: background-color 0.3s;
+                white-space: nowrap;
+                &:hover {
+                    background-color: #f0f0f0;
+                }
+                &:not(:last-child) {
+                    margin-right: 20px;
+                }
+            }
+        }
+
+       
+
+
+    
+    }
+
+    &_footer{
+        width: 100%;
+        height: 267.37px;
+        background: #000000CC;
+    }
+    
 
 }
 
