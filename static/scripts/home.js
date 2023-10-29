@@ -1,6 +1,18 @@
+function throttle(func, delay) {
+    let lastCall = 0;
+    return function() {
+        let now = Date.now();
+        if (now - lastCall < delay) {
+            return;
+        }
+        lastCall = now;
+        return func.apply(this, arguments);
+    };
+}
+
 $(function() {
     function checkIfInView() {
-        $('.animate-slide-up').each(function() {
+        $('.animate-slide-up:not(.visible)').each(function() {
             var elementTop = $(this).offset().top;
             var elementBottom = elementTop + $(this).outerHeight();
             var viewportTop = $(window).scrollTop();
@@ -8,11 +20,13 @@ $(function() {
 
             if (elementBottom > viewportTop && elementTop < viewportBottom) {
                 $(this).addClass('visible'); 
-            } else {
-                $(this).removeClass('visible');
             }
         });
     }
-    checkIfInView();
-    $(window).on('scroll', checkIfInView);
+
+    function onScroll() {
+        requestAnimationFrame(checkIfInView);
+    }
+    
+    $(window).on('scroll', throttle(onScroll, 250));
 });
