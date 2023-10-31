@@ -5,6 +5,27 @@
   font-weight: normal;
   font-style: normal;
 }
+.box {
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+
+#boxLeft {
+  transform: translateX(-100%);
+}
+
+#boxRight {
+  transform: translateX(100%);
+}
+
+#boxTop {
+  transform: translateY(-100%);
+}
+
+#boxBottom {
+  transform: translateY(100%);
+}
+
 body {
   background: #fdf6f6 !important;
 }
@@ -27,19 +48,30 @@ body {
   margin: 0px;
   padding: 0px;
 }
-.home-content_menu_location {
+.home-content_menu a {
+  margin-left: 10px;
   height: 99.615px;
   width: 10%;
+  text-decoration: none;
+  color: black;
   margin: 0px;
   padding: 0px;
   padding-top: 20px;
 }
-.home-content_menu_location_icon-location {
+.home-content_menu a p {
+  margin-left: 34px;
+}
+.home-content_menu a .icon-location {
   width: 23.14px;
   height: 27.96px;
+  margin-left: 48px;
 }
-.home-content_menu_location_text {
-  font-family: "Urbanist";
+.home-content_menu a .icon-location:hover {
+  filter: brightness(100%);
+}
+.home-content_menu a:hover {
+  color: #666;
+  transition-duration: 0.5s;
 }
 .home-content_menu_orig-menu {
   height: 99.615px;
@@ -69,6 +101,8 @@ body {
 }
 .home-content_menu_orig-menu_menu-list_menu-item a:hover {
   color: #666;
+  font-size: 35px;
+  transition-duration: 0.5s;
 }
 .home-content_menu_orig-menu_menu-list_menu-divider {
   width: 1px;
@@ -131,6 +165,25 @@ body {
   width: 810.86px;
   height: 4.316px;
   background: black;
+}
+.home-content_header_like-button {
+  margin-top: 100px;
+  width: 50px;
+  height: 50px;
+  position: relative;
+}
+.home-content_header_like-button_circule {
+  width: 175px;
+  height: 175px;
+  margin: 0 0 0 38px;
+  z-index: 0;
+}
+.home-content_header_like-button_mask {
+  width: 450px;
+  height: 450px;
+  z-index: 1;
+  position: absolute;
+  margin-right: 10px;
 }
 .home-content_footer-content {
   width: 1429.24px;
@@ -392,13 +445,14 @@ body {
   transform: scale(1.1);
   z-index: 2;
 }
-.circule_footer-card-move {
-  margin-top: 210px;
-}
 .circule_footer-card-move_line {
   width: 343px;
   height: 5px;
   background: #000;
+}
+
+.circule_footer-card-move {
+  margin-top: 118px;
 }
 
 .divider {
@@ -480,4 +534,4 @@ input[placeholder=Password] {
   background-repeat: no-repeat;
   background-size: 20px 20px;
   padding-right: 10px;
-}/*# sourceMappingURL=main2.css.map */
+}/*# sourceMappingURL=main.css.map */

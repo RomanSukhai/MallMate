@@ -84,7 +84,6 @@ $(document).ready(function() {
         if(prev >= 0) {
             $radioButtons.eq(prev).prop('checked', true);
         } else {
-            // якщо ми на першому слайді і натискаємо ліву стрілку, перемикаємося на останній
             $radioButtons.last().prop('checked', true);
         }
     });
@@ -96,9 +95,30 @@ $(document).ready(function() {
         if(next < $radioButtons.length) {
             $radioButtons.eq(next).prop('checked', true);
         } else {
-            // якщо ми на останньому слайді і натискаємо праву стрілку, перемикаємося на перший
             $radioButtons.first().prop('checked', true);
         }
     });
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+    // Ініціалізація ScrollReveal
+    const sr = ScrollReveal({
+        distance: '150px',
+        duration: 1700,
+        reset: false
+    });
+    const sr2 = ScrollReveal({
+        distance: '200px',
+        duration: 2000,
+        reset: false
+    });
+
+    // Застосування анімації до блоків
+    sr2.reveal('#fromTopHeader', { origin: 'top' });
+    sr.reveal('#fromTop', { origin: 'top' });
+    sr.reveal('#fromLeft', { origin: 'left' });
+    sr.reveal('#fromRight', { origin: 'right' });
+    sr.reveal('#fromBottom', { origin: 'bottom' });
+});
+
 

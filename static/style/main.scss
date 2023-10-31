@@ -1,0 +1,640 @@
+@font-face {
+    font-family: 'Urbanist';
+    src: url('../fonts/Urbanist-Regular.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+.box {
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+#boxLeft {
+    transform: translateX(-100%);
+}
+
+#boxRight {
+    transform: translateX(100%);
+}
+
+#boxTop {
+    transform: translateY(-100%);
+}
+
+#boxBottom {
+    transform: translateY(100%);
+}
+
+@mixin input_svg($image) {
+    padding-left: 30px;
+    background-image: $image;
+    background-position: 5px center;
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+    padding-right: 10px;
+
+}
+
+@mixin margin_pading() {
+    margin: 0px;
+    padding: 0px;
+}
+
+@mixin style_bacround($image) {
+    background-image: $image;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+body {
+    background: #fdf6f6 !important;
+}
+
+.home-content {
+    width: 1440px;
+    height: 854.13px;
+    background: white;
+    position: relative;
+
+    &_menu {
+        width: 1440px;
+        height: 100.615px;
+
+        &_line {
+            height: 1px;
+            width: 1428.8px;
+            border-radius: 45px;
+            background: black;
+            @include margin_pading();
+        }
+        
+
+        a {
+            margin-left: 10px;
+            height: 99.615px;
+            width: 10%;
+            text-decoration: none;
+            color: black;
+            @include margin_pading();
+            padding-top: 20px;
+            p{
+                margin-left: 34px;
+            }
+
+            .icon-location {
+                width: 23.14px;
+                height: 27.96px;
+                margin-left: 48px;
+
+                &:hover{
+                    filter: brightness(100%);
+                }
+            }
+            &:hover {
+                color: #666;
+                transition-duration:0.5s;
+                
+            }
+            
+
+            
+        }
+
+        &_orig-menu {
+            height: 99.615px;
+            width: 70%;
+            @include margin_pading();
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0 0 0 115px;
+
+
+            &_menu-list {
+                list-style: none;
+                display: flex;
+                align-items: center;
+                @include margin_pading();
+                width: 100%;
+                height: 100%;
+
+                &_menu-item {
+                    a {
+                        text-decoration: none;
+                        color: #000;
+                        padding: 10px 15px;
+                        font-size: 30.5px;
+                        font-family: 'Urbanist';
+
+                        &:hover {
+                            color: #666;
+                            font-size: 35px;
+                            transition-duration:0.5s;
+                        }
+                    }
+                }
+
+                &_menu-divider {
+                    width: 1px;
+                    height: 30px;
+                    background-color: black;
+                    margin: 0 5px;
+                }
+            }
+        }
+
+        &_logSign {
+            height: 99.615px;
+            width: 20%;
+            @include margin_pading();
+            padding: 0 40px 0 0;
+
+
+            &_btn {
+                padding: 4.9px 30.5px;
+                font-size: 25.5px;
+                border: 1px solid black;
+                border-radius: 10px;
+                cursor: pointer;
+                background-color: transparent;
+                transition: background-color 0.3s;
+                white-space: nowrap;
+
+                &:hover {
+                    background-color: #fdf6f6;
+                }
+
+                &:not(:last-child) {
+                    margin-right: 20px;
+                }
+            }
+        }
+    }
+
+    &_header {
+        width: 1410.36px;
+        height: 452.9px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: #fdf6f6;
+
+        &_text {
+            font-family: 'Urbanist';
+            font-size: 50px;
+            text-align: center;
+            line-height: 1.2;
+        }
+
+        &_container-text {
+            width: 300px;
+            height: 120px;
+
+            &_text-header {
+                font-family: 'Urbanist';
+                font-size: 100px;
+                padding: 35px 0 0 0;
+
+            }
+
+            &_image {
+                height: 90px;
+                width: 75px;
+            }
+        }
+
+        &_line {
+            width: 810.86px;
+            height: 4.316px;
+            background: black;
+        }
+
+        &_like-button{
+            margin-top: 100px;
+            width: 50px;
+            height: 50px;
+            position: relative;
+            &_circule{
+                width: 175px;
+                height: 175px;
+                margin: 0 0 0 38px;
+                z-index: 0;
+            }
+            &_mask{
+                width: 450px;
+                height: 450px;
+                z-index: 1;
+                position: absolute;
+                margin-right: 10px;
+            }
+            
+        }
+
+
+
+    }
+
+    &_footer-content {
+        width: 1429.24px;
+        height: 510.57px;
+        margin: 64px auto 10px auto;
+        background: #F8E1E14D;
+
+        &_image-control {
+            position: relative;
+
+
+
+            &_image {
+                position: relative;
+                left: 110px;
+                width: 76px;
+                height: 55px;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+
+        &_add-text {
+            padding: 60px 0 0 0;
+
+            &_line {
+                height: 100%;
+                width: 400px;
+                height: 4.316px;
+                border-radius: 25px;
+                background: black;
+            }
+
+            &_text {
+                font-family: 'Urbanist';
+                font-size: 57px;
+                text-align: center;
+                line-height: 1.2;
+            }
+        }
+
+        &_add-button {
+            padding: 10px 0 0 0;
+
+            &_btn {
+                background-color: white;
+                width: 340px;
+                padding: 4.9px 30.5px;
+                font-size: 25.5px;
+                border: 1px solid black;
+                border-radius: 10px;
+                cursor: pointer;
+                transition: background-color 0.3s;
+                white-space: nowrap;
+
+                &:hover {
+                    background-color: #f0f0f0;
+                }
+
+                &:not(:last-child) {
+                    margin-right: 20px;
+                }
+            }
+        }
+    }
+
+    &_footer {
+        width: 100%;
+        height: 294.37px;
+        background: #000000CC;
+
+        &_1 {
+            height: 100%;
+            width: 25%;
+
+            img {
+                height: 110px;
+                width: 130px;
+                padding: 40px 0 0 60px;
+            }
+
+            &_text {
+                color: white;
+                padding: 0 0 80px 30px;
+                font-family: 'Urbanist';
+                font-size: 18px;
+            }
+
+        }
+
+        &_2 {
+            height: 100%;
+            width: 50%;
+
+            &_proj-menu {
+                width: 100%;
+                height: 86%;
+
+                &_project {
+                    color: white;
+                    padding: 30px 28px 0 0;
+                    font-size: 30px;
+                }
+
+                &_buttons {
+                    color: white;
+                    text-align: center;
+                    line-height: 1.7;
+                    font-size: 18px;
+
+                }
+            }
+
+
+            &_text-main-footer {
+                text-align: center;
+                font-family: 'Urbanist';
+                font-size: 16px;
+                color: white;
+            }
+
+
+
+        }
+
+        &_4 {
+            height: 100%;
+            width: 25%;
+
+            &_text {
+                font-size: 30px;
+            }
+
+            a {
+                text-decoration: none;
+                color: #ffffff;
+                font-family: 'Urbanist';
+
+                &:hover {
+                    color: #666;
+                }
+
+                padding: 0 0 100px 0
+            }
+
+            p {
+                color: white;
+                font-family: 'Urbanist';
+                ;
+            }
+
+        }
+
+    }
+
+    &_header-pre-block {
+        &_line {
+            width: 498px;
+            height: 5px;
+            background: #000;
+
+
+        }
+
+        &_text {
+            font-family: 'Urbanist';
+            font-size: 55px;
+        }
+    }
+
+    &_main-pre-header {
+        height: 505.3px;
+        background: #fdf6f6;
+        width: 99%;
+        margin: 18px auto 0 auto;
+
+        &_mainer-content1 {
+            width: 50%;
+            height: 100%;
+
+            &_inside1 {
+                margin: 30px 0 0 40px;
+
+                img {
+                    width: 50px;
+                    height: 50px;
+                }
+
+                p {
+                    color: #000;
+                    margin-top: 6px;
+                    font-family: 'Urbanist';
+                    font-size: 24px;
+                }
+            }
+
+            &_inside2 {
+                height: 100%;
+
+                p {
+                    font-size: 35px;
+                    color: #000;
+                    font-family: 'Urbanist';
+                }
+
+                &_btn {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 0px 40px 0px 40px;
+                    border: 1px solid black;
+                    border-radius: 20px;
+                    cursor: pointer;
+                    background-color: white;
+                    transition: background-color 0.3s;
+                    white-space: nowrap;
+                    margin-bottom: 74px;
+                    color: #ABA1A1;
+
+                    &:hover {
+                        background-color: #fdf6f6;
+
+                        p {
+                            color: #000000;
+                        }
+                    }
+
+                    p {
+                        font-size: 25px;
+                        color: #ABA1A1;
+                    }
+                }
+
+            }
+        }
+
+        &_mainer-content2 {
+            width: 50%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            position: relative;
+
+            &_image-left {
+                position: absolute;
+                right: 47%;
+                top: 57%;
+            }
+
+            &_image-right {
+                position: absolute;
+                right: 8%;
+                top: 45%;
+            }
+
+            img {
+                border-radius: 50%;
+                margin: -3px;
+                width: 320px;
+                height: 320px;
+                transition: transform 0.7s ease-in-out;
+
+                &:hover {
+                    transform: scale(1.0);
+                    transition: transform 0.7s ease-in-out;
+                }
+
+                &:not(:hover) {
+                    transform: scale(0.9);
+                    animation: resetSize 0.5s forwards 0.3s;
+                }
+            }
+
+            img:nth-child(3) {
+                position: absolute;
+                top: 0;
+                left: 26%;
+                margin-left: 5px;
+            }
+        }
+    }
+
+    &_block-move {
+        img {
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s;
+
+            &.slick-center {
+                transform: scale(1.1);
+                z-index: 2;
+            }
+        }
+
+    }
+
+
+}
+
+
+#slider img {
+    user-select: none;
+    pointer-events: none;
+}
+
+
+
+
+.triangle {
+    @include style_bacround(url('../images/Triangle.png'))
+}
+
+.circule {
+    @include style_bacround(url('../images/Ellipse\ 27.png'));
+    background-size: 900px 853px;
+
+    &_block-move {
+        img {
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s;
+
+            &.slick-center {
+                transform: scale(1.1);
+                z-index: 2;
+            }
+        }
+    }
+
+    &_footer-card-move{
+
+        &_line{
+            width: 343px;
+            height: 5px;
+            background: #000;
+        }
+    }
+    
+}
+.circule_footer-card-move {
+    margin-top: 118px;
+}
+
+
+.divider {
+    height: 100%;
+    /* Висота 100% контейнера */
+    width: 445px;
+    height: 4.2px;
+    /* Товщина полоски */
+    background-color: black;
+    /* Колір полоски */
+}
+
+
+
+.osnova {
+    width: 100;
+
+}
+
+.block_zaibav {
+    width: 100%;
+    height: 100%;
+
+}
+
+.block_zaibav2 {
+    width: 50%;
+    height: 70%;
+
+}
+
+.bordRegist {
+    border-radius: 100px;
+}
+
+.text-block {
+    padding: 80px 0 0 0;
+}
+
+.user_icon {
+    @include input_svg(url("../svgFiles/person.svg"))
+}
+
+.texte {
+    color: aqua;
+}
+
+input[placeholder="First Name"] {
+    @include input_svg(url("../svgFiles/person.svg"))
+}
+
+input[placeholder="Last Name"] {
+    @include input_svg("")
+}
+
+input[placeholder="Email"] {
+    @include input_svg(url("../svgFiles/envelope-at.svg"))
+}
+
+input[placeholder="Password"] {
+    @include input_svg(url("../svgFiles/icons8-password.svg"))
+}
