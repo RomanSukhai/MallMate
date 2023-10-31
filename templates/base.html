@@ -6,10 +6,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="{% static 'style/reserv.css' %}" rel="stylesheet">
-    <link href="{% static 'style/main.css' %}" rel="stylesheet">
+    <link href="{% static 'style/main2.css' %}" rel="stylesheet">
+    <link href="{% static 'style/cardMove2.css' %}" rel="stylesheet">
     <link href="{% static 'bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
     <script src="{% static 'bootstrap/js/bootstrap.bundle.min.js' %}"></script>
-    
+    <script src="{% static 'jquery.min.js' %}"></script>
+    <script src="{% static 'scripts/home2.js' %}"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
 
 </head>
 
@@ -120,6 +124,30 @@
     </main>
 
 
+    <main class="home-content circule">
+        <section id="slider">
+            <input type="radio" name="slider" id="s1">
+            <input type="radio" name="slider" id="s2">
+            <input type="radio" name="slider" id="s3" checked>
+            <input type="radio" name="slider" id="s4">
+            <input type="radio" name="slider" id="s5">
+            <button class="arrow left-arrow"><img src="../static/images/left.png" alt=""></button>
+            <label for="s1" id="slide1"> <img src="../static/images/cards/Rectangle 75.png" alt=""></label>
+            <label for="s2" id="slide2"><img src="../static/images/cards/Rectangle 76.png" alt=""></label>
+            <label for="s3" id="slide3"><img src="../static/images/cards/Rectangle 77.png" alt=""></label>
+            <label for="s4" id="slide4"><img src="../static/images/cards/Rectangle 78.png" alt=""></label>
+            <label for="s5" id="slide5"><img src="../static/images/cards/Rectangle 79.png" alt=""></label>
+            <button class="arrow right-arrow"><img src="../static/images/right.png" alt=""></button>
+        </section>
+        
+        <div class="home-content_header-pre-block d-flex flex-row justify-content-center align-items-center circule_footer-card-move">
+            <div class=" circule_footer-card-move_line"></div>
+            <p class="home-content_header-pre-block_text">Your personal profile and sales</p>
+            <div class=" circule_footer-card-move_line"></div>
+        </div>
+    </main>
+
+
 
     <footer class="home-content animate-slide-up">
         <div class="home-content_footer-content ">
@@ -170,6 +198,5 @@
     <!-- {% block content %}{% endblock %}   -->
     
 </body>
-<script src="{% static 'jquery.min.js' %}"></script>
-    <script src="{% static 'scripts/home.js' %}"></script>
+
 </html>

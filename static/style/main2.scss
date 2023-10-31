@@ -20,6 +20,13 @@
     padding: 0px;
 }
 
+@mixin style_bacround($image) {
+    background-image: $image;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
 body {
     background: #fdf6f6 !important;
 }
@@ -358,14 +365,16 @@ body {
         &_mainer-content1 {
             width: 50%;
             height: 100%;
-            &_inside1{
-                margin:30px 0 0 40px ;
 
-                img{
+            &_inside1 {
+                margin: 30px 0 0 40px;
+
+                img {
                     width: 50px;
                     height: 50px;
                 }
-                p{
+
+                p {
                     color: #000;
                     margin-top: 6px;
                     font-family: 'Urbanist';
@@ -373,19 +382,19 @@ body {
                 }
             }
 
-            &_inside2{
+            &_inside2 {
                 height: 100%;
 
-                p{
-                   font-size: 35px;
-                   color: #000;
-                   font-family: 'Urbanist'; 
+                p {
+                    font-size: 35px;
+                    color: #000;
+                    font-family: 'Urbanist';
                 }
 
-                &_btn{
-                    display: flex;            
-                    justify-content: center; 
-                    align-items: center; 
+                &_btn {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
                     padding: 0px 40px 0px 40px;
                     border: 1px solid black;
                     border-radius: 20px;
@@ -394,20 +403,22 @@ body {
                     transition: background-color 0.3s;
                     white-space: nowrap;
                     margin-bottom: 74px;
-                    color: #ABA1A1; 
-                
+                    color: #ABA1A1;
+
                     &:hover {
                         background-color: #fdf6f6;
-                        p{
+
+                        p {
                             color: #000000;
                         }
                     }
-                    p{
+
+                    p {
                         font-size: 25px;
-                        color: #ABA1A1; 
+                        color: #ABA1A1;
                     }
                 }
-                
+
             }
         }
 
@@ -418,51 +429,103 @@ body {
             justify-content: center;
             align-items: flex-end;
             position: relative;
-            &_image-left{
+
+            &_image-left {
                 position: absolute;
                 right: 47%;
                 top: 57%;
             }
-            &_image-right{
+
+            &_image-right {
                 position: absolute;
                 right: 8%;
                 top: 45%;
             }
-        
+
             img {
-                border-radius: 50%;  
-                margin: -3px;       
+                border-radius: 50%;
+                margin: -3px;
                 width: 320px;
-                height:320px;
+                height: 320px;
                 transition: transform 0.7s ease-in-out;
 
                 &:hover {
                     transform: scale(1.0);
                     transition: transform 0.7s ease-in-out;
                 }
-        
+
                 &:not(:hover) {
                     transform: scale(0.9);
                     animation: resetSize 0.5s forwards 0.3s;
                 }
             }
+
             img:nth-child(3) {
                 position: absolute;
                 top: 0;
                 left: 26%;
-                margin-left:5px;  
+                margin-left: 5px;
             }
         }
     }
 
+    &_block-move {
+        img {
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s;
+
+            &.slick-center {
+                transform: scale(1.1);
+                z-index: 2;
+            }
+        }
+
+    }
+
+
 }
 
-.triangle {
-    background-image: url("../images/Triangle.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+
+#slider img {
+    user-select: none;
+    pointer-events: none;
 }
+
+
+
+
+.triangle {
+    @include style_bacround(url('../images/Triangle.png'))
+}
+
+.circule {
+    @include style_bacround(url('../images/Ellipse\ 27.png'));
+    background-size: 900px 853px;
+
+    &_block-move {
+        img {
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s;
+
+            &.slick-center {
+                transform: scale(1.1);
+                z-index: 2;
+            }
+        }
+    }
+
+    &_footer-card-move{
+        margin-top: 210px;
+
+        &_line{
+            width: 343px;
+            height: 5px;
+            background: #000;
+        }
+    }
+    
+}
+
 
 .divider {
     height: 100%;
@@ -473,6 +536,7 @@ body {
     background-color: black;
     /* Колір полоски */
 }
+
 
 .osnova {
     width: 100;
