@@ -4,7 +4,14 @@
 python -m venv virtenv 
 .\virtenv\Scripts\activate 
 pip install -r requirements.txt
-python .\manage.py runserver
+```
+
+Тепер окремо запустити файл connect.py що в папці mysql
+
+``` shell
+python manage.py makemigrations
+python manage.py migrate 
+python manage.py runserver
 ```
 
 
