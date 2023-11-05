@@ -2,6 +2,7 @@
 
 ``` shell
 git clone -b mallmate_110.201 https://github.com/RomanSukhai/MallMate.git
+cd .\MallMate\
 ```
 
 ``` shell
