@@ -3,12 +3,14 @@
 ``` shell
 git clone -b mallmate_110.201 https://github.com/RomanSukhai/MallMate.git
 cd .\MallMate\
+
 ```
 
 ``` shell
 python -m venv virtenv 
 .\virtenv\Scripts\activate 
 pip install -r requirements.txt
+
 ```
 
 Тепер окремо запустити файл connect.py що в папці mysql
@@ -17,6 +19,7 @@ pip install -r requirements.txt
 python manage.py makemigrations
 python manage.py migrate 
 python manage.py runserver
+
 ```
 
 
