@@ -1,6 +1,10 @@
 <h1>MallMate</h1>
 
 ``` shell
+git clone -b mallmate_110.201 https://github.com/RomanSukhai/MallMate.git
+```
+
+``` shell
 python -m venv virtenv 
 .\virtenv\Scripts\activate 
 pip install -r requirements.txt
