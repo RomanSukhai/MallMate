@@ -51,7 +51,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'MallMate.urls'
+ROOT_URLCONF = 'mallmate.urls'
 
 TEMPLATES = [
     {
