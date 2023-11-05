@@ -1,5 +1,5 @@
 """
-URL configuration for mallmate project.
+URL configuration for MallMate project.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/4.2/topics/http/urls/
@@ -14,18 +14,35 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+from django.conf import settings
+from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import path
-
-from mallmate import views
+from django.contrib.auth import views as auth_views
+import users.views as users_views
+from . import views as project_views
 
 urlpatterns = [
-    # path('admin/', admin.site.urls),
-    path('home/', views.home, name="home"),
-    path('tima/', views.tima, name="tima"),
-    path('login/', views.login_view, name='login'),
-    path('register/', views.register, name='register'),
-    path('', views.register, name='register'),
-    path('request_password_reset/', views.request_password_reset, name='request_password_reset'),
-    path('handle_password_reset/<str:request_id>/', views.handle_password_reset, name='handle_password_reset'),
+    path('', project_views.landing, name='landing'),
+
+    path('admin/', admin.site.urls),
+
+    path('home', project_views.home, name='home'),
+
+    path('register/', users_views.register, name='register'),
+    path('profile/', users_views.profile, name='profile'),
+    path('login/', auth_views.LoginView.as_view(template_name='login.html'), name='login'),
+
+    path('logout/', auth_views.LogoutView.as_view(template_name='logout.html'), name='logout'),
+    path('password-reset/', auth_views.PasswordResetView.as_view(template_name='password_reset.html'), name='password_reset'),
+    path('password-reset/done/', auth_views.PasswordResetDoneView.as_view(template_name='password_reset_done.html'), name='password_reset_done'),
+    path('password-reset-confirm/<uidb64>/<token>/', auth_views.PasswordResetConfirmView.as_view(template_name='password_reset_confirm.html'), name='password_reset_confirm'),
+    path('password-reset-complete/', auth_views.PasswordResetView.as_view(template_name='password_reset_complete.html'), name='password_reset_complete'),
+
+    path('password-change/', auth_views.PasswordChangeView.as_view(template_name='password_change.html'), name='password_change'),
+    path('password-change/done', auth_views.PasswordChangeDoneView.as_view(template_name='password_change_done.html'), name='password_change_done'),
+    # path('login/', users_views.login, name='login')
 ]
+
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -1,0 +1,224 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <script src="{% static 'scripts/jquery.min.js' %}"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{% static 'style/reserv.css' %}" rel="stylesheet">
+    <link href="{% static 'style/main.css' %}" rel="stylesheet">
+    <link href="{% static 'style/cardMove2.css' %}" rel="stylesheet">
+    <link href="{% static 'bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+    <script src="{% static 'bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'jquery.min.js' %}"></script>
+    <script src="{% static 'scripts/home2.js' %}"></script>
+    <script src="{% static 'scripts/scrollreveal.min.js' %}"></script>
+
+</head>
+
+<body class=" d-flex flex-column justify-content-center align-items-center ">
+    <header class="home-content  " >
+        <menu class=" home-content_menu d-flex align-content-start justify-content-center flex-wrap " id="fromTop">
+            <a href="" class=" flex-column">
+                <img src="{% static 'icons/image 20.png' %}" alt="" class="icon-location">
+                <p>location</p>
+            </a>
+            
+            <dir class="home-content_menu_orig-menu ">
+                <ul class="home-content_menu_orig-menu_menu-list d-flex justify-content-center  align-items-center ">
+                    <li class="home-content_menu_orig-menu_menu-list_menu-item "><a href="#">home</a>
+                    </li>
+                    <li class="home-content_menu_orig-menu_menu-list_menu-divider "></li>
+                    <li class="home-content_menu_orig-menu_menu-list_menu-item "><a href="#">about
+                            Us</a></li>
+                    <li class="home-content_menu_orig-menu_menu-list_menu-divider "></li>
+                    <li class="home-content_menu_orig-menu_menu-list_menu-item "><a href="#">service
+                            Profile</a></li>
+                    <li class="home-content_menu_orig-menu_menu-list_menu-divider "></li>
+                    <li class="home-content_menu_orig-menu_menu-list_menu-item "><a href="#">useful
+                            information</a></li>
+                </ul>
+            </dir>
+            <dir class="home-content_menu_logSign d-flex justify-content-center align-items-center ">
+                <button class="home-content_menu_logSign_btn "><a href="{% url 'login' %}">Log in</a></button>
+                <button class="home-content_menu_logSign_btn "><a href="{% url 'register' %}">register</a></button>
+            </dir>
+
+            <dir class="home-content_menu_line ">
+            </dir>
+        </menu>
+        <div class="home-content_header d-flex justify-content-center flex-column  align-items-center " >
+            <div class="d-flex align-items-center home-content_header_container-text" id="fromTop">
+                <img class="home-content_header_container-text_image " src="{% static 'images/M.png' %}" alt="">
+                <p class="home-content_header_container-text_text-header ">all</p>
+                <img class="home-content_header_container-text_image " src="{% static 'images/M.png' %}" alt="">
+                <p class="home-content_header_container-text_text-header">ate</p>
+            </div>
+            <div id="fromTop" class="home-content_header_line "></div>
+
+            <p id="fromTop"  class="home-content_header_text">Your best assistant for navigating in a <br> shopping center</p>
+            <div id="fromTopHeader" class="home-content_header_like-button d-flex align-items-center justify-content-center" id="">
+                <img class="home-content_header_like-button_circule" src="../static/images/Ellipse 1.png" alt="">
+                <img class="home-content_header_like-button_mask" src="../static/images/Mask.png" alt="">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            </div>
+        </div>
+    </header>
+
+
+
+
+
+
+
+    <main class="home-content d-flex flex-column">
+        <div class="home-content_header-pre-block d-flex flex-row justify-content-center align-items-center" id="fromTop">
+            <div class="home-content_header-pre-block_line"></div>
+            <p class="home-content_header-pre-block_text">What can we do?</p>
+            <div class="home-content_header-pre-block_line"></div>
+        </div>
+        <div class="home-content_main-pre-header d-flex flex-row">
+            <div class="home-content_main-pre-header_mainer-content1 d-flex flex-column " id="fromLeft">
+                <div class="home-content_main-pre-header_mainer-content1_inside1 d-flex flex-row">
+                    <img src="../static/icons/dot.svg" alt="">
+                    <p>choose your location and try: </p>
+
+                </div>
+                <div
+                    class="home-content_main-pre-header_mainer-content1_inside2 d-flex align-items-end justify-content-center flex-column">
+                    <p>store and product search</p>
+                    <button class="home-content_main-pre-header_mainer-content1_inside2_btn ">
+                        <p>try now</p>
+                    </button>
+                </div>
+            </div>
+            <div class="home-content_main-pre-header_mainer-content2 " id="fromRight">
+                <img class="home-content_main-pre-header_mainer-content2_image-left"
+                    src="../static/images/shop_calvincLein.png" alt="">
+                <img class="home-content_main-pre-header_mainer-content2_image-right"
+                    src="../static/images/shop_shoes.png" alt="">
+                <img src="../static/images/backet.png" alt="">
+            </div>
+
+
+        </div>
+
+    </main>
+
+
+
+
+
+
+
+    <main class="home-content triangle animate-slide-up">
+        <div class="d-flex align-items-center justify-content-around text-block" id="fromTop">
+            <div class="divider"></div>
+            <p class="home-content_header_text ">Forget about confusion</p>
+            <div class="divider"></div>
+        </div>
+        <div class="block_zaibav d-flex flex-wrap">
+            <div class="d-flex justify-content-center align-items-center block_zaibav2" id="fromLeft">
+                <img src="{% static 'Gifes/Grabacion.gif' %}" width="637,89px">
+            </div>
+            <div class="d-flex justify-content-center align-items-center block_zaibav2" id="fromRight">
+                <p class="home-content_header_text">It's easy to navigate with our interactive map</p>
+            </div>
+        </div>
+
+    </main>
+
+
+    <main class="home-content circule">
+        <div id="fromTop">
+            <section id="slider">
+                <input type="radio" name="slider" id="s1">
+                <input type="radio" name="slider" id="s2">
+                <input type="radio" name="slider" id="s3" checked>
+                <input type="radio" name="slider" id="s4">
+                <input type="radio" name="slider" id="s5">
+                <button class="arrow left-arrow"><img src="../static/images/left.png" alt=""></button>
+                <label for="s1" id="slide1"> <img src="../static/images/cards/Rectangle 75.png" alt=""></label>
+                <label for="s2" id="slide2"><img src="../static/images/cards/Rectangle 76.png" alt=""></label>
+                <label for="s3" id="slide3"><img src="../static/images/cards/Rectangle 77.png" alt=""></label>
+                <label for="s4" id="slide4"><img src="../static/images/cards/Rectangle 78.png" alt=""></label>
+                <label for="s5" id="slide5"><img src="../static/images/cards/Rectangle 79.png" alt=""></label>
+                <button class="arrow right-arrow"><img src="../static/images/right.png" alt=""></button>
+            </section>
+        </div>
+        
+
+        <div
+            class="home-content_header-pre-block d-flex flex-row justify-content-center align-items-center circule_footer-card-move" id="fromLeft">
+            <div class=" circule_footer-card-move_line"></div>
+            <p class="home-content_header-pre-block_text">Your personal profile and sales</p>
+            <div class=" circule_footer-card-move_line"></div>
+        </div>
+    </main>
+
+
+
+    <footer class="home-content animate-slide-up">
+        <div class="home-content_footer-content ">
+            <div
+                class="home-content_footer-content_add-text d-flex align-items-center justify-content-around home-content_footer-content_add " id="fromTop">
+                <div class="home-content_footer-content_add-text_line "></div>
+                <div class="home-content_footer-content_add-text_text ">Don't waste time <br> Start now</div>
+                <div class="home-content_footer-content_add-text_line "></div>
+            </div>
+            <div class="home-content_footer-content_image-control d-flex align-items-center justify-content-center " id="fromTop">
+                <img class="home-content_footer-content_image-control_image " src="../static/images/arrow.png" alt="">
+            </div>
+            <div
+                class="home-content_footer-content_add-button d-flex align-items-center justify-content-around home-content_footer-content_add " id="fromBottom">
+                <button class="home-content_footer-content_add-button_btn  ">register</button>
+            </div>
+
+        </div>
+        <div class="home-content_footer d-flex flex-wrap">
+            <div class="home-content_footer_1 d-flex align-items-start flex-wrap">
+                <img src="../static/images/M_footer.png" alt="" id="fromLeft">
+                <p class="home-content_footer_1_text" id="fromLeft">if you have any wishes, please contact us</p>
+            </div>
+            <div class="home-content_footer_2">
+                <div class="home-content_footer_2_proj-menu d-flex align-items-end flex-column">
+                    <p class="home-content_footer_2_proj-menu_project" id="fromRight">project </p>
+                    <p class="home-content_footer_2_proj-menu_buttons" id="fromRight">home <br>about us <br>services <br>useful
+                        information</p>
+                </div>
+                <p class="home-content_footer_2_text-main-footer" id="fromBottom">MallMate 2023</p>
+            </div>
+            <div class="d-flex justify-content-center align-items-center flex-column home-content_footer_4">
+                <p id="fromRight" class="home-content_footer_4_text">support</p>
+                <p id="fromRight">FAQs</p>
+                <a id="fromRight" href="">contact us</a>
+            </div>
+
+        </div>
+
+    </footer>
+
+
+
+
+
+    <!-- {% block content %}{% endblock %}   -->
+
+</body>
+
+</html>

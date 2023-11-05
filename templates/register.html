@@ -1,38 +1,32 @@
-{% extends "base.html" %}
-{% load static %}
-
-{% block title %}Registration{% endblock %}
+{% extends 'base.html' %}
 
 {% block content %}
-<form method="post" class="mx-auto ">
-    {% csrf_token %}
-    <div class=" mb-3 form-group d-flex justify-content-center">
-        <input  type="text" name="{{ form.first_name.name }}" id="{{ form.first_name.id_for_label }}"
-            class="rounded form-control my-input " value="{{ form.first_name.value|default:'' }}" placeholder="First Name">
-    </div>
+    <div class="content-section d-flex justify-content-center mt-5">
+        <form method="post" class="mx-auto">
+            {% csrf_token %}
+            <div class="form-group">
+                <input type="text" class="form-control" name="{{ form.first_name.name }}" value="{{ form.first_name.value|default:'' }}" placeholder="First Name">
+            </div>
 
-    <div class="mb-3 form-group d-flex justify-content-center">
-        <input  type="text" name="{{ form.last_name.name }}" id="{{ form.last_name.id_for_label }}"
-            class="rounded form-control my-input" value="{{ form.last_name.value|default:'' }}" placeholder="Last Name">
-    </div>
+            <div class="form-group">
+                <input type="text" class="form-control" name="{{ form.last_name.name }}" value="{{ form.last_name.value|default:'' }}" placeholder="Last Name">
+            </div>
 
-    <div class=" mb-3 form-group d-flex justify-content-center">
-        <input  type="email" name="{{ form.email.name }}" id="{{ form.email.id_for_label }}"
-            class="rounded form-control my-input" value="{{ form.email.value|default:'' }}" placeholder="Email">
-    </div>
+            <div class="form-group">
+                <input type="email" class="form-control" name="{{ form.email.name }}" value="{{ form.email.value|default:'' }}" placeholder="Email">
+            </div>
 
-    <div class=" mb-3 form-group d-flex justify-content-center">
-        <input " type="password" name="{{ form.password.name }}" id="{{ form.password.id_for_label }}"
-            class="rounded form-control my-input" value="{{ form.password.value|default:'' }}" placeholder="Password">
-    </div>
+            <div class="form-group">
+                <input type="password" class="form-control" name="{{ form.password1.name }}" placeholder="Password">
+            </div>
 
-    <div class="d-flex justify-content-center">
-        <button type="submit" class="btn btn-primary     justify-content-center ">Register</button>
-        <div class="already-registered d-flex justify-content-center">
-            <p>Вже зареєстровані? <a href="{% url 'login' %}" class="btn btn-link">Увійдіть</a></p>
-            <p><a href="{% url 'request_password_reset' %}" class="btn btn-link">Забули пароль?</a></p>
-        </div>
-    </div>
+            <div class="form-group">
+                <input type="password" class="form-control" name="{{ form.password2.name }}" placeholder="Confirm Password">
+            </div>
 
-</form>
+            <button type="submit" class="btn btn-outline-info">Зареєструватися</button>
+            <p>Маєте акаунт? <a href="{% url 'login' %}">Увійдіть</a></p>
+
+        </form>
+    </div>
 {% endblock %}

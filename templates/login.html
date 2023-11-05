@@ -1,25 +1,17 @@
-{% extends "base.html" %}
-{% load static %}
-{% block title %}Login{% endblock %}
-
+{% extends 'base.html' %}
 {% block content %}
-<form method="post" class="mx-auto">
-    {% csrf_token %}
-    <div class="mb-3 form-group d-flex justify-content-center">
-        <input style="border-radius: 100px;" type="email" name="{{ form.email.name }}" id="{{ form.email.id_for_label }}" class="form-control my-input" value="{{ form.email.value|default:'' }}" placeholder="Електронна пошта">
-    </div>
-
-    <div class="mb-3 form-group d-flex justify-content-center">
-        <input style="border-radius: 100px;" type="password" name="{{ form.password.name }}" id="{{ form.password.id_for_label }}" class="form-control my-input" value="{{ form.password.value|default:'' }}" placeholder="Пароль">
-    </div>
-
-    <div class="d-flex justify-content-center">
-        <button type="submit" class="btn btn-primary justify-content-center">Вхід</button>
-        <div class="already-registered d-flex justify-content-center">
-            <p>Не маєте акаунту? <a href="{% url 'register' %}" class="btn btn-link">Зареєструйтеся</a></p>
-            <p><a href="{% url 'request_password_reset' %}" class="btn btn-link">Забули пароль?</a></p>
+<div class="content-section d-flex justify-content-center mt-5">
+    <form method="post" class="mx-auto">
+        {% csrf_token %}
+        <div class="form-group">
+            <input type="email" class="form-control" name="{{ form.username.name }}" value="{{ form.username.value|default:''  }}" placeholder="Email">
         </div>
-    </div>
-</form>
-
+        <div class="form-group">
+            <input type="password" class="form-control" name="{{ form.password.name }}" placeholder="Password">
+        </div>
+        <button type="submit" class="btn btn-outline-info">Увійти</button>
+        <p>Не маєте акаунту? <a href="{% url 'register' %}">Зареєструйтеся</a></p>
+        <p>Забули пароль? <a href="{% url 'password_reset' %}">Скинути пароль</a></p>
+    </form>
+</div>
 {% endblock %}

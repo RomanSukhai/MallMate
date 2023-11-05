@@ -1,9 +1,19 @@
-{% extends "base.html" %}
-{% load static %}
-
-{% block title %}home{% endblock %}
-
+{% extends 'base.html' %}
 {% block content %}
-    <a href="{% url 'tima' %}"><img src="{% static 'images/R.png' %}" class="image-button"></a>
-    <img src="{% static 'images/1.jpg' %}" class="centered-image">
+    <h1>Це типу домашня сторінка (тільки залогінені мають доступ)</h1>
+{#    <p><a href="{% url 'logout' %}">Вийти з акаунту</a></p>#}
+
+    <img src="../static/Gifes/landing.gif" alt="woohoo">
+{#    <video controls>#}
+{#        <source src="{{ MEDIA_URL }} videos/landing.mp4">#}
+{#    </video>#}
+
+    <div>
+        {% for user in users %}
+            <h3>{{ user.first_name }} {{ user.last_name }}</h3>
+            <p>{{ user.email }}</p>
+            <p>{{ user.password }}</p>
+            <p>{{ user.last_login }}</p>
+        {% endfor %}
+    </div>
 {% endblock %}

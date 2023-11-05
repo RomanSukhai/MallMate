@@ -1,12 +1,9 @@
-{% extends "base.html" %}
+{% extends "landing.html" %}
 {% load static %}
 
-{% block title %}Tima attack{% endblock %}
+{% block title %}home{% endblock %}
 
 {% block content %}
-    <a href="{% url 'home' %}"><img src="{% static 'images/OIP.jpg' %}" class="image-button"></a>
-    <p>{{ name }}</p>
-    <p>
-        <img src="{% static 'images/video.gif' %}" class="centered-image">
-    </p>
+    <a href="{% url 'tima' %}"><img src="{% static 'images/R.png' %}" class="image-button"></a>
+    <img src="{% static 'images/1.jpg' %}" class="centered-image">
 {% endblock %}
