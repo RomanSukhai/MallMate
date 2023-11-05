@@ -69,7 +69,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'MallMate.wsgi.application'
+WSGI_APPLICATION = 'mallmate.wsgi.application'
 
 
 # Database
