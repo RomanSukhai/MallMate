@@ -465,8 +465,19 @@ body {
   /* Колір полоски */
 }
 
+.block-for-login {
+  width: 1228px;
+  height: 715px;
+  font-family: "urbanist";
+}
+.block-for-login_leftb {
+  background-color: white;
+  width: 50%;
+  height: 100%;
+  font-family: "urbanist";
+}
 .osnova {
-  width: 100;
+  width: 100px;
 }
 
 .block_zaibav {
@@ -534,15 +545,4 @@ input[placeholder=Password] {
   background-repeat: no-repeat;
   background-size: 20px 20px;
   padding-right: 10px;
-}
-
-.white-header {
-  background-color: white; /* Змінюємо фон на білий */
-}
-.white-header .home-content_header_container img {
-  max-width: 50px;
-  max-height: 50px; /* Зменшення розміру вставлених зображень */
-}
-.white-header .home-content_header_container a {
-  margin-left: 10px; /* Додамо відступ між кнопками */
 }/*# sourceMappingURL=main.css.map */

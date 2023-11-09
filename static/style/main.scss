@@ -588,10 +588,23 @@ body {
     /* Колір полоски */
 }
 
+.block-for-login{
+    width: 1228px;
+    height: 715px;
+    font-family: 'urbanist';
+    &_leftb{
+        background-color: white;
+        width: 50%;
+        height: 100%;
+        font-family: 'urbanist';
+    }
+    &_rightb{
 
+    }
+  }
 
 .osnova {
-    width: 100;
+    width: 100px;
 
 }
 
@@ -606,6 +619,9 @@ body {
     height: 70%;
 
 }
+
+
+
 
 .bordRegist {
     border-radius: 100px;

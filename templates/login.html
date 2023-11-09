@@ -1,17 +1,104 @@
-{% extends 'base.html' %}
-{% block content %}
-<div class="content-section d-flex justify-content-center mt-5">
-    <form method="post" class="mx-auto">
-        {% csrf_token %}
-        <div class="form-group">
-            <input type="email" class="form-control" name="{{ form.username.name }}" value="{{ form.username.value|default:''  }}" placeholder="Email">
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <script src="{% static 'scripts/jquery.min.js' %}"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{% static 'style/reserv.css' %}" rel="stylesheet">
+    <link href="{% static 'style/login.css' %}" rel="stylesheet">
+    <link href="{% static 'style/forma.css' %}" rel="stylesheet">
+    <link href="{% static 'style/cardMove2.css' %}" rel="stylesheet">
+    <link href="{% static 'bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+    <script src="{% static 'bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'scripts/home2.js' %}"></script>
+    <script src="{% static 'scripts/scrollreveal.min.js' %}"></script>
+</head>
+
+<body >
+
+
+
+    {% if messages %}
+    {% for message in messages %}
+    <div class="alert alert-{{ message.tags }}">
+        {{ message }}
+    </div>
+    {% endfor %}
+    {% endif %}
+
+
+    <div class="block-for-login ">
+
+        <div class="block-for-login_leftb">
+            <header class="home-content_header_container">
+                <div>
+                    <img src="../static/images/M.png" href="{% url 'landing' %} " class="for-img"></a>
+                    {% if user.is_authenticated %}
+                    Ви увійшли як {{ user.first_name }} {{ user.last_name }}
+                    <a href="{% url 'profile' %}" class="btn btn-primary btn-sm">Профіль</a>
+                    <a href="{% url 'logout' %}" class="btn btn-primary btn-sm">Вийти</a>
+                    {% else %}
+                    {% endif %}
+                </div>
+            </header>
+            <p align="center" style="font-size:50px;">Log in</p>
+            <p align="center" style="opacity: 0.6;">Welcome to MallMate! Please enter your email and password to get <br> started</p>
+
+            <!-- <form method="post" class="mx-auto">
+                {% csrf_token %}
+                <div class="form-group">
+                    <input type="email" class="form-control" name="{{ form.username.name }}"
+                        value="{{ form.username.value|default:''  }}" placeholder="Email">
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-control" name="{{ form.password.name }}" placeholder="Password">
+                </div>
+                <div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            Remember me
+                        </label>
+                    </div>
+                    <div><a href="{% url 'password_reset' %}">Forgot password?</a></div>
+                </div>
+                <button type="submit" class="btn btn-outline-info">log in</button>
+                
+            </form> -->
+            <div class="login-box">
+                <form>
+                  <div class="user-box">
+                    <input type="text" name="" required="">
+                    <label class="d-flex flex-column">Email<img class="icon" src="/static/icons/mail.svg" style="height: 15px; width: 15px;"></label>
+                    
+                  </div>
+                  <div class="user-box">
+                    <input type="password" name="" required="">
+                    <label class="d-flex flex-column">Password<img class="icon" src="/static/icons/lock.svg" style="height: 15px; width: 15px;"></label>
+                  </div>
+                  <div class="d-flex flex-wrap justify-content-between">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault" style="color: #BD9F9F;">
+                            Remember me
+                        </label>
+                    </div>
+                    <div ><a style="color: #BD9F9F;" href="{% url 'password_reset' %}" >Forgot password?</a></div>
+                </div>
+                <button type="submit" class="btn btn-outline-info">log in</button>
+                  
+                </form>
+              </div>
+
+            <p>Не маєте акаунту? <a href="{% url 'register' %}">Зареєструйтеся</a></p>
         </div>
-        <div class="form-group">
-            <input type="password" class="form-control" name="{{ form.password.name }}" placeholder="Password">
+        <div>
+
         </div>
-        <button type="submit" class="btn btn-outline-info">Увійти</button>
-        <p>Не маєте акаунту? <a href="{% url 'register' %}">Зареєструйтеся</a></p>
-        <p>Забули пароль? <a href="{% url 'password_reset' %}">Скинути пароль</a></p>
-    </form>
-</div>
-{% endblock %}
+
+    </div>
+</body>
+
+</html>

@@ -122,3 +122,13 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
+$(document).ready(function() {
+    $('#inputField').on('input', function() {
+      var inputValue = $(this).val();
+      if (inputValue.length > 0) {
+        $('.icon').addClass('hide');
+      } else {
+        $('.icon').removeClass('hide');
+      }
+    });
+  });
