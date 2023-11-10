@@ -4,19 +4,22 @@
 
 <head>
     <meta charset="UTF-8">
-    <script src="{% static 'scripts/jquery.min.js' %}"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="{% static 'scripts/jquery.min.js' %}"></script>
+    <script src="{% static 'scripts/login.js' %}"></script>
+    <script src="{% static 'bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'scripts/scrollreveal.min.js' %}"></script>
+    <script src="{% static 'scripts/swiper.min.js' %}"></script>
     <link href="{% static 'style/reserv.css' %}" rel="stylesheet">
     <link href="{% static 'style/login.css' %}" rel="stylesheet">
-    <link href="{% static 'style/forma.css' %}" rel="stylesheet">
-    <link href="{% static 'style/cardMove2.css' %}" rel="stylesheet">
     <link href="{% static 'bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
-    <script src="{% static 'bootstrap/js/bootstrap.bundle.min.js' %}"></script>
-    <script src="{% static 'scripts/home2.js' %}"></script>
-    <script src="{% static 'scripts/scrollreveal.min.js' %}"></script>
+    <link href="{% static 'style/forma.css' %}" rel="stylesheet">
+    <link href="{% static 'style/main.css' %}" rel="stylesheet">
+    <link href="{% static 'style/shtora.css' %}" rel="stylesheet">
+    <link href="{% static 'style/swiper.min.css' %}" rel="stylesheet">
 </head>
 
-<body >
+<body>
 
 
 
@@ -29,12 +32,12 @@
     {% endif %}
 
 
-    <div class="block-for-login ">
+    <div class="block-for-login d-flex justify-content-between">
 
         <div class="block-for-login_leftb">
             <header class="home-content_header_container">
                 <div>
-                    <img src="../static/images/M.png" href="{% url 'landing' %} " class="for-img"></a>
+                    <a href="{% url 'landing' %} "><img src="../static/images/M.png" class="for-img"></a>
                     {% if user.is_authenticated %}
                     Ви увійшли як {{ user.first_name }} {{ user.last_name }}
                     <a href="{% url 'profile' %}" class="btn btn-primary btn-sm">Профіль</a>
@@ -43,8 +46,10 @@
                     {% endif %}
                 </div>
             </header>
-            <p align="center" style="font-size:50px;">Log in</p>
-            <p align="center" style="opacity: 0.6;">Welcome to MallMate! Please enter your email and password to get <br> started</p>
+            <p align="center" style="font-size:50px; margin-top: 7%; margin-bottom: 0px;">Log in</p>
+            <p align="center" style="opacity: 0.6 ;">Welcome to MallMate! Please enter your email and password to get
+                <br> started
+            </p>
 
             <!-- <form method="post" class="mx-auto">
                 {% csrf_token %}
@@ -67,38 +72,55 @@
                 <button type="submit" class="btn btn-outline-info">log in</button>
                 
             </form> -->
-            <div class="login-box">
+            <div class="login-box d-flex justify-content-center align-items-center">
                 <form>
-                  <div class="user-box">
-                    <input type="text" name="" required="">
-                    <label class="d-flex flex-column">Email<img class="icon" src="/static/icons/mail.svg" style="height: 15px; width: 15px;"></label>
-                    
-                  </div>
-                  <div class="user-box">
-                    <input type="password" name="" required="">
-                    <label class="d-flex flex-column">Password<img class="icon" src="/static/icons/lock.svg" style="height: 15px; width: 15px;"></label>
-                  </div>
-                  <div class="d-flex flex-wrap justify-content-between">
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                        <label class="form-check-label" for="flexCheckDefault" style="color: #BD9F9F;">
-                            Remember me
-                        </label>
-                    </div>
-                    <div ><a style="color: #BD9F9F;" href="{% url 'password_reset' %}" >Forgot password?</a></div>
-                </div>
-                <button type="submit" class="btn btn-outline-info">log in</button>
-                  
-                </form>
-              </div>
+                    <div class="user-box">
+                        <input type="text" name="" required="" id="username">
+                        <label class="d-flex flex-column">Email<img id="usernameIcon" class="icon"
+                                src="/static/icons/mail.svg" style="height: 15px; width: 15px;"></label>
 
-            <p>Не маєте акаунту? <a href="{% url 'register' %}">Зареєструйтеся</a></p>
+                    </div>
+                    <div class="user-box">
+                        <input type="password" name="" required="" id="password">
+                        <label class="d-flex flex-column">Password<img id="passwordIcon" class="icon"
+                                src="/static/icons/lock.svg" style="height: 15px; width: 15px;"></label>
+                    </div>
+                    <div class="d-flex flex-wrap justify-content-between">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault"
+                                style="color: #BD9F9F; text-align: center;">
+                                Remember <br> me
+                            </label>
+                        </div>
+                        <div><a style="color: #BD9F9F;" href="{% url 'password_reset' %}">Forgot password?</a></div>
+                    </div>
+                    <button class=" butt"><a style="position: relative; bottom: 12px; text-decoration: none;"
+                            href="{% url 'login' %}">Log in</a></button>
+
+                </form>
+            </div>
+            <div class="d-flex align-items-center justify-content-around text-block" id="fromTop">
+                <div class="divider-f"></div>
+                <p class="or-f ">or</p>
+                <div class="divider-f"></div>
+            </div>
+            <div class="d-flex align-items-center justify-content-center"><button class=" butt2"><a
+                        href="{% url 'register' %}">
+                        create an account</a></button></div>
+
         </div>
         <div>
+            <swiper-container class="mySwiper">
 
+                    <swiper-slide>Slide 1</swiper-slide>
+                    <swiper-slide>Slide 2</swiper-slide>
+                    <swiper-slide>Slide 3</swiper-slide>
+                    <swiper-slide>Slide 4</swiper-slide>
+                </swiper-container>
+            </div>
         </div>
-
-    </div>
+        
 </body>
 
 </html>

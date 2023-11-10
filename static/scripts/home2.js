@@ -121,14 +121,3 @@ document.addEventListener('DOMContentLoaded', function () {
     sr.reveal('#fromBottom', { origin: 'bottom' });
 });
 
-
-$(document).ready(function() {
-    $('#inputField').on('input', function() {
-      var inputValue = $(this).val();
-      if (inputValue.length > 0) {
-        $('.icon').addClass('hide');
-      } else {
-        $('.icon').removeClass('hide');
-      }
-    });
-  });
