@@ -121,3 +121,28 @@ document.addEventListener('DOMContentLoaded', function () {
     sr.reveal('#fromBottom', { origin: 'bottom' });
 });
 
+$(document).ready(function () {
+    var mySwiper = new Swiper('.mySwiper', {
+ 
+      spaceBetween: 100,
+      centeredSlides: true,
+      autoplay: {
+        delay: 3500,
+        disableOnInteraction: false,
+      },
+      speed: 1100,
+      
+    });
+});
+$(document).ready(function () {
+    var mySwiper = new Swiper('.myUniqueSwiper', {
+      direction: 'vertical',
+      spaceBetween: 5,
+      centeredSlides: true,
+      autoplay: {
+        delay: 3500,
+        disableOnInteraction: false,
+      },
+      speed: 1100,
+    });
+  });

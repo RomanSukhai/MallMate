@@ -9,20 +9,18 @@
     <script src="{% static 'scripts/login.js' %}"></script>
     <script src="{% static 'bootstrap/js/bootstrap.bundle.min.js' %}"></script>
     <script src="{% static 'scripts/scrollreveal.min.js' %}"></script>
-    <script src="{% static 'scripts/swiper.min.js' %}"></script>
+    <script src="{% static 'scripts/swiper-bundle.min.js' %}"></script>
+    <script src="{% static 'scripts/home2.js' %}"></script>
     <link href="{% static 'style/reserv.css' %}" rel="stylesheet">
     <link href="{% static 'style/login.css' %}" rel="stylesheet">
     <link href="{% static 'bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
     <link href="{% static 'style/forma.css' %}" rel="stylesheet">
     <link href="{% static 'style/main.css' %}" rel="stylesheet">
     <link href="{% static 'style/shtora.css' %}" rel="stylesheet">
-    <link href="{% static 'style/swiper.min.css' %}" rel="stylesheet">
+    <link href="{% static 'style/swiper-bundle.min.css' %}" rel="stylesheet">
 </head>
 
 <body>
-
-
-
     {% if messages %}
     {% for message in messages %}
     <div class="alert alert-{{ message.tags }}">
@@ -100,7 +98,7 @@
 
                 </form>
             </div>
-            <div class="d-flex align-items-center justify-content-around text-block" id="fromTop">
+            <div class="d-flex align-items-center justify-content-around text-block">
                 <div class="divider-f"></div>
                 <p class="or-f ">or</p>
                 <div class="divider-f"></div>
@@ -110,17 +108,34 @@
                         create an account</a></button></div>
 
         </div>
-        <div>
-            <swiper-container class="mySwiper">
-
-                    <swiper-slide>Slide 1</swiper-slide>
-                    <swiper-slide>Slide 2</swiper-slide>
-                    <swiper-slide>Slide 3</swiper-slide>
-                    <swiper-slide>Slide 4</swiper-slide>
-                </swiper-container>
+        <div class="d-flex justify-content-center align-items-center flex-column">
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img style=" object-fit: cover;" src="/static/images/cards/Frame 8.png"
+                            alt=""></div>
+                    <div class="swiper-slide"><img style=" object-fit: cover;" src="/static/images/cards/Frame 9.png"
+                            alt=""></div>
+                    <div class="swiper-slide"><img style=" object-fit: cover;" src="/static/Gifes/Grabacion.gif" alt="">
+                    </div>
+                </div>
             </div>
+            <div class="swiper myUniqueSwiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <span class="slide-text">Personal sales</span>
+                  </div>
+                  <div class="swiper-slide">
+                    <span class="slide-text">Search store</span>
+                  </div>
+                  <div class="swiper-slide">
+                    <span class="slide-text">Navigate with map</span>
+                  </div>
+                </div>
+              </div>
         </div>
-        
+
+    </div>
+
 </body>
 
 </html>
