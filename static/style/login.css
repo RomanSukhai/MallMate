@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @import url(forma.css);
 .block-for-login {
   width: 1228px;
@@ -26,4 +27,9 @@ body {
   width: 44px;
   height: 44px;
   margin: 20px 0 0 30px;
+=======
+.box {
+  opacity: 0;
+  transition: all 0.5s ease;
+>>>>>>> mallmate_110.203
 }/*# sourceMappingURL=login.css.map */
