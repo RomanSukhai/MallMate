@@ -59,6 +59,10 @@ body {
     &_menu {
         width: 1440px;
         height: 100.615px;
+        position: fixed;
+        top: 0;
+        z-index: 1000;
+        background: white;
 
         &_line {
             height: 1px;
