@@ -34,9 +34,9 @@
 
         <div class="block-for-register_leftb">
             <header class="home-content_header_container">
-                <div>
+                <div class="d-flex flex-row">
                     <a href="{% url 'landing' %} "><img src="../static/images/M.png" class="for-img"></a>
-                    <button class="button"><a href="{% url 'login' %}">log in</a></button>
+                    <button class="button" onclick="location.href='{% url 'login' %}'"><a>Log in</a></button>
                     {% if user.is_authenticated %}
                     Ви увійшли як {{ user.first_name }} {{ user.last_name }}
                     <a href="{% url 'profile' %}" class="btn btn-primary btn-sm">Профіль</a>
