@@ -34,28 +34,24 @@ from .forms import RememberMeAuthenticationForm
 
 class RememberMeLoginView(LoginView):
     form_class = RememberMeAuthenticationForm
-    template_name = 'login.html'  # Вказуйте ваш шлях до шаблону відповідно
+    template_name = 'login.html'  
 
     def form_valid(self, form):
         remember_me = form.cleaned_data.get('remember_me', False)
 
-        # Виклик батьківського методу form_valid
         response = super().form_valid(form)
 
         if remember_me:
-            # Встановлення терміну дії сесії на довгий період (наприклад, 30 днів)
             self.request.session.set_expiry(30 * 24 * 60 * 60)
         else:
-            # Сесія закінчиться при закритті браузера
+
             self.request.session.set_expiry(0)
 
         return response
 
     def form_invalid(self, form):
-        # Виклик батьківського методу form_invalid
         response = super().form_invalid(form)
 
-        # Очистка терміну дії сесії при невірних облікових даних
         self.request.session.set_expiry(0)
 
         return response

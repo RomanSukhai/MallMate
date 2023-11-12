@@ -3,7 +3,7 @@ import mysql.connector
 connection = mysql.connector.connect(
     host='localhost',
     user='root',
-    passwd='root'
+    passwd='namor2004'
 )
 
 cursor = connection.cursor()
@@ -16,7 +16,7 @@ connection.close()
 dataBase = mysql.connector.connect(
     host='localhost',
     user='root',
-    passwd='root',
+    passwd='namor2004',
 
     database='MallMate'
 )

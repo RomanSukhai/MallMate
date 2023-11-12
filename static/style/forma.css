@@ -165,6 +165,12 @@
   bottom: 0px;
   text-decoration: none;
 }
+.butt2:hover {
+  background-color: #fdf6f6;
+}
+.butt:hover {
+  background-color: #fdf6f6;
+}
 .divider-f {
   height: 100%;
   width: 274px;
