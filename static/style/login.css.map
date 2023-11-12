@@ -1,5 +1,1 @@
-<<<<<<< HEAD
-{"version":3,"sources":["login.scss","login.css"],"names":[],"mappings":"AAAU,sBAAA;AACR;EACE,aAAA;EACA,aAAA;ACCJ;ADAI;EACI,uBAAA;EACA,UAAA;EACA,YAAA;ACER;ADCI;EACE,UAAA;EACA,YAAA;ACCN;;ADEA;EACE,aAAA;EACA,uBAAA;EACA,mBAAA;EACA,iBAAA;EACA,SAAA;EACA,oCAAA;ACCF;;ADCA;EACE,WAAA;EACA,YAAA;EACA,qBAAA;ACEF","file":"login.css"}
-=======
-{"version":3,"sources":["login.scss","login.css"],"names":[],"mappings":"AAAA;EACI,UAAA;EACA,yBAAA;ACCJ","file":"login.css"}
->>>>>>> mallmate_110.203
+{"version":3,"sources":["login.scss","login.css"],"names":[],"mappings":"AACU,sBAAA;AACR;EACE,aAAA;EACA,aAAA;ACAJ;ADCI;EACI,uBAAA;EACA,UAAA;EACA,YAAA;ACCR;ADEI;EACE,UAAA;EACA,YAAA;ACAN;;ADGA;EACE,aAAA;EACA,uBAAA;EACA,mBAAA;EACA,iBAAA;EACA,SAAA;EACA,oCAAA;ACAF;;ADEA;EACE,WAAA;EACA,YAAA;EACA,qBAAA;ACCF;;ADEA;EACI,UAAA;EACA,yBAAA;ACCJ","file":"login.css"}

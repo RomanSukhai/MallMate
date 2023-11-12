@@ -21,6 +21,8 @@ from django.urls import path
 from django.contrib.auth import views as auth_views
 import users.views as users_views
 from . import views as project_views
+from django.urls import path
+from users.views import RememberMeLoginView
 
 urlpatterns = [
     path('', project_views.landing, name='landing'),
@@ -31,7 +33,7 @@ urlpatterns = [
 
     path('register/', users_views.register, name='register'),
     path('profile/', users_views.profile, name='profile'),
-    path('login/', auth_views.LoginView.as_view(template_name='login.html'), name='login'),
+    path('login/', RememberMeLoginView.as_view(), name='login'),  
 
     path('logout/', auth_views.LogoutView.as_view(template_name='logout.html'), name='logout'),
     path('password-reset/', auth_views.PasswordResetView.as_view(template_name='password_reset.html'), name='password_reset'),

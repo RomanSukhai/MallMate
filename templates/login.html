@@ -36,12 +36,6 @@
             <header class="home-content_header_container">
                 <div>
                     <a href="{% url 'landing' %} "><img src="../static/images/M.png" class="for-img"></a>
-                    {% if user.is_authenticated %}
-                    Ви увійшли як {{ user.first_name }} {{ user.last_name }}
-                    <a href="{% url 'profile' %}" class="btn btn-primary btn-sm">Профіль</a>
-                    <a href="{% url 'logout' %}" class="btn btn-primary btn-sm">Вийти</a>
-                    {% else %}
-                    {% endif %}
                 </div>
             </header>
             <p align="center" style="font-size:50px; margin-top: 7%; margin-bottom: 0px;">Log in</p>
@@ -71,32 +65,30 @@
                 
             </form> -->
             <div class="login-box d-flex justify-content-center align-items-center">
-                <form>
+                <form method="POST" action="{% url 'login' %}">
+                    {% csrf_token %}
                     <div class="user-box">
-                        <input type="text" name="" required="" id="username">
+                        <input type="text" name="{{ form.username.name }}" required="" id="username">
                         <label class="d-flex flex-column">Email<img id="usernameIcon" class="icon"
                                 src="/static/icons/mail.svg" style="height: 15px; width: 15px;"></label>
-
                     </div>
                     <div class="user-box">
-                        <input type="password" name="" required="" id="password">
+                        <input type="password" name="{{ form.password.name }}" required="" id="password">
                         <label class="d-flex flex-column">Password<img id="passwordIcon" class="icon"
                                 src="/static/icons/lock.svg" style="height: 15px; width: 15px;"></label>
                     </div>
                     <div class="d-flex flex-wrap justify-content-between">
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                            <label class="form-check-label" for="flexCheckDefault"
-                                style="color: #BD9F9F; text-align: center;">
+                            <input class="form-check-input" type="checkbox" name="{{ form.remember_me.name }}" value="on" id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault" style="color: #BD9F9F; text-align: center;">
                                 Remember <br> me
                             </label>
                         </div>
                         <div><a style="color: #BD9F9F;" href="{% url 'password_reset' %}">Forgot password?</a></div>
                     </div>
-                    <button class=" butt"><a style="position: relative; bottom: 12px; text-decoration: none;"
-                            href="{% url 'login' %}">Log in</a></button>
-
+                    <button class="butt" type="submit">Log in</button>
                 </form>
+                
             </div>
             <div class="d-flex align-items-center justify-content-around text-block">
                 <div class="divider-f"></div>

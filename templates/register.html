@@ -34,9 +34,9 @@
 
         <div class="block-for-register_leftb">
             <header class="home-content_header_container">
-                <div class="d-flex ">
+                <div>
                     <a href="{% url 'landing' %} "><img src="../static/images/M.png" class="for-img"></a>
-                    <button class="button">log in</button>
+                    <button class="button"><a href="{% url 'login' %}">log in</a></button>
                     {% if user.is_authenticated %}
                     Ви увійшли як {{ user.first_name }} {{ user.last_name }}
                     <a href="{% url 'profile' %}" class="btn btn-primary btn-sm">Профіль</a>
@@ -47,31 +47,34 @@
             </header>
             <p align="center" style="font-size:40px; margin-top: 7%; font-weight: bold; line-height: 70px; margin-bottom: 0px;">Create an account</p>
             <div class="login-box d-flex justify-content-center align-items-center">
-                <form>
+                <form method="POST">
+                    {% csrf_token %}
                     <div class="user-box">
-                        <input type="text" name="" required="" id="username">
+                        <input type="text" class="form-control" name="{{ form.first_name.name }}">
                         <label class="d-flex flex-column">First name</label>
 
                     </div>
                     <div class="user-box">
-                        <input type="password" name="" required="" id="password">
+                        <input type="text" class="form-control" name="{{ form.last_name.name }}">
                         <label class="d-flex flex-column">Last name</label>
                     </div>
                     <div class="user-box">
-                        <input type="password" name="" required="" id="password">
+                        <input type="email" class="form-control" name="{{ form.email.name }}">
                         <label class="d-flex flex-column">Email</label>
                     </div>
                     <div class="user-box">
-                        <input type="password" name="" required="" id="password">
+                        <input type="password" class="form-control" name="{{ form.password1.name }}">
                         <label class="d-flex flex-column">Password</label>
                     </div>
                     <div class="user-box">
-                        <input type="password" name="" required="" id="password">
+                        <input type="password" class="form-control" name="{{ form.password2.name }}">
                         <label class="d-flex flex-column">Confirm password</label>
                     </div>
                     <div class="parent-container d-flex flex-column">
-                        <button class="button-big"> <a style="font-size: 23px; font-weight: 400;">Create an account</a> </button>
-                         </div>
+                        <button class="button-big">
+                            <a style="font-size: 23px; font-weight: 400;">Create an account</a>
+                        </button>
+                    </div>
                     <div class="parent-container d-flex flex-column">
                         <button class="button-big"><img id="GoogleIcon" class="icon"
                             src="/static/icons/google.svg" style="height: 28px; width: 32px;"> <a style="font-size: 20px; font-weight: 400;"> Sign up with Google</a> </button>
