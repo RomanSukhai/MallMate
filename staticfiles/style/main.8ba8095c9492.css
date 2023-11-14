@@ -428,7 +428,7 @@ body {
 }
 
 .triangle {
-  background-image: url("../images/triangle.png");
+  background-image: url("../images/Triangle.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -549,4 +549,4 @@ input[placeholder=Password] {
   background-repeat: no-repeat;
   background-size: 20px 20px;
   padding-right: 10px;
-}/*# sourceMappingURL=main.css.map */
+}/*# sourceMappingURL=main.8ba8095c9492.css.map */
