@@ -1,0 +1,29 @@
+@import url("forma.f2fb0a3793ca.css");
+.block-for-login {
+  width: 1228px;
+  height: 715px;
+}
+.block-for-login_leftb {
+  background-color: white;
+  width: 50%;
+  height: 100%;
+}
+.block-for-login_rightb {
+  width: 50%;
+  height: 100%;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  background-color: #fdf6f6 !important;
+}
+
+.for-img {
+  width: 44px;
+  height: 44px;
+  margin: 20px 0 0 30px;
+}/*# sourceMappingURL=login.css.map */

@@ -1,0 +1,87 @@
+@import url("forma.f2fb0a3793ca.css");
+.block-for-register {
+  width: 1228px;
+  height: 715px;
+}
+.block-for-register_leftb {
+  background-color: white;
+  width: 50%;
+  height: 100%;
+}
+.block-for-register_rightb {
+  width: 50%;
+  height: 100%;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  background-color: #fdf6f6 !important;
+}
+
+.for-img {
+  width: 44px;
+  height: 44px;
+  margin: 20px 0 0 30px;
+}
+
+.for-button {
+  width: 44px;
+  height: 44px;
+  margin: 20px 0 0 30px;
+}
+
+.button {
+  width: 89px;
+  height: 30px;
+  background-color: transparent;
+  border: 1px solid #333;
+  border-radius: 20px;
+  color: black;
+  font-size: 20px;
+  transition: background-color 0.1s;
+  margin-top: 27px;
+  margin-left: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.button:hover {
+  background-color: #fdf6f6;
+}
+
+.parent-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+}
+
+.button-big {
+  width: 50%;
+  height: 52px;
+  background-color: white;
+  border: 1px solid #333;
+  border-radius: 100px;
+  color: #333;
+  font-size: 25px;
+  transition: background-color 0.1s;
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.button-big:hover {
+  background-color: #F6E6E6;
+}
+
+.header {
+  width: 100%;
+  height: auto;
+  display: flex;
+  background: linear-gradient(to right, #FFFFFF 50%, #fdf6f6 50%);
+}/*# sourceMappingURL=register.css.map */
