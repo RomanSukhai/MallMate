@@ -84,7 +84,7 @@ WSGI_APPLICATION = 'mallmate.wsgi.application'
 # }
 
 DATABASES = {
-    'default': dj_database_url.config(default='mysql://localhost/mydb')
+    'default': dj_database_url.config(env='JAWSDB_URL', default='mysql://localhost/mydb')
 }
 
 
