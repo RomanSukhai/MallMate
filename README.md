@@ -4,11 +4,7 @@
 git clone -b mallmate_101_final_log_reg_0.3 https://github.com/RomanSukhai/MallMate.git
 cd .\MallMate\
 ```
-вкажіть свій пароль до MYSQL
 
-``` shell
-setx MYSQL_PWD "ваш_пароль_до_MYSQL"
-```
 створіть віртуальне середовище
 
 ``` shell
