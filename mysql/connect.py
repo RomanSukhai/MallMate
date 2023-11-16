@@ -1,10 +1,9 @@
 import mysql.connector
-import os
 
 connection = mysql.connector.connect(
     host='localhost',
     user='root',
-    passwd=os.environ['MYSQL_PWD']
+    passwd='namor2004'
 )
 
 cursor = connection.cursor()
@@ -17,7 +16,7 @@ connection.close()
 dataBase = mysql.connector.connect(
     host='localhost',
     user='root',
-    passwd=os.environ['MYSQL_PWD'],
+    passwd='namor2004',
 
     database='MallMate'
 )
