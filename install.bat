@@ -15,9 +15,11 @@ cd /d "%~dp0"
 
 
 @chcp 65001 >nul
-set /p MYSQL_PASSWORD=Введіть ваш пароль від MYSQL: 
-echo Ви ввели: %MYSQL_PASSWORD%
+set /p MYSQL_PASSWORD=Введіть ваш пароль від MYSQL:
 setx MYSQL_PWD "%MYSQL_PASSWORD%" /M
+
+echo Супер, тепер трохи терпіння (установка займе трохи часу)
+echo Під час очікування можна час від часу тицяти ENTER (якщо дуже давно нічого не з'являлося на екрані)
 
 python -m venv virtenv 
 call virtenv\Scripts\activate
