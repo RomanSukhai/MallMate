@@ -2,7 +2,7 @@
 chcp 65001
 set /p MYSQL_PASSWORD=Введіть ваш пароль від MYSQL: 
 echo Ви ввели: %MYSQL_PASSWORD%
-setx MYSQL_PWD=%MYSQL_PASSWORD%
+setx MYSQL_PWD "%MYSQL_PASSWORD%" /M
 
 python -m venv virtenv 
 call virtenv\Scripts\activate
