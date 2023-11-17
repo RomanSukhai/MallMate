@@ -5,7 +5,7 @@ git clone -b mallmate_101_final_log_reg_0.3.1 https://github.com/RomanSukhai/Mal
 cd .\MallMate\
 
 ```
-Якщо у вас windows, **З ПРАВАМИ АДМІНІСТРАТОРА** запустити файл install.bat в папці проекту. Воно все що треба встановить і запустить сервер
+**З ПРАВАМИ АДМІНІСТРАТОРА** запустити файл install.bat в папці проекту. Воно встановить все що треба
 
    ![image](https://github.com/RomanSukhai/MallMate/assets/118640498/9aee1e5e-916c-4109-94e2-308a05af3022)
 
