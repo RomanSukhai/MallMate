@@ -30,6 +30,10 @@ urlpatterns = [
     path('admin/', admin.site.urls),
 
     path('home', project_views.home, name='home'),
+    path('about', project_views.about, name='about'),
+    path('profile', project_views.profile, name='profile'),
+    path('info', project_views.info, name='info'),
+
 
     path('register/', users_views.register, name='register'),
     path('profile/', users_views.profile, name='profile'),

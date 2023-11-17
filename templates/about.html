@@ -1,0 +1,47 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="{% static 'scripts/jquery.min.js' %}"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{% static 'style/reserv.css' %}" rel="stylesheet">
+    <link href="{% static 'style/main.css' %}" rel="stylesheet">
+    <link href="{% static 'style/cardMove2.css' %}" rel="stylesheet">
+    <link href="{% static 'bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+    <script src="{% static 'bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'jquery.min.js' %}"></script>
+    <script src="{% static 'scripts/home2.js' %}"></script>
+    <script src="{% static 'scripts/scrollreveal.min.js' %}"></script>
+</head>
+<body>
+    <header class="home-content_header_container">
+        <div>
+            <a href="{% url 'landing' %}" >MallMate</a>
+            {% if user.is_authenticated %}
+                Ви увійшли як {{ user.first_name }} {{ user.last_name }}
+                <a href="{% url 'profile' %}" class="btn btn-primary btn-sm">Профіль</a>
+                <a href="{% url 'logout' %}" class="btn btn-primary btn-sm">Вийти</a>
+            {% else %}
+                <a href="{% url 'login' %}" class="btn btn-primary btn-sm">Увійти</a>
+                <a href="{% url 'register' %}" class="btn btn-primary btn-sm">Зареєструватися</a>
+            {% endif %}
+        </div>
+    </header>
+
+
+    {% if messages %}
+        {% for message in messages %}
+            <div class="alert alert-{{ message.tags }}">
+                {{ message }}
+            </div>
+        {% endfor %}
+    {% endif %}
+    
+    <h1>*Дуже важлива інформація про нас (MallMate)*</h1>
+
+    <img src="../static/Gifes/about.gif" alt="woohoo">
+
+
+</body>
+</html>

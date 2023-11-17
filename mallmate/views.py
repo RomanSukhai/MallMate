@@ -14,3 +14,12 @@ def home(request):
     }
     return render(request, 'home.html', context)
 
+def about(request):
+    return render(request, 'about.html')
+
+@login_required()
+def profile(request):
+    return render(request, 'profile.html')
+
+def info(request):
+    return render(request, 'info.html')

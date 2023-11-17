@@ -26,4 +26,8 @@ body {
   width: 44px;
   height: 44px;
   margin: 20px 0 0 30px;
+}
+
+.alert-wide {
+  width: 100vh;
 }/*# sourceMappingURL=login.css.map */

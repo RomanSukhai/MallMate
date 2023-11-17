@@ -27,16 +27,16 @@
             
             <dir class="home-content_menu_orig-menu ">
                 <ul class="home-content_menu_orig-menu_menu-list d-flex justify-content-center  align-items-center ">
-                    <li class="home-content_menu_orig-menu_menu-list_menu-item "><a href="#">home</a>
+                    <li class="home-content_menu_orig-menu_menu-list_menu-item "><a href="{% url 'home' %}">home</a>
                     </li>
                     <li class="home-content_menu_orig-menu_menu-list_menu-divider "></li>
-                    <li class="home-content_menu_orig-menu_menu-list_menu-item "><a href="#">about
+                    <li class="home-content_menu_orig-menu_menu-list_menu-item "><a href="{% url 'about' %}">about
                             Us</a></li>
                     <li class="home-content_menu_orig-menu_menu-list_menu-divider "></li>
-                    <li class="home-content_menu_orig-menu_menu-list_menu-item "><a href="#">service
+                    <li class="home-content_menu_orig-menu_menu-list_menu-item "><a href="{% url 'profile' %}">service
                             Profile</a></li>
                     <li class="home-content_menu_orig-menu_menu-list_menu-divider "></li>
-                    <li class="home-content_menu_orig-menu_menu-list_menu-item "><a href="#">useful
+                    <li class="home-content_menu_orig-menu_menu-list_menu-item "><a href="{% url 'info' %}">useful
                             information</a></li>
                 </ul>
             </dir>
@@ -150,7 +150,7 @@
             </div>
             <div
                 class="home-content_footer-content_add-button d-flex align-items-center justify-content-around home-content_footer-content_add " id="fromBottom">
-                <button class="home-content_footer-content_add-button_btn  ">register</button>
+                <button class="home-content_footer-content_add-button_btn" onclick="location.href='{% url 'register' %}'">register</button>
             </div>
 
         </div>
