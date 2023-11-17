@@ -1,8 +1,8 @@
 import mysql.connector
 import os
 
-MYSQL_PWD = os.environ.get('MYSQL_PWD', 'ВСТАНОВІТЬ ПАРОЛЬ')
-# print(MYSQL_PWD)
+MYSQL_PWD = os.environ.get('MYSQL_PWD', 'не вдалося отримати пароль. Запустіть install.bat і вкажіть свій пароль')
+print(MYSQL_PWD)
 
 connection = mysql.connector.connect(
     host='localhost',

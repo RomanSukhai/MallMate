@@ -82,7 +82,7 @@ WSGI_APPLICATION = 'mallmate.wsgi.application'
 #     }
 # }
 
-MYSQL_PWD = os.environ.get('MYSQL_PWD', 'ВСТАНОВТЬ ПАРОЛЬ')
+MYSQL_PWD = os.environ.get('MYSQL_PWD', 'не вдалося отримати пароль. Запустіть install.bat і вкажіть свій пароль')
 
 DATABASES = {
     'default': {
