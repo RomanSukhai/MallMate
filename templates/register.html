@@ -21,9 +21,10 @@
 </head>
 
 <body>
+<div class="d-flex flex-column">
     {% if messages %}
     {% for message in messages %}
-    <div class="alert alert-{{ message.tags }}">
+    <div class="alert alert-{{ message.tags }} alert-wide">
         {{ message }}
     </div>
     {% endfor %}
@@ -37,12 +38,6 @@
                 <div class="d-flex flex-row">
                     <a href="{% url 'landing' %} "><img src="../static/images/M.png" class="for-img"></a>
                     <button class="button" onclick="location.href='{% url 'login' %}'"><a>Log in</a></button>
-                    {% if user.is_authenticated %}
-                    Ви увійшли як {{ user.first_name }} {{ user.last_name }}
-                    <a href="{% url 'profile' %}" class="btn btn-primary btn-sm">Профіль</a>
-                    <a href="{% url 'logout' %}" class="btn btn-primary btn-sm">Вийти</a>
-                    {% else %}
-                    {% endif %}
                 </div>
             </header>
             <p align="center" style="font-size:40px; margin-top: 7%; font-weight: bold; line-height: 70px; margin-bottom: 0px;">Create an account</p>
@@ -115,6 +110,7 @@
 
 
     </div>
+</div>
 
 </body>
 

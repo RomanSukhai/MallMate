@@ -8,13 +8,29 @@ from django.contrib.auth.views import LoginView
 
 
 def register(request):
+    error_messages = []
+
     if request.method == 'POST':
         form = RegisterForm(request.POST)
         if form.is_valid():
             form.save()
             email = form.cleaned_data.get('email')
-            messages.success(request, f'Успішно створено акаунт для {email}')
+            messages.success(request, f'Account successfully created for {email}')
             return redirect('login')
+        else:
+            # Add error messages for each form field to a list
+            for field, errors in form.errors.items():
+                for error in errors:
+                    # Check if the field has a label
+                    field_label = form.fields.get(field, None)
+                    if field_label:
+                        error_messages.append(f"{field_label.label}: {error}")
+                    else:
+                        error_messages.append(error)
+
+            # Display all error messages in a single alert
+            if error_messages:
+                messages.error(request, '\n'.join(error_messages), extra_tags='danger')
     else:
         form = RegisterForm()
 
@@ -26,11 +42,6 @@ def register(request):
 # class RememberMeLoginView(LoginView):
 #     form_class = RememberMeAuthenticationForm
 #     template_name = 'login.html'
-
-from django.contrib.auth.views import LoginView
-from django.contrib.auth import login
-from django.shortcuts import render
-from .forms import RememberMeAuthenticationForm
 
 class RememberMeLoginView(LoginView):
     form_class = RememberMeAuthenticationForm
@@ -44,13 +55,20 @@ class RememberMeLoginView(LoginView):
         if remember_me:
             self.request.session.set_expiry(30 * 24 * 60 * 60)
         else:
-
             self.request.session.set_expiry(0)
 
         return response
 
     def form_invalid(self, form):
         response = super().form_invalid(form)
+
+        for field, errors in form.errors.items():
+            for error in errors:
+                field_label = form.fields.get(field, None)
+                if field_label:
+                    messages.error(self.request, f"{field_label.label}: {error}", extra_tags='danger')
+                else:
+                    messages.error(self.request, error, extra_tags='danger')
 
         self.request.session.set_expiry(0)
 

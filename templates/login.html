@@ -24,9 +24,9 @@
     <div class="d-flex flex-column">
         {% if messages %}
         {% for message in messages %}
-        <div class="alert alert-{{ message.tags }} alert-wide">
+            <div class="alert alert-{{ message.tags }} alert-wide">
             {{ message }}
-        </div>
+            </div>
         {% endfor %}
         {% endif %}
 
