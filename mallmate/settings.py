@@ -82,12 +82,14 @@ WSGI_APPLICATION = 'mallmate.wsgi.application'
 #     }
 # }
 
+MYSQL_PWD = os.environ.get('MYSQL_PWD', 'ВСТАНОВТЬ ПАРОЛЬ')
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'MallMate',
         'USER': 'root',
-        'PASSWORD': 'namor2004',
+        'PASSWORD': MYSQL_PWD,
         'HOST': 'localhost',
         'PORT': '3306',
     }

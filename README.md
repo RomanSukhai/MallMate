@@ -5,11 +5,15 @@ git clone -b mallmate_101_final_log_reg_0.3 https://github.com/RomanSukhai/MallM
 cd .\MallMate\
 ```
 
+1 раз в житті ввести цю штуку
+``` shell
+$env:MYSQL_PWD = "ВАШ_ПАРОЛЬ_MYSQL"
+```
+
 створіть віртуальне середовище
 
 ``` shell
-pip install virtualenv
-virtualenv virtenv 
+python -m virtualenv virtenv 
 .\virtenv\Scripts\activate 
 pip install -r requirements.txt
 ```
