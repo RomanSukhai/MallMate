@@ -3,6 +3,7 @@
 ``` shell
 git clone -b mallmate_101_final_log_reg_0.3.1 https://github.com/RomanSukhai/MallMate.git
 cd .\MallMate\
+
 ```
 Якщо у вас windows, __**З ПРАВАМИ АДМІНІСТРАТОРА**__ запустити файл install.bat в папці проекту. Воно все що треба встановить і запустить сервер
 
