@@ -9,7 +9,7 @@ cd .\MallMate\
 
 ``` shell
 pip install virtualenv
-virtualenv virtenv 
+python -m venv virtenv
 .\virtenv\Scripts\activate 
 pip install -r requirements.txt
 ```
