@@ -8,7 +8,6 @@ cd .\MallMate\
 створіть віртуальне середовище
 
 ``` shell
-pip install virtualenv
 python -m venv virtenv
 .\virtenv\Scripts\activate 
 pip install -r requirements.txt
