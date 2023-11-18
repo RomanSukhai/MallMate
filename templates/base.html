@@ -22,7 +22,7 @@
                 <a href='{% url 'landing' %}'><img src="{% static 'images/M.png' %}" class="img-fluid logo" alt=""></a>
                 {% if user.is_authenticated %}
 
-                {% if request.path == '/home/' %}
+                {% if request.path != '/home' %}
                 <button class="button" onclick="location.href='{% url 'home' %}'">home</button>
                 {% endif %}
 

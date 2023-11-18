@@ -1,26 +1,26 @@
-import mysql.connector
-import os
+# import mysql.connector
+# import os
 
-MYSQL_PWD = os.environ.get('MYSQL_PWD', 'не вдалося отримати пароль. Запустіть install.bat і вкажіть свій пароль')
-print(MYSQL_PWD)
+# MYSQL_PWD = os.environ.get('MYSQL_PWD', 'namor2004')
+# print(MYSQL_PWD)
 
-connection = mysql.connector.connect(
-    host='localhost',
-    user='root',
-    passwd=MYSQL_PWD
-)
+# connection = mysql.connector.connect(
+#     host='localhost',
+#     user='root',
+#     passwd=MYSQL_PWD
+# )
 
-cursor = connection.cursor()
+# cursor = connection.cursor()
 
-cursor.execute("CREATE DATABASE IF NOT EXISTS MallMate")
+# cursor.execute("CREATE DATABASE IF NOT EXISTS MallMate")
 
-cursor.close()
-connection.close()
+# cursor.close()
+# connection.close()
 
-dataBase = mysql.connector.connect(
-    host='localhost',
-    user='root',
-    passwd=MYSQL_PWD,
+# dataBase = mysql.connector.connect(
+#     host='localhost',
+#     user='root',
+#     passwd=MYSQL_PWD,
 
-    database='MallMate'
-)
+#     database='MallMate'
+# )
