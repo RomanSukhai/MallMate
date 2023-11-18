@@ -1,16 +1,25 @@
 <h1>MallMate</h1>
 
 ``` shell
-git clone -b mallmate_101_final_log_reg_0.3.5 https://github.com/RomanSukhai/MallMate.git
+git clone -b mallmate_101_final_log_reg_0.3 https://github.com/RomanSukhai/MallMate.git
 cd .\MallMate\
-
 ```
-Запустити файл install.bat в папці проекту. Воно встановить все що треба
-Щоб запустити після встановлення, відкрити run.bat
-Можна і через термінал щоб кожен раз в папку не лізти
 
-```bash
-.\run.bat
+створіть віртуальне середовище
+
+``` shell
+pip install virtualenv
+virtualenv virtenv 
+.\virtenv\Scripts\activate 
+pip install -r requirements.txt
+```
+
+Тепер окремо запустити файл connect.py що в папці mysql
+
+``` shell
+python manage.py makemigrations
+python manage.py migrate 
+python manage.py runserver
 ```
 
 
