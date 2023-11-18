@@ -7,8 +7,10 @@
 .logo {
   width: 44px;
   margin-left: 34.47px;
+  margin-right: 34.47px;
   margin-top: 38.1px;
   margin-bottom: 38.1px;
+  background-color: #FFFFFF;
 }
 
 .image-container {
@@ -29,9 +31,10 @@
 
 .header {
   width: 100%;
-  height: auto;
+  min-height: -moz-fit-content;
+  min-height: fit-content;
   display: flex;
-  background: linear-gradient(to right, #FFFFFF 50%, #fdf6f6 50%);
+  background: white;
 }
 
 .my-container {
@@ -57,6 +60,27 @@
   align-items: center;
 }
 .button:hover {
+  background-color: #fdf6f6;
+}
+
+.button-adaptive {
+  min-width: -moz-fit-content;
+  min-width: fit-content;
+  height: 40px;
+  background-color: #FFFFFF;
+  border: 1px solid #333;
+  border-radius: 25px;
+  color: #333;
+  font-size: 25.5px;
+  transition: background-color 0.3s;
+  white-space: nowrap;
+  margin-top: 43.54px;
+  margin-left: 30.84px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.button-adaptive:hover {
   background-color: #fdf6f6;
 }
 
@@ -133,4 +157,4 @@
   left: 0;
   color: #000000;
   font-size: 16px;
-}/*# sourceMappingURL=passwordreset.css.map */
+}/*# sourceMappingURL=base.css.map */
