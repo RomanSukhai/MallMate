@@ -36,6 +36,7 @@ urlpatterns = [
 
 
     path('register/', users_views.register, name='register'),
+    path('confirm-account-mail/', users_views.confirm_account_mail, name='confirm-account-mail'),
     path('confirm-account/', users_views.confirm_account, name='confirm-account'),
     path('profile/', users_views.profile, name='profile'),
     path('login/', RememberMeLoginView.as_view(), name='login'),  

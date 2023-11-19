@@ -79,5 +79,8 @@ def profile(request):
     return render(request, 'profile.html')
 
 
+def confirm_account_mail(request):
+    return render(request, 'confirm_account_mail.html')
+
 def confirm_account(request):
     return render(request, 'confirm_account.html')

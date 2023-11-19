@@ -5,94 +5,141 @@
     font-style: normal;
   }
 
-.container {
-    background-color: #FFF;
-    min-height: 100%;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    position: fixed;
-    // transform: translateX(-50%);
+.logo {
+    width: 44px;
+    margin-left: 34.47px;
+    margin-top: 38.1px;
+    margin-bottom: 38.1px;
 }
 
-.inside-container {
-    margin-bottom: 76px;
-    margin-left: 123px;
-    margin-right: 123px;
-    background-color: #F6EDED;
-    height: 602px;
-    width: 100%;
+.image-container {
+    background-image: url('../images/changepassword.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 176px;
+    height: 176px;
+}
+
+.parent-container {
     display: flex;
-    align-items: center;
-}
-
-h1.main-text {
-    margin-top: 74px;
-    margin-left: 84px;
-    font-size: 50px;
-    color: #000;
-}
-
-.circle-container {
-    margin-left: 52px;
-    width: 65px;   
-    height: 65px;
-    background-color: transparent;
-    border-radius: 50%;
-    border: 1px solid #000;
-    display: flex;
-    align-items: center;
     justify-content: center;
-    // font-size: 16px;
+    align-items: center;
+    width: 100%;
+    height: auto;
+}
+
+.header {
+    width: 100%;
+    height: auto;
+    display: flex;
+    background: linear-gradient(to right, #FFFFFF 50%, #fdf6f6 50%);
+}
+
+.my-container {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to right, #FFFFFF 50%, #fdf6f6 50%);
+    
+}
+
+.button {
+    width: 127px;
+    height: 40px;
+    background-color: #FFFFFF;
+    border: 1px solid #333;
+    border-radius: 25px;
+    color: #333;
+    font-size: 25.5px;
+    transition: background-color 0.3s;
+    white-space: nowrap;
+
+    margin-top: 43.54px;
+    margin-left: 30.84px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    &:hover {
+      background-color: #fdf6f6;
+    }
   }
 
-img.icon-container {
-    height: 26px;
-    width: auto;
+  .butt2 {
+    font-size: 25.5px;
+    border: 1px solid black;
+    border-radius: 25px;
+    cursor: pointer;
+    background-color: #FFFFFF;
+    transition: background-color 0.3s;
+    white-space: nowrap;
+    height: 43px;
+    width: 252px;
+  }
+
+  @font-face {
+    font-family: 'Urbanist';
+    src: url('../fonts/Urbanist-Regular.ttf');
+    font-weight: normal;
+    font-style: normal;
 }
 
-p.mallmate {
-    margin-top: 0px;
-    margin-left: 15px;
-    margin-bottom: 0px;
-    font-size: 25px;
-    color: #000;
+.login-box {
+    font-family: 'urbanist', sans-serif;
+    width: 790px;
+    margin-top: 20px;
+    padding: auto;
+    background: transparent;
+}
+  
+.login-box h2 {
+    margin: 0 0 20px;
+    padding: 0;
+    color: #000000;
+    text-align: center;
+}
+  
+.login-box .user-box {
+    position: relative;
+}
+  
+.login-box .user-box input {
+    width: 100%;
+    padding: 20px 0;
+    font-size: 16px;
+    color: #000000;
+    margin-bottom: 40px;
+    border: none;
+    border-bottom: 1px solid #000000;
+    outline: none;
+    background: transparent;
+}
+.login-box .user-box label {
+    position: absolute;
+    top:0;
+    left: 0;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #000000;
+    pointer-events: none;
+    transition: .5s;
+}
+  
+.login-box .user-box input:focus ~ label,
+.login-box .user-box input:not(:placeholder-shown) ~ label {
+    top: -20px;
+    left: 0;
+    color: #000000;
+    font-size: 16px;
 }
 
-p.to-whom {
-    margin-top: 0px;
-    margin-left: 16px;
-    font-size: 15px;
-    color: #000;
+
+p.some-text {
+    margin-top: 79px;
+    font-family: 'Urbanist', sans-serif;
 }
 
-p.message {
-    margin: 0px 0;
-    font-size: 30px;
-    color: #000;
-}
-
-.hi-text-container {
-    display: flex;
-    align-items: center;
-    margin-top: 81px;
-}
-
-.input-container {
-    margin-top: 66px;
-    margin-bottom: 47px;
-    width: 520px;
-    height: 70px;
-}
-
-.number-container {
-    margin: 0;
-    width: 70px;
-    height: 70px;
-    background-color: #FFF;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #000;
-    font-size: 42px;
+a.link {
+    color: #BD9F9F;
+    font-family: 'Urbanist', sans-serif;
 }

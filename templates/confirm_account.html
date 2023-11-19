@@ -5,52 +5,36 @@
     <meta charset="UTF-8">
     <script src="{% static 'scripts/jquery.min.js' %}"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="{% static 'style/confirm_account.css' %}" rel="stylesheet">
+    <link href="../static/style/confirm_account.css" rel="stylesheet">
     <link href="{% static 'bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
     <script src="{% static 'bootstrap/js/bootstrap.bundle.min.js' %}"></script>
-    <script src="{% static 'jquery.min.js' %}"></script>
 </head>
-<body class="d-flex flex-column">
-<h1 class="main-text">Confirm your account</h1>
-<div class="d-flex">
-    <div class="circle-container">
-        <img src="{% static 'images/M.png' %}" class="icon-container"/>
+<body>
+    <div class="header d-flex">
+        <a href='{% url 'home' %}'><img src="{% static 'images/M.png' %}" class="img-fluid logo" alt=""></a>
+        <button class="button" onclick="location.href='{% url 'login' %}'">log in</button>
+        <button class="button" onclick="location.href='{% url 'register' %}'">register</button>
     </div>
-    <div d-flex flex-column>
-        <p class="mallmate">MallMate</p>
-        <p class="to-whom">to whom: to me</p>
-    </div>
-</div>
-<div class="d-flex justify-content-center">
-    <div class="inside-container d-flex flex-column">
-        <div class="hi-text-container d-flex flex-column">
-            <p class="message">Hi {firstname lastname}!</p>
-            <p class="message">Please copy the One Time Password(OTP) below</p>
-            <p class="message">and paste it in the Confirm your account page</p>
-        </div>
-        <div class="input-container d-flex justify-content-between">
-            <div class="number-container">
-                6
+    <div class="my-container">
+        <div class="parent-container d-flex flex-column">
+            <img src="{% static 'images/confirmaccount.png' %}"/>
+            <div class="login-box justify-content-center">
+                <h2>Confirm your account</h2>
+                <form method="post">
+                    {% csrf_token %}
+                    <div class="user-box">
+                        <input type="email" name="{{ form.email.name }}" placeholder="">
+                        <label>Enter your one time password(OTP)</label>
+                    </div>
+                    <div class="text-center">
+                    <button class="butt2" type="submit">confirm</button>
+                    </div>
+                </form>
             </div>
-            <div class="number-container">
-                9
-            </div>
-            <div class="number-container">
-                4
-            </div>
-            <div class="number-container">
-                2
-            </div>
-            <div class="number-container">
-                0
-            </div>
-            <div class="number-container">
-                0
+            <div class="justify-content-center">
+                <p class="some-text">Haven't received OTP? <a href="#" class="link">Resend</a></p>
             </div>
         </div>
-        <p class="message">This code expires in 5 minutes.</p>
-        <p class="message"><strong>DO NOT SHARE OR SEND THIS CODE TO ANYONE!</strong></p>
     </div>
-</div>
 </body>
 </html>
