@@ -1,4 +1,4 @@
-{% load static %}
+{% comment %} {% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -52,5 +52,22 @@
         <p class="message"><strong>DO NOT SHARE OR SEND THIS CODE TO ANYONE!</strong></p>
     </div>
 </div>
+</body>
+</html> {% endcomment %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmation Email</title>
+</head>
+<body>
+    <p>Hello {{ context_variable }},</p>
+    <!-- Інші елементи тіла листа -->
+
+    {{ image_html | safe }}
+
+    <!-- Інші елементи тіла листа -->
 </body>
 </html>

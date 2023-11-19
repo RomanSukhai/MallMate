@@ -7,6 +7,8 @@ from .forms import RememberMeAuthenticationForm
 from django.contrib.auth.views import LoginView
 from django.contrib.auth.views import PasswordResetDoneView, PasswordResetView, PasswordChangeDoneView, PasswordResetConfirmView, PasswordChangeView, PasswordResetConfirmView
 from django.urls import reverse_lazy
+from django.utils.safestring import mark_safe
+
 
 
 def register(request):
@@ -101,14 +103,46 @@ def send_html_email(subject, template_name, context, recipient_list):
     email.send()
 
 
-def confirm_account_mail(request):
-    # subject = "Activate Account"
-    # template_name = "index.html"
-    # context = {'context_variable': 'value'}
-    # recipient_email = "ПОШТА ОДЕРЖУВАЧА"
+# def confirm_account_mail(request):
+#     subject = "Activate Account"
+#     template_name = "confirm_account_mail.html"
+#     context = {'context_variable': 'value'}
+#     recipient_email = "artem.duda.shi.2022@lpnu.ua"
 
-    # send_html_email(subject, template_name, context, [recipient_email])
-    return render(request, 'confirm_account_mail.html')
+#     send_html_email(subject, template_name, context, [recipient_email])
+#     return render(request, 'confirm_account_mail.html')
+
+from django.shortcuts import render
+from django.core.mail import EmailMultiAlternatives
+from django.template.loader import render_to_string
+from django.utils.html import strip_tags
+from email.mime.image import MIMEImage
+
+def confirm_account_mail(request):
+    subject = "Activate Account"
+    template_name = "confirm_account_mail.html"
+    context = {'context_variable': 'value'}
+    recipient_email = "artem.duda.shi.2022@lpnu.ua"
+
+    image_html = '<img src="cid:unique_image_id" alt="Chinese Dog Breeds">'
+    
+    context['image_html'] = image_html
+
+    html_content = render_to_string(template_name, context)
+    text_content = strip_tags(html_content)
+
+    msg = EmailMultiAlternatives(subject, text_content, to=[recipient_email])
+    msg.attach_alternative(html_content, "text/html")
+
+    with open("./static/images/dog.png", "rb") as image_file:
+        msg_img = MIMEImage(image_file.read())
+        msg_img.add_header("Content-ID", "<unique_image_id>")
+        msg.attach(msg_img)
+
+    msg.send()
+
+    return render(request, template_name, context)
+
 
 def confirm_account(request):
     return render(request, 'confirm_account.html')
