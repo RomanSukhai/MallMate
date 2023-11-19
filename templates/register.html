@@ -1,7 +1,6 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -45,24 +44,23 @@
                 <form method="POST">
                     {% csrf_token %}
                     <div class="user-box">
-                        <input type="text" class="form-control" name="{{ form.first_name.name }}">
+                        <input type="text" required id="username" name="{{ form.first_name.name }}">
                         <label class="d-flex flex-column">First name</label>
-
                     </div>
                     <div class="user-box">
-                        <input type="text" class="form-control" name="{{ form.last_name.name }}">
+                        <input type="text" required id="username" name="{{ form.last_name.name }}">
                         <label class="d-flex flex-column">Last name</label>
                     </div>
                     <div class="user-box">
-                        <input type="email" class="form-control" name="{{ form.email.name }}">
+                        <input type="text" required id="username" name="{{ form.email.name }}">
                         <label class="d-flex flex-column">Email</label>
                     </div>
                     <div class="user-box">
-                        <input type="password" class="form-control" name="{{ form.password1.name }}">
+                        <input type="password" required id="username" name="{{ form.password1.name }}">
                         <label class="d-flex flex-column">Password</label>
                     </div>
                     <div class="user-box">
-                        <input type="password" class="form-control" name="{{ form.password2.name }}">
+                        <input type="password" required id="username" name="{{ form.password2.name }}">
                         <label class="d-flex flex-column">Confirm password</label>
                     </div>
                     <div class="parent-container d-flex flex-column">
@@ -78,8 +76,6 @@
 
                 </form>
             </div>
-
-
         </div>
          <div class="d-flex justify-content-center align-items-center flex-column">
             <div class="swiper mySwiper">
@@ -106,9 +102,6 @@
                 </div>
               </div>
         </div>
-
-
-
     </div>
 </div>
 
