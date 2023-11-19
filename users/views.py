@@ -79,7 +79,33 @@ def profile(request):
     return render(request, 'profile.html')
 
 
+from django.core.mail import EmailMessage
+from django.template.loader import render_to_string
+from django.utils.html import strip_tags
+from django.conf import settings
+
+def send_html_email(subject, template_name, context, recipient_list):
+    html_message = render_to_string(template_name, context)
+    plain_message = strip_tags(html_message)
+   
+    email = EmailMessage(
+        subject,
+        plain_message,
+        settings.DEFAULT_FROM_EMAIL,
+        recipient_list,
+    )
+
+    email.attach(subject, html_message, "text/html")
+    email.send()
+
+
 def confirm_account_mail(request):
+    # subject = "Activate Account"
+    # template_name = "index.html"
+    # context = {'context_variable': 'value'}
+    # recipient_email = "ПОШТА ОДЕРЖУВАЧА"
+
+    # send_html_email(subject, template_name, context, [recipient_email])
     return render(request, 'confirm_account_mail.html')
 
 def confirm_account(request):

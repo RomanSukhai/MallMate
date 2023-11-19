@@ -13,7 +13,7 @@ python -m venv virtenv
 pip install -r requirements.txt
 ```
 
-Тепер окремо запустити файл connect.py що в папці mysql
+Тепер окремо запустити файл connect.py що в папці mysql 
 
 ``` shell
 python manage.py makemigrations
