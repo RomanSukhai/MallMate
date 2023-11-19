@@ -1,0 +1,95 @@
+@font-face {
+    font-family: 'Urbanist';
+    src: url('../fonts/urbanist-thin.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+.container {
+    background-color: #FFF;
+    min-height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    // transform: translateX(-50%);
+}
+
+.inside-container {
+    background-color: #F6EDED;
+    height: 602px;
+    width: 1195px;
+    display: flex;
+    align-items: center;
+}
+
+h1.main-text {
+    margin-top: 74px;
+    margin-left: 84px;
+    font-size: 50px;
+    color: #000;
+}
+
+.circle-container {
+    margin-left: 52px;
+    width: 65px;   
+    height: 65px;
+    background-color: transparent;
+    border-radius: 50%;
+    border: 1px solid #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    // font-size: 16px;
+  }
+
+img.icon-container {
+    height: 26px;
+    width: auto;
+}
+
+p.mallmate {
+    margin-top: 0px;
+    margin-left: 15px;
+    margin-bottom: 0px;
+    font-size: 25px;
+    color: #000;
+}
+
+p.to-whom {
+    margin-top: 0px;
+    margin-left: 16px;
+    font-size: 15px;
+    color: #000;
+}
+
+p.message {
+    margin: 0px 0;
+    font-size: 30px;
+    color: #000;
+}
+
+.hi-text-container {
+    display: flex;
+    align-items: center;
+    margin-top: 81px;
+}
+
+.input-container {
+    margin-top: 66px;
+    margin-bottom: 47px;
+    width: 520px;
+    height: 70px;
+}
+
+.number-container {
+    margin: 0;
+    width: 70px;
+    height: 70px;
+    background-color: #FFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000;
+    font-size: 42px;
+}

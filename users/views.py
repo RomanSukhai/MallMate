@@ -77,3 +77,7 @@ class RememberMeLoginView(LoginView):
 @login_required()
 def profile(request):
     return render(request, 'profile.html')
+
+
+def confirm_account(request):
+    return render(request, 'confirm_account.html')
