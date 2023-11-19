@@ -189,6 +189,12 @@ class CustomPasswordResetConfirmView(PasswordResetConfirmView):
 
         return response
 
+    def form_invalid(self, form):
+        response = super().form_invalid(form)
+        messages.error(self.request, 'There was an error resetting your password. Please make sure the link is valid and try again.')
+
+        return response
+
 class CustomPasswordChangeView(PasswordChangeView):
     template_name = 'password_change.html'
     # success_url = reverse_lazy('home')
@@ -196,10 +202,4 @@ class CustomPasswordChangeView(PasswordChangeView):
     def form_invalid(self, form):
         response = super().form_invalid(form)
         messages.warning(self.request, 'There was an error changing your password. Please try again.')
-        return response
-
-class CustomPasswordResetConfirmView(PasswordResetConfirmView):
-    def form_invalid(self, form):
-        response = super().form_invalid(form)
-        messages.error(self.request, 'There was an error resetting your password. Please make sure the link is valid and try again.')
         return response

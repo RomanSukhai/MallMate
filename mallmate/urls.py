@@ -49,7 +49,6 @@ urlpatterns = [
 
     path('password-change/', users_views.CustomPasswordChangeView.as_view(template_name='password_change.html'), name='password_change'),
     path('password-change/done', users_views.CustomPasswordChangeDoneView.as_view(), name='password_change_done'),
-    # path('login/', users_views.login, name='login')
 ]
 
 if settings.DEBUG:
