@@ -14,9 +14,12 @@
 }
 
 .inside-container {
+  margin-bottom: 76px;
+  margin-left: 123px;
+  margin-right: 123px;
   background-color: #F6EDED;
   height: 602px;
-  width: 1195px;
+  width: 100%;
   display: flex;
   align-items: center;
 }
