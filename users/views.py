@@ -5,7 +5,7 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth import login
 from .forms import RememberMeAuthenticationForm
 from django.contrib.auth.views import LoginView
-from django.contrib.auth.views import PasswordResetDoneView, PasswordResetView
+from django.contrib.auth.views import PasswordResetDoneView, PasswordResetView, PasswordChangeDoneView, PasswordResetConfirmView, PasswordChangeView, PasswordResetConfirmView
 from django.urls import reverse_lazy
 
 
@@ -128,6 +128,44 @@ class CustomPasswordResetView(PasswordResetView):
 
     def get(self, request, *args, **kwargs):
         messages.success(
-            self.request, 'Password has been reset successfully. You can log in now.'
+            self.request, 'Your password has been reset successfully. You can log in now.'
         )
         return redirect(self.success_url)
+
+class CustomPasswordChangeDoneView(PasswordChangeDoneView):
+    success_url = reverse_lazy('home')
+
+    def get(self, request, *args, **kwargs):
+        messages.success(
+            self.request, 'Your password has been changed successfully.'
+        )
+        return redirect(self.success_url)
+
+
+class CustomPasswordResetConfirmView(PasswordResetConfirmView):
+    success_url = reverse_lazy('login')
+
+    def form_valid(self, form):
+        response = super().form_valid(form)
+        login(self.request, self.user)
+
+        messages.success(
+            self.request, 'Your password has been reset. Please log in with your new password.'
+        )
+
+        return response
+
+class CustomPasswordChangeView(PasswordChangeView):
+    template_name = 'password_change.html'
+    # success_url = reverse_lazy('home')
+
+    def form_invalid(self, form):
+        response = super().form_invalid(form)
+        messages.warning(self.request, 'There was an error changing your password. Please try again.')
+        return response
+
+class CustomPasswordResetConfirmView(PasswordResetConfirmView):
+    def form_invalid(self, form):
+        response = super().form_invalid(form)
+        messages.error(self.request, 'There was an error resetting your password. Please make sure the link is valid and try again.')
+        return response
