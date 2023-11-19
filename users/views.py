@@ -5,6 +5,8 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth import login
 from .forms import RememberMeAuthenticationForm
 from django.contrib.auth.views import LoginView
+from django.contrib.auth.views import PasswordResetDoneView, PasswordResetView
+from django.urls import reverse_lazy
 
 
 def register(request):
@@ -110,3 +112,22 @@ def confirm_account_mail(request):
 
 def confirm_account(request):
     return render(request, 'confirm_account.html')
+
+class CustomPasswordResetDoneView(PasswordResetDoneView):
+    success_url = reverse_lazy('login')
+
+    def get(self, request, *args, **kwargs):
+        messages.success(
+            self.request, 'Password reset email has been sent. Check your inbox.'
+        )
+        return redirect(self.success_url)
+
+
+class CustomPasswordResetView(PasswordResetView):
+    success_url = reverse_lazy('login')
+
+    def get(self, request, *args, **kwargs):
+        messages.success(
+            self.request, 'Password has been reset successfully. You can log in now.'
+        )
+        return redirect(self.success_url)
