@@ -23,3 +23,6 @@ def profile(request):
 
 def info(request):
     return render(request, 'info.html')
+
+def map(request):
+    return render(request, 'map.html')

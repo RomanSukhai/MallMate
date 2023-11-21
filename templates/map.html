@@ -1,0 +1,69 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{% static 'style/reserv.css' %}" rel="stylesheet">
+    <link href="{% static 'style/main.css' %}" rel="stylesheet">
+    <link href="{% static 'style/map.css' %}" rel="stylesheet">
+    <link href="{% static 'style/leaflet.css' %}" rel="stylesheet">
+    <link href="{% static 'bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="{% static 'scripts/jquery.min.js' %}"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="{% static 'bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'scripts/leaflet.js' %}"></script>
+    <script src="{% static 'scripts/map.js' %}"></script>
+
+    >
+    <title>Document</title>
+    <script>
+        var imageMapUrl = "{% static 'images/cat.jpg' %}";
+    </script>
+</head>
+
+<body class=" d-flex flex-column justify-content-center align-items-center ">
+    <header class="home-content  ">
+        <menu class=" home-content_menu d-flex align-content-start justify-content-center flex-wrap " id="fromTop">
+            <a href="" class=" flex-column">
+                <img src="{% static 'icons/image 20.png' %}" alt="" class="icon-location">
+                <p>location</p>
+            </a>
+            <img src="" alt="">
+            <dir class="home-content_menu_orig-menu ">
+                <ul class="home-content_menu_orig-menu_menu-list d-flex justify-content-center  align-items-center ">
+                    <li class="home-content_menu_orig-menu_menu-list_menu-item "><a href="{% url 'home' %}">home</a>
+                    </li>
+                    <li class="home-content_menu_orig-menu_menu-list_menu-divider "></li>
+                    <li class="home-content_menu_orig-menu_menu-list_menu-item "><a href="{% url 'about' %}">about
+                            Us</a></li>
+                    <li class="home-content_menu_orig-menu_menu-list_menu-divider "></li>
+                    <li class="home-content_menu_orig-menu_menu-list_menu-item "><a href="{% url 'profile' %}">service
+                            Profile</a></li>
+                    <li class="home-content_menu_orig-menu_menu-list_menu-divider "></li>
+                    <li class="home-content_menu_orig-menu_menu-list_menu-item "><a href="{% url 'info' %}">useful
+                            information</a></li>
+                </ul>
+            </dir>
+            <dir class="home-content_menu_logSign d-flex justify-content-center align-items-center ">
+                <button class="home-content_menu_logSign_btn" onclick="location.href='{% url 'login' %}'">Log
+                    in</button>
+                <button class="home-content_menu_logSign_btn"
+                    onclick="location.href='{% url 'register' %}'">Register</button>
+            </dir>
+            <dir class="home-content_menu_line ">
+            </dir>
+        </menu>
+        <div class="map-navigation d-flex flex-row flex-beetween">
+            <div class="map-search d-flex flex-column">
+                <input type="text" id="searchInput" placeholder="Введіть для пошуку...">
+            </div>
+            <div class="map" id="map"></div>
+        </div>
+
+    </header>
+</body>
+
+</html>

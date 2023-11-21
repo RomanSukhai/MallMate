@@ -1,3 +1,4 @@
+{% load socialaccount %}
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
@@ -70,10 +71,8 @@
                     </div>
                     <div class="parent-container d-flex flex-column">
                         <button class="button-big"><img id="GoogleIcon" class="icon"
-                            src="/static/icons/google.svg" style="height: 28px; width: 32px;"> <a style="font-size: 20px; font-weight: 400;"> Sign up with Google</a> </button>
+                            src="/static/icons/google.svg" style="height: 28px; width: 32px;"><a style="font-size: 20px; font-weight: 400;" href="{% provider_login_url 'google' method="redirect" %}">Sign up with Google</a> </button>
                          </div>
-
-
                 </form>
             </div>
         </div>

@@ -17,7 +17,7 @@ Including another URLconf
 from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 from django.contrib.auth import views as auth_views
 import users.views as users_views
 from . import views as project_views
@@ -28,18 +28,18 @@ urlpatterns = [
     path('', project_views.landing, name='landing'),
 
     path('admin/', admin.site.urls),
+    path('home/', project_views.home, name='home'),
+    path('about/', project_views.about, name='about'),
+    path('profile/', project_views.profile, name='profile'),
+    path('info/', project_views.info, name='info'),
+    path('map/', project_views.map, name='map'),
 
-    path('home', project_views.home, name='home'),
-    path('about', project_views.about, name='about'),
-    path('profile', project_views.profile, name='profile'),
-    path('info', project_views.info, name='info'),
-
-
+    path('accounts/', include('allauth.urls')),
     path('register/', users_views.register, name='register'),
     path('confirm-account-mail/', users_views.confirm_account_mail, name='confirm-account-mail'),
     path('confirm-account/', users_views.confirm_account, name='confirm-account'),
     path('profile/', users_views.profile, name='profile'),
-    path('login/', RememberMeLoginView.as_view(), name='login'),  
+    path('login/', RememberMeLoginView.as_view(), name='login'),
 
     path('logout/', auth_views.LogoutView.as_view(template_name='logout.html'), name='logout'),
     path('password-reset/', auth_views.PasswordResetView.as_view(template_name='password_reset.html'), name='password_reset'),

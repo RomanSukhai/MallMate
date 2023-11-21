@@ -1,0 +1,55 @@
+.map-navigation {
+  width: 100%;
+  height: 700px;
+
+  .map {
+    width: 50%;
+    height: 100%;
+    margin: auto;
+  }
+  .map-search {
+    width: 300px;
+    height: 200px;
+    margin-top: 100px;
+
+    #searchInput {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+    }
+
+    #myList {
+      li {
+        width: 269px;
+        padding: 5px;
+        margin-top: 3px;
+        background-color: #f9f9f9;
+        border: 1px solid #ddd;
+      }
+    }
+  }
+}
+
+.ui-autocomplete {
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  padding: 1px 0;
+}
+
+.ui-menu-item {
+  padding: 1px;
+  cursor: pointer;
+  background-color: #f2f2f2;
+}
+
+.ui-menu-item:hover {
+  background-color: #f2f2f2;
+}
+
+
+.ui-menu-item-wrapper {
+  font-size: 16px;
+  color: #333;
+  font-family: "Urbanist";
+}
