@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Urbanist";
-  src: url("../fonts/urbanist-thin.ttf") format("truetype");
+  src: url("../fonts/centurygothic.ttf");
   font-weight: normal;
   font-style: normal;
 }
@@ -74,7 +74,7 @@
 
 @font-face {
   font-family: "Urbanist";
-  src: url("../fonts/Urbanist-Regular.ttf");
+  src: url("../fonts/centurygothic.ttf");
   font-weight: normal;
   font-style: normal;
 }

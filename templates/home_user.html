@@ -1,0 +1,125 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{% static 'style/reserv.css' %}" rel="stylesheet">
+    <link href="{% static 'style/main.css' %}" rel="stylesheet">
+    <link href="{% static 'style/cardMove.css' %}" rel="stylesheet">
+    <link href="{% static 'bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+    <script src="{% static 'bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'scripts/jquery.min.js' %}"></script>
+    <script src="{% static 'scripts/home2.js' %}"></script>
+    <script src="{% static 'scripts/scrollreveal.min.js' %}"></script>
+    <title>Document</title>
+</head>
+
+<body class=" d-flex flex-column justify-content-center align-items-center ">
+    <header class="home-content">
+        <menu
+            class=" home-content_menu d-flex align-content-start justify-content-center justify-content-center flex-wrap ">
+            <a href="" id="createDiv" style="position: relative;" class=" d-flex text-nowrap flex-column justify-content-center align-items-center">
+                <img src="{% static 'icons/image 20.png' %}" alt="" class="icon-location">
+                <p>ТРЦ Victoria Gardens</p>
+            </a>
+
+            <dir class="home-content_menu_orig-menu ">
+                <ul class="home-content_menu_orig-menu_menu-list d-flex justify-content-center  align-items-center ">
+                    <li class="home-content_menu_orig-menu_menu-list_menu-item "><a href="{% url 'home' %}">home</a>
+                    </li>
+                    <li class="home-content_menu_orig-menu_menu-list_menu-divider "></li>
+                    <li class="home-content_menu_orig-menu_menu-list_menu-item "><a href="{% url 'about' %}">about
+                            us</a></li>
+                    <li class="home-content_menu_orig-menu_menu-list_menu-divider "></li>
+                    <li class="home-content_menu_orig-menu_menu-list_menu-item "><a
+                            href="{% url 'profile' %}">service</a></li>
+                    <li class="home-content_menu_orig-menu_menu-list_menu-divider "></li>
+                    <li class="home-content_menu_orig-menu_menu-list_menu-item ">
+                        <a href="{% url 'profile' %}">Profile</a>
+                    </li>
+                    <li class="home-content_menu_orig-menu_menu-list_menu-divider "></li>
+                    <li class="home-content_menu_orig-menu_menu-list_menu-item "><a href="{% url 'info' %}">useful
+                            information</a></li>
+                </ul>
+            </dir>
+            <dir class=" home-content_menu_user d-flex flex-column align-items-center">
+                <img src="../static/icons/image24.svg" alt="">
+                <a class="a_style" href="#">username</a>
+            </dir>
+            <dir class="home-content_menu_line ">
+            </dir>
+        </menu>
+        <div class="d-flex align-items-center home-content_header_container-text mallmate_log" id="fromTop">
+            <img class="home-content_header_container-text_image image_M" src="{% static 'images/M.png' %}" alt="">
+            <p class="home-content_header_container-text_text-header text">all</p>
+            <img class="home-content_header_container-text_image image_M" src="{% static 'images/M.png' %}" alt="">
+            <p class="home-content_header_container-text_text-header text">ate</p>
+        </div>
+        <div class="home-content_header d-flex justify-content-center flex-column  align-items-center ">
+            <div class="home-content_header_cards">
+                <section id="slider">
+                    <input type="radio" name="slider" id="s1">
+                    <input type="radio" name="slider" id="s2">
+                    <input type="radio" name="slider" id="s3" checked>
+                    <input type="radio" name="slider" id="s4">
+                    <input type="radio" name="slider" id="s5">
+                    <button class="arrow right-arrow"><img src="../static/images/left_row.png" alt=""></button>
+                    <label for="s1" id="slide1"> <img class="img-cards" src="../static/images/cards/home_card_1.png"
+                            alt=""></label>
+                    <label for="s2" id="slide2"><img class="img-cards" src="../static/images/cards/home_card_2.png"
+                            alt=""></label>
+                    <label for="s3" id="slide3"><img class="img-cards" src="../static/images/cards/home_card_3.png"
+                            alt=""></label>
+                    <label for="s4" id="slide4"><img class="img-cards" src="../static/images/cards/home_card_4.png"
+                            alt=""></label>
+                    <label for="s5" id="slide5"><img class="img-cards" src="../static/images/cards/home_card_5.png"
+                            alt=""></label>
+                    <button class="arrow left-arrow"><img src="../static/images/right_row.png" alt=""></button>
+                </section>
+            </div>
+        </div>
+        <div class="home-content_buttonsProp d-flex justify-content-around  align-items-center">
+            <a href="">
+                <div
+                    class="home-content_buttonsProp_circule home-content_buttonsProp_circule_child1 d-flex justify-content-center align-items-center flex-wrap">
+                    <img src="../static/icons/shop.svg" alt="">
+                    <p>пошук магазинів</p>
+                </div>
+            </a>
+            <a href="">
+                <div
+                    class="home-content_buttonsProp_circule home-content_buttonsProp_circule_child2 d-flex justify-content-center align-items-center flex-wrap">
+                    <img src="../static/icons/map.svg" alt="">
+                    <p>карта</p>
+                </div>
+            </a>
+            <a href="">
+                <div
+                    class="home-content_buttonsProp_circule home-content_buttonsProp_circule_child3 d-flex justify-content-center align-items-center flex-wrap">
+                    <img src="../static/icons/clock.svg" alt="">
+                    <p>години роботи</p>
+                </div>
+            </a>
+        </div>
+    </header>
+
+
+
+    <main>
+
+    </main>
+
+
+
+
+
+    <footer>
+
+    </footer>
+
+
+</body>
+
+</html>

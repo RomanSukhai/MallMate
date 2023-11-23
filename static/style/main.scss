@@ -1,6 +1,6 @@
 @font-face {
-    font-family: 'Urbanist';
-    src: url('../fonts/Urbanist-Regular.ttf');
+    font-family: "Urbanist";
+    src: url("../fonts/centurygothic.ttf");
     font-weight: normal;
     font-style: normal;
 }
@@ -31,7 +31,6 @@
     background-repeat: no-repeat;
     background-size: 20px 20px;
     padding-right: 10px;
-
 }
 
 @mixin margin_pading() {
@@ -56,6 +55,20 @@ body {
     background: white;
     position: relative;
 
+    .mallmate_log {
+        margin: 88px 0 0 35px;
+        .image_M {
+            width: 25px;
+            height: 25px;
+        }
+        .text {
+            font-size: 24px;
+            font-weight: 1000;
+            margin-bottom: 0;
+            padding-top: 7px;
+        }
+    }
+
     &_menu {
         width: 1440px;
         height: 100.615px;
@@ -65,13 +78,12 @@ body {
         background: white;
 
         &_line {
-            height: 1px;
+            height: 2px;
             width: 1428.8px;
             border-radius: 45px;
             background: black;
             @include margin_pading();
         }
-        
 
         a {
             margin-left: 10px;
@@ -81,7 +93,7 @@ body {
             color: black;
             @include margin_pading();
             padding-top: 20px;
-            p{
+            p {
                 margin-left: 34px;
             }
 
@@ -90,18 +102,14 @@ body {
                 height: 27.96px;
                 margin-left: 48px;
 
-                &:hover{
+                &:hover {
                     filter: brightness(100%);
                 }
             }
             &:hover {
                 color: #666;
-                transition-duration:0.5s;
-                
+                transition-duration: 0.5s;
             }
-            
-
-            
         }
 
         &_orig-menu {
@@ -128,12 +136,12 @@ body {
                         color: #000;
                         padding: 10px 15px;
                         font-size: 30.5px;
-                        font-family: 'Urbanist';
+                        font-family: "Urbanist";
 
                         &:hover {
                             color: #666;
                             font-size: 35px;
-                            transition-duration:0.5s;
+                            transition-duration: 0.5s;
                         }
                     }
                 }
@@ -152,7 +160,6 @@ body {
             width: 20%;
             @include margin_pading();
             padding: 0 40px 0 0;
-
 
             &_btn {
                 padding: 4.9px 30.5px;
@@ -173,6 +180,75 @@ body {
                 }
             }
         }
+
+        &_user {
+            img {
+                height: 50px;
+                width: 50px;
+            }
+            a {
+                margin-left: 0px;
+                width: 0px;
+                height: 0px;
+                padding-top: 0px;
+                margin-right: 64px;
+            }
+        }
+    }
+
+    &_buttonsProp{
+        width: 100%;
+        height: 200px;
+        margin-top: 443px;
+        
+
+        &_circule{
+            position: relative;
+            width: 100px;
+            height: 100px;
+            border-radius: 100px;
+            background: #FCF3F3;
+            box-shadow: 7px 7px 3px 1px rgba(0,0,0,0.51);
+            transition: background 0.3s ease;
+            p{
+                position: absolute;
+                top: 113px;
+                width: 135px;
+                text-decoration: none;
+                color: #000;
+                font-family: "Urbanist";
+            }
+
+            
+
+            &:hover {
+                background: #F7E4E4;
+            }
+            img{
+                height: 64px;
+                width: 64px;
+                margin-top: 12px;
+            }
+            &_child1{
+                margin-left: 350px;
+                
+            }
+            &_child2{
+                img{
+                    margin-bottom: 35px;
+                }
+                p{
+                    left: 30px;
+                }
+            }
+            &_child3{
+                margin-right: 350px;
+                p{
+                    left: 0;
+                }
+            }
+            
+        }
     }
 
     &_header {
@@ -184,8 +260,27 @@ body {
         transform: translate(-50%, -50%);
         background: #fdf6f6;
 
+        
+
+        &_cards{
+            margin: 0px 454px 365px 0;
+            .left-arrow{
+                left: 813px;
+                top: 203px;
+            }
+            .right-arrow{
+                right: 359px;
+                top: 203px;
+            }
+            .img-cards{
+                width: 485px;
+                height: 444px;
+            }
+
+        }
+
         &_text {
-            font-family: 'Urbanist';
+            font-family: "Urbanist";
             font-size: 50px;
             text-align: center;
             line-height: 1.2;
@@ -196,10 +291,9 @@ body {
             height: 120px;
 
             &_text-header {
-                font-family: 'Urbanist';
+                font-family: "Urbanist";
                 font-size: 100px;
                 padding: 35px 0 0 0;
-
             }
 
             &_image {
@@ -214,41 +308,35 @@ body {
             background: black;
         }
 
-        &_like-button{
+        &_like-button {
             margin-top: 100px;
             width: 50px;
             height: 50px;
             position: relative;
-            &_circule{
+            &_circule {
                 width: 175px;
                 height: 175px;
                 margin: 0 0 0 38px;
                 z-index: 0;
             }
-            &_mask{
+            &_mask {
                 width: 450px;
                 height: 450px;
                 z-index: 1;
                 position: absolute;
                 margin-right: 10px;
             }
-            
         }
-
-
-
     }
 
     &_footer-content {
         width: 1429.24px;
         height: 510.57px;
         margin: 64px auto 10px auto;
-        background: #F8E1E14D;
+        background: #f8e1e14d;
 
         &_image-control {
             position: relative;
-
-
 
             &_image {
                 position: relative;
@@ -273,7 +361,7 @@ body {
             }
 
             &_text {
-                font-family: 'Urbanist';
+                font-family: "Urbanist";
                 font-size: 57px;
                 text-align: center;
                 line-height: 1.2;
@@ -308,7 +396,7 @@ body {
     &_footer {
         width: 100%;
         height: 294.37px;
-        background: #000000CC;
+        background: #000000cc;
 
         &_1 {
             height: 100%;
@@ -323,10 +411,9 @@ body {
             &_text {
                 color: white;
                 padding: 0 0 80px 30px;
-                font-family: 'Urbanist';
+                font-family: "Urbanist";
                 font-size: 18px;
             }
-
         }
 
         &_2 {
@@ -348,20 +435,15 @@ body {
                     text-align: center;
                     line-height: 1.7;
                     font-size: 18px;
-
                 }
             }
 
-
             &_text-main-footer {
                 text-align: center;
-                font-family: 'Urbanist';
+                font-family: "Urbanist";
                 font-size: 16px;
                 color: white;
             }
-
-
-
         }
 
         &_4 {
@@ -375,23 +457,20 @@ body {
             a {
                 text-decoration: none;
                 color: #ffffff;
-                font-family: 'Urbanist';
+                font-family: "Urbanist";
 
                 &:hover {
                     color: #666;
                 }
 
-                padding: 0 0 100px 0
+                padding: 0 0 100px 0;
             }
 
             p {
                 color: white;
-                font-family: 'Urbanist';
-                ;
+                font-family: "Urbanist";
             }
-
         }
-
     }
 
     &_header-pre-block {
@@ -399,12 +478,10 @@ body {
             width: 498px;
             height: 5px;
             background: #000;
-
-
         }
 
         &_text {
-            font-family: 'Urbanist';
+            font-family: "Urbanist";
             font-size: 55px;
         }
     }
@@ -430,7 +507,7 @@ body {
                 p {
                     color: #000;
                     margin-top: 6px;
-                    font-family: 'Urbanist';
+                    font-family: "Urbanist";
                     font-size: 24px;
                 }
             }
@@ -441,7 +518,7 @@ body {
                 p {
                     font-size: 35px;
                     color: #000;
-                    font-family: 'Urbanist';
+                    font-family: "Urbanist";
                 }
 
                 &_btn {
@@ -456,7 +533,7 @@ body {
                     transition: background-color 0.3s;
                     white-space: nowrap;
                     margin-bottom: 74px;
-                    color: #ABA1A1;
+                    color: #aba1a1;
 
                     &:hover {
                         background-color: #fdf6f6;
@@ -468,10 +545,9 @@ body {
 
                     p {
                         font-size: 25px;
-                        color: #ABA1A1;
+                        color: #aba1a1;
                     }
                 }
-
             }
         }
 
@@ -503,7 +579,7 @@ body {
                 transition: transform 0.7s ease-in-out;
 
                 &:hover {
-                    transform: scale(1.0);
+                    transform: scale(1);
                     transition: transform 0.7s ease-in-out;
                 }
 
@@ -532,27 +608,66 @@ body {
                 z-index: 2;
             }
         }
-
     }
-
-
 }
+.TRZ_submit{
+    height: 300px;
+    width: 692px;
+    border-radius: 30px;
+    background: #FCF3F3;
+    position: relative;
+    bottom: 800px;
+    right: 350px;
+    z-index: 10000;
+    .closeDiv{
+        margin: 30px 0 0 20px;
+        width: 20px;
+        height: 20px;
+        border: none; 
+        cursor: pointer;
+    }
+    p{
+        font-family: 'Urbanist';
+        font-size: 25px;
+        text-align: center;
+        margin-left: 180px;
+        margin-top: 5px;
+    }
+    .dropdown {
+        margin: 10px 0 0 50px;
+        width: 40%;
+        height: 40%;
+        p{
+            margin-left: 0;
+            margin-top: 0;
+        }
+       
+        label{
+            display: block;
+            margin-bottom: 5px;
+        }
 
+        select{
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+    }
+}
 
 #slider img {
     user-select: none;
     pointer-events: none;
 }
 
-
-
-
 .triangle {
-    @include style_bacround(url('../images/Triangle.png'))
+    @include style_bacround(url("../images/Triangle.png"));
 }
 
 .circule {
-    @include style_bacround(url('../images/Ellipse\ 27.png'));
+    @include style_bacround(url("../images/Ellipse\ 27.png"));
     background-size: 900px 853px;
 
     &_block-move {
@@ -567,20 +682,17 @@ body {
         }
     }
 
-    &_footer-card-move{
-
-        &_line{
+    &_footer-card-move {
+        &_line {
             width: 343px;
             height: 5px;
             background: #000;
         }
     }
-    
 }
 .circule_footer-card-move {
     margin-top: 118px;
 }
-
 
 .divider {
     height: 100%;
@@ -592,40 +704,33 @@ body {
     /* Колір полоски */
 }
 
-.block-for-login{
+.block-for-login {
     width: 1228px;
     height: 715px;
-    font-family: 'urbanist';
-    &_leftb{
+    font-family: "urbanist";
+    &_leftb {
         background-color: white;
         width: 50%;
         height: 100%;
-        font-family: 'urbanist';
+        font-family: "urbanist";
     }
-    &_rightb{
-
+    &_rightb {
     }
-  }
+}
 
 .osnova {
     width: 100px;
-
 }
 
 .block_zaibav {
     width: 100%;
     height: 100%;
-
 }
 
 .block_zaibav2 {
     width: 50%;
     height: 70%;
-
 }
-
-
-
 
 .bordRegist {
     border-radius: 100px;
@@ -636,7 +741,7 @@ body {
 }
 
 .user_icon {
-    @include input_svg(url("../svgFiles/person.svg"))
+    @include input_svg(url("../svgFiles/person.svg"));
 }
 
 .texte {
@@ -644,17 +749,17 @@ body {
 }
 
 input[placeholder="First Name"] {
-    @include input_svg(url("../svgFiles/person.svg"))
+    @include input_svg(url("../svgFiles/person.svg"));
 }
 
 input[placeholder="Last Name"] {
-    @include input_svg("")
+    @include input_svg("");
 }
 
 input[placeholder="Email"] {
-    @include input_svg(url("../svgFiles/envelope-at.svg"))
+    @include input_svg(url("../svgFiles/envelope-at.svg"));
 }
 
 input[placeholder="Password"] {
-    @include input_svg(url("../svgFiles/icons8-password.svg"))
+    @include input_svg(url("../svgFiles/icons8-password.svg"));
 }
