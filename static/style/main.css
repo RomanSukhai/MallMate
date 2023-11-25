@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @font-face {
   font-family: "Urbanist";
   src: url("../fonts/centurygothic.ttf");
@@ -26,15 +25,44 @@
   transform: translateY(100%);
 }
 
+body, .home-content {
+  overflow-x: hidden;
+}
+
 body {
   background: #fdf6f6 !important;
 }
 
 .home-content {
-  width: 1440px;
+  width: 1460px;
   height: 854.13px;
   background: white;
   position: relative;
+}
+.home-content .proposition {
+  width: 670px;
+  height: 705px;
+  margin: 20px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: transform 1s ease;
+}
+.home-content .proposition img {
+  width: 100%;
+  height: 100%;
+}
+.home-content .proposition:hover {
+  transform: scale(1.05);
+}
+.home-content .proposition:not(:hover) {
+  transform: scale(0.95);
+}
+.home-content .proposition-1 {
+  background-image: url("../images/Dodat_pos.png");
+}
+.home-content .proposition-2 {
+  background-image: url("../images/Prop2.png");
 }
 .home-content .mallmate_log {
   margin: 88px 0 0 35px;
@@ -50,7 +78,7 @@ body {
   padding-top: 7px;
 }
 .home-content_menu {
-  width: 1440px;
+  width: 1460px;
   height: 100.615px;
   position: fixed;
   top: 0;
@@ -171,7 +199,7 @@ body {
   width: 100px;
   height: 100px;
   border-radius: 100px;
-  background: #FCF3F3;
+  background: #fcf3f3;
   box-shadow: 7px 7px 3px 1px rgba(0, 0, 0, 0.51);
   transition: background 0.3s ease;
 }
@@ -184,7 +212,7 @@ body {
   font-family: "Urbanist";
 }
 .home-content_buttonsProp_circule:hover {
-  background: #F7E4E4;
+  background: #f7e4e4;
 }
 .home-content_buttonsProp_circule img {
   height: 64px;
@@ -392,6 +420,58 @@ body {
   color: white;
   font-family: "Urbanist";
 }
+.home-content .additional {
+  margin: 85px 0 20px 0;
+}
+.home-content .circle-container {
+  position: relative;
+  margin: 0px 80px 0 0px;
+  width: 174px;
+  top: 42px;
+  height: 174px;
+  border: 45px solid rgb(246, 237, 237);
+  border-radius: 50%;
+  z-index: 1;
+}
+.home-content .circle-container .circle {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: rgb(246, 237, 237);
+  z-index: 2;
+}
+.home-content .circle-container .circle img {
+  position: absolute;
+  right: -40px;
+  bottom: -38px;
+  animation: spin 5s linear infinite;
+  z-index: 3;
+}
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.home-content_header-pre-block_textaddit {
+  font-size: 40px;
+  font-family: "Urbanist";
+  margin-left: 40px;
+  position: relative;
+  display: inline-block;
+}
+.home-content_header-pre-block_textaddit::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: black;
+}
 .home-content_header-pre-block_line {
   width: 498px;
   height: 5px;
@@ -504,14 +584,18 @@ body {
   z-index: 2;
 }
 
+.additional_footer {
+  width: 1460px;
+}
+
 .TRZ_submit {
   height: 300px;
   width: 692px;
   border-radius: 30px;
-  background: #FCF3F3;
-  position: relative;
-  bottom: 800px;
-  right: 350px;
+  background: #fcf3f3;
+  position: fixed;
+  bottom: 54%;
+  right: 50%;
   z-index: 10000;
 }
 .TRZ_submit .closeDiv {
@@ -590,12 +674,9 @@ body {
 
 .divider {
   height: 100%;
-  /* Висота 100% контейнера */
   width: 445px;
   height: 4.2px;
-  /* Товщина полоски */
   background-color: black;
-  /* Колір полоски */
 }
 
 .block-for-login {

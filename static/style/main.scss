@@ -44,16 +44,45 @@
     background-repeat: no-repeat;
     background-position: center;
 }
+body, .home-content {
+    overflow-x: hidden;
+}
 
 body {
     background: #fdf6f6 !important;
 }
 
 .home-content {
-    width: 1440px;
+    width: 1460px;
     height: 854.13px;
     background: white;
     position: relative;
+    .proposition {
+        width: 670px;
+        height: 705px;
+        margin: 20px;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        transition: transform 1s ease;
+        img{
+            width: 100%;
+            height: 100%; 
+        }
+        &:hover{
+            transform: scale(1.05);
+        }
+        &:not(:hover){
+            transform: scale(0.95);
+        }
+        
+    }
+    .proposition-1 {
+        background-image: url("../images/Dodat_pos.png");
+    }
+    .proposition-2 {
+        background-image: url("../images/Prop2.png");
+    }
 
     .mallmate_log {
         margin: 88px 0 0 35px;
@@ -70,7 +99,7 @@ body {
     }
 
     &_menu {
-        width: 1440px;
+        width: 1460px;
         height: 100.615px;
         position: fixed;
         top: 0;
@@ -119,7 +148,6 @@ body {
             justify-content: center;
             align-items: center;
             padding: 0 0 0 115px;
-
 
             &_menu-list {
                 list-style: none;
@@ -195,21 +223,20 @@ body {
         }
     }
 
-    &_buttonsProp{
+    &_buttonsProp {
         width: 100%;
         height: 200px;
         margin-top: 443px;
-        
 
-        &_circule{
+        &_circule {
             position: relative;
             width: 100px;
             height: 100px;
             border-radius: 100px;
-            background: #FCF3F3;
-            box-shadow: 7px 7px 3px 1px rgba(0,0,0,0.51);
+            background: #fcf3f3;
+            box-shadow: 7px 7px 3px 1px rgba(0, 0, 0, 0.51);
             transition: background 0.3s ease;
-            p{
+            p {
                 position: absolute;
                 top: 113px;
                 width: 135px;
@@ -218,35 +245,31 @@ body {
                 font-family: "Urbanist";
             }
 
-            
-
             &:hover {
-                background: #F7E4E4;
+                background: #f7e4e4;
             }
-            img{
+            img {
                 height: 64px;
                 width: 64px;
                 margin-top: 12px;
             }
-            &_child1{
+            &_child1 {
                 margin-left: 350px;
-                
             }
-            &_child2{
-                img{
+            &_child2 {
+                img {
                     margin-bottom: 35px;
                 }
-                p{
+                p {
                     left: 30px;
                 }
             }
-            &_child3{
+            &_child3 {
                 margin-right: 350px;
-                p{
+                p {
                     left: 0;
                 }
             }
-            
         }
     }
 
@@ -259,23 +282,20 @@ body {
         transform: translate(-50%, -50%);
         background: #fdf6f6;
 
-        
-
-        &_cards{
+        &_cards {
             margin: 0px 454px 365px 0;
-            .left-arrow{
+            .left-arrow {
                 left: 813px;
                 top: 203px;
             }
-            .right-arrow{
+            .right-arrow {
                 right: 359px;
                 top: 203px;
             }
-            .img-cards{
+            .img-cards {
                 width: 485px;
                 height: 444px;
             }
-
         }
 
         &_text {
@@ -471,14 +491,65 @@ body {
             }
         }
     }
-
+    .additional {
+        margin: 85px 0 20px 0;
+    }
+    .circle-container {
+        position: relative;
+        margin: 0px 80px 0 0px;
+        width: 174px;
+        top: 42px;
+        height: 174px;
+        border: 45px solid rgba(246, 237, 237, 1);
+        border-radius: 50%;
+        z-index: 1;
+        .circle {
+            position: relative;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background-color: rgba(246, 237, 237, 1);
+            z-index: 2;
+            img {
+                position: absolute;
+                right: -40px;
+                bottom: -38px;
+                animation: spin 5s linear infinite;
+                z-index: 3;
+            }
+            @keyframes spin {
+                from {
+                    transform: rotate(0deg);
+                }
+                to {
+                    transform: rotate(360deg);
+                }
+            }
+        }
+    }
     &_header-pre-block {
+        &_textaddit {
+            font-size: 40px;
+            font-family: "Urbanist";
+            margin-left: 40px;
+            position: relative;
+            display: inline-block;
+
+            &::after {
+                content: "";
+                position: absolute;
+                bottom: -2px;
+                left: 0;
+                width: 100%;
+                height: 2px;
+                background-color: black;
+            }
+        }
         &_line {
             width: 498px;
             height: 5px;
             background: #000;
         }
-
         &_text {
             font-family: "Urbanist";
             font-size: 55px;
@@ -609,24 +680,28 @@ body {
         }
     }
 }
-.TRZ_submit{
+
+.additional_footer{
+    width: 1460px;
+}
+.TRZ_submit {
     height: 300px;
     width: 692px;
     border-radius: 30px;
-    background: #FCF3F3;
-    position: relative;
-    bottom: 800px;
-    right: 350px;
+    background: #fcf3f3;
+    position: fixed;
+    bottom: 54%;
+    right: 50%;
     z-index: 10000;
-    .closeDiv{
+    .closeDiv {
         margin: 30px 0 0 20px;
         width: 20px;
         height: 20px;
-        border: none; 
+        border: none;
         cursor: pointer;
     }
-    p{
-        font-family: 'Urbanist';
+    p {
+        font-family: "Urbanist";
         font-size: 25px;
         text-align: center;
         margin-left: 180px;
@@ -636,17 +711,17 @@ body {
         margin: 10px 0 0 50px;
         width: 40%;
         height: 40%;
-        p{
+        p {
             margin-left: 0;
             margin-top: 0;
         }
-       
-        label{
+
+        label {
             display: block;
             margin-bottom: 5px;
         }
 
-        select{
+        select {
             width: 100%;
             padding: 10px;
             margin-bottom: 10px;
@@ -695,12 +770,9 @@ body {
 
 .divider {
     height: 100%;
-    /* Висота 100% контейнера */
     width: 445px;
     height: 4.2px;
-    /* Товщина полоски */
     background-color: black;
-    /* Колір полоски */
 }
 
 .block-for-login {
