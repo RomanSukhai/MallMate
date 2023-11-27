@@ -54,9 +54,10 @@ body {
 
 .home-content {
     width: 1460px;
-    height: 854.13px;
+    height: 879.13px;
     background: white;
     position: relative;
+    overflow-x: hidden;
     .proposition {
         width: 670px;
         height: 705px;
@@ -108,7 +109,7 @@ body {
 
         &_line {
             height: 2px;
-            width: 1428.8px;
+            width: 100%;
             border-radius: 45px;
             background: black;
             @include margin_pading();
@@ -350,7 +351,7 @@ body {
 
     &_footer-content {
         width: 1429.24px;
-        height: 510.57px;
+        height: 506.57px;
         margin: 64px auto 10px auto;
         background: #f8e1e14d;
 
@@ -414,7 +415,7 @@ body {
 
     &_footer {
         width: 100%;
-        height: 294.37px;
+        height: 298.37px;
         background: #000000cc;
 
         &_1 {
@@ -437,7 +438,7 @@ body {
 
         &_2 {
             height: 100%;
-            width: 50%;
+            width: 49%;
 
             &_proj-menu {
                 width: 100%;
@@ -795,7 +796,8 @@ body {
 
 .block_zaibav {
     width: 100%;
-    height: 100%;
+    height: 75%;
+    overflow-x: hidden;
 }
 
 .block_zaibav2 {

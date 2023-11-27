@@ -35,9 +35,10 @@ body {
 
 .home-content {
   width: 1460px;
-  height: 854.13px;
+  height: 879.13px;
   background: white;
   position: relative;
+  overflow-x: hidden;
 }
 .home-content .proposition {
   width: 670px;
@@ -87,7 +88,7 @@ body {
 }
 .home-content_menu_line {
   height: 2px;
-  width: 1428.8px;
+  width: 100%;
   border-radius: 45px;
   background: black;
   margin: 0px;
@@ -303,7 +304,7 @@ body {
 }
 .home-content_footer-content {
   width: 1429.24px;
-  height: 510.57px;
+  height: 506.57px;
   margin: 64px auto 10px auto;
   background: rgba(248, 225, 225, 0.3019607843);
 }
@@ -357,7 +358,7 @@ body {
 }
 .home-content_footer {
   width: 100%;
-  height: 294.37px;
+  height: 298.37px;
   background: rgba(0, 0, 0, 0.8);
 }
 .home-content_footer_1 {
@@ -377,7 +378,7 @@ body {
 }
 .home-content_footer_2 {
   height: 100%;
-  width: 50%;
+  width: 49%;
 }
 .home-content_footer_2_proj-menu {
   width: 100%;
@@ -696,7 +697,8 @@ body {
 
 .block_zaibav {
   width: 100%;
-  height: 100%;
+  height: 75%;
+  overflow-x: hidden;
 }
 
 .block_zaibav2 {
