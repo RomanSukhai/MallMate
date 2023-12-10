@@ -52,7 +52,7 @@
             <dir class="home-content_menu_line ">
             </dir>
         </menu>
-        <div class="d-flex align-items-center home-content_header_container-text mallmate_log" id="fromTop">
+        <div class="d-flex align-items-center home-content_header_container-text mallmate_log" >
             <img class="home-content_header_container-text_image image_M" src="{% static 'images/M.png' %}" alt="">
             <p class="home-content_header_container-text_text-header text">all</p>
             <img class="home-content_header_container-text_image image_M" src="{% static 'images/M.png' %}" alt="">
@@ -89,7 +89,7 @@
                     <p>пошук магазинів</p>
                 </div>
             </a>
-            <a href="">
+            <a href="{% url 'map' %}">
                 <div
                     class="home-content_buttonsProp_circule home-content_buttonsProp_circule_child2 d-flex justify-content-center align-items-center flex-wrap">
                     <img src="../static/icons/map.svg" alt="">
