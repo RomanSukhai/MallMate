@@ -1,7 +1,7 @@
 <h1>MallMate</h1>
 
 ``` shell
-git clone -b mallmate_101_final_log_reg_0.3.7 https://github.com/RomanSukhai/MallMate.git
+git clone -b mallmate_701_map-hardware https://github.com/RomanSukhai/MallMate.git
 cd .\MallMate\
 ```
 
