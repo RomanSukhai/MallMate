@@ -24,8 +24,10 @@ def profile(request):
 def info(request):
     return render(request, 'info.html')
 
+@login_required()
 def map(request):
     return render(request, 'map.html')
 
+@login_required()
 def home_user(request):
     return render(request, 'home_user.html')

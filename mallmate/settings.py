@@ -166,7 +166,7 @@ EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'mallmate844@gmail.com'
 EMAIL_HOST_PASSWORD = 'voya rdoz vmsp lwpx'
 
-LOGIN_REDIRECT_URL = '/login'
+LOGIN_REDIRECT_URL = '/home_user'
 ACCOUNT_LOGOUT_REDIRECT_URL = '/login'
 AUTH_USER_MODEL = 'users.User'
 ACCOUNT_USER_MODEL_USERNAME_FIELD = None

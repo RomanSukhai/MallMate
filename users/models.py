@@ -2,6 +2,8 @@ from django.db import models
 from django.contrib.auth.models import AbstractUser
 from django.utils.translation import gettext_lazy as _
 from django.contrib.auth.base_user import BaseUserManager
+from django.db import models
+
 
 
 class UserManager(BaseUserManager):
@@ -41,3 +43,26 @@ class User(AbstractUser):
 
     USERNAME_FIELD = 'email'
     REQUIRED_FIELDS = []
+
+class City(models.Model):
+    name = models.CharField(max_length=100)
+
+    def __str__(self):
+        return self.name
+
+class Mall(models.Model):
+    cities = models.ManyToManyField(City, related_name='malls')
+    name = models.CharField(max_length=100)
+
+    def __str__(self):
+        return self.name
+
+class Shop(models.Model):
+    mall = models.ForeignKey(Mall, on_delete=models.CASCADE, related_name='shops')
+    name = models.CharField(max_length=100)
+    icon_image = models.ImageField(upload_to='shop_icons/')
+    x = models.DecimalField(max_digits=9, decimal_places=6)
+    y = models.DecimalField(max_digits=9, decimal_places=6)
+
+    def __str__(self):
+        return f"{self.name} in {self.mall.name}"
