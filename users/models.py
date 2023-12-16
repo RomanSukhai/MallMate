@@ -59,7 +59,7 @@ class Mall(models.Model):
 class Shop(models.Model):
     mall = models.ForeignKey(Mall, on_delete=models.CASCADE, related_name='shops')
     name = models.CharField(max_length=100)
-    icon_image = models.ImageField(upload_to='shop_icons/')
+    iconUrl = models.CharField(max_length=100)
     x = models.DecimalField(max_digits=9, decimal_places=6)
     y = models.DecimalField(max_digits=9, decimal_places=6)
 

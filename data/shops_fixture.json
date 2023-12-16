@@ -1,0 +1,1586 @@
+[
+    {
+        "model": "users.shop",
+        "pk": 1,
+        "fields": {
+            "mall": 1,
+            "name": "Магазин 1",
+            "iconUrl": "{% static 'images/magazine_Map/Exit.png' %}",
+            "x": 40,
+            "y": 40
+        }
+    },
+    {
+        "model": "users.shop",
+        "pk": 2,
+        "fields": {
+            "mall": 1,
+            "name": "Silpo",
+            "iconUrl": "{% static 'images/magazine_Map/Silpo.png' %}",
+            "x": 0,
+            "y": 170
+        }
+    },
+    {
+        "model": "users.shop",
+        "pk": 3,
+        "fields": {
+            "mall": 1,
+            "name": "Jysk",
+            "iconUrl": "{% static 'images/magazine_Map/Jysk.png' %}",
+            "x": 0,
+            "y": 590
+        }
+    },
+    {
+        "model": "users.shop",
+        "pk": 4,
+        "fields": {
+            "mall": 1,
+            "name": "foxtrot",
+            "iconUrl": "{% static 'images/magazine_Map/foxtrot.png' %}",
+            "x": 45,
+            "y": 491
+        }
+    },
+    {
+        "model": "users.shop",
+        "pk": 5,
+        "fields": {
+            "mall": 1,
+            "name": "Rozetka",
+            "iconUrl": "{% static 'images/magazine_Map/Rozetka.png' %}",
+            "x": 175,
+            "y": 644
+        }
+    },
+    {
+        "model": "users.shop",
+        "pk": 6,
+        "fields": {
+            "mall": 1,
+            "name": "eldorado",
+            "iconUrl": "{% static 'images/magazine_Map/eldorado.png' %}",
+            "x": 45,
+            "y": 549
+        }
+    },
+    {
+        "model": "users.shop",
+        "pk": 7,
+        "fields": {
+            "mall": 1,
+            "name": "MIELE",
+            "iconUrl": "{% static 'images/magazine_Map/MIELE.png' %}",
+            "x": 186,
+            "y": 529
+        }
+    },
+    {
+        "model": "users.shop",
+        "pk": 8,
+        "fields": {
+            "mall": 1,
+            "name": "Xiomi",
+            "iconUrl": "{% static 'images/magazine_Map/Xiomi.png' %}",
+            "x": 186,
+            "y": 500
+        }
+    },
+    {
+        "model": "users.shop",
+        "pk": 9,
+        "fields": {
+            "mall": 1,
+            "name": "Магазин 2",
+            "iconUrl": "{% static 'images/magazine_Map/Rectangle426.png' %}",
+            "x": 187,
+            "y": 549
+        }
+    },
+    {
+        "model": "users.shop",
+        "pk": 10,
+        "fields": {
+            "mall": 1,
+            "name": "Магазин 2",
+            "iconUrl": "{% static 'images/magazine_Map/Group46.png' %}",
+            "x": 186,
+            "y": 562
+        }
+    },
+    {
+        "model": "users.shop",
+        "pk": 11,
+        "fields": {
+            "mall": 1,
+            "name": "Магазин 2",
+            "iconUrl": "{% static 'images/magazine_Map/Group45.png' %}",
+            "x": 186,
+            "y": 580
+        }
+    },
+    {
+        "model": "users.shop",
+        "pk": 12,
+        "fields": {
+            "mall": 1,
+            "name": "Магазин 2",
+            "iconUrl": "{% static 'images/magazine_Map/Rectangle521.png' %}",
+            "x": 193,
+            "y": 480
+        }
+    },
+    {
+        "model": "users.shop",
+        "pk": 13,
+        "fields": {
+            "mall": 1,
+            "name": "Defacto",
+            "iconUrl": "{% static 'images/magazine_Map/Defacto.png' %}",
+            "x": 217,
+            "y": 500
+        }
+    },
+    {
+        "model": "users.shop",
+        "pk": 14,
+        "fields": {
+            "mall": 1,
+            "name": "Магазин 2",
+            "iconUrl": "{% static 'images/magazine_Map/Group50.png' %}",
+            "x": 285,
+            "y": 513
+        }
+    },
+    {
+        "model": "users.shop",
+        "pk": 15,
+        "fields": {
+            "mall": 1,
+            "name": "Магазин 2",
+            "iconUrl": "{% static 'images/magazine_Map/Group51.png' %}",
+            "x": 302,
+            "y": 515
+        }
+    },
+    {
+        "model": "users.shop",
+        "pk": 16,
+        "fields": {
+            "mall": 1,
+            "name": "WaiKIKI",
+            "iconUrl": "{% static 'images/magazine_Map/WaiKIKI.png' %}",
+            "x": 302,
+            "y": 500
+        }
+    },
+    {
+        "model": "users.shop",
+        "pk": 17,
+        "fields": {
+            "mall": 1,
+            "name": "Магазин 2",
+            "iconUrl": "{% static 'images/magazine_Map/Rectangle 526.png' %}",
+            "x": 315,
+            "y": 495
+        }
+    },
+    {
+        "model": "users.shop",
+        "pk": 18,
+        "fields": {
+            "mall": 1,
+            "name": "Магазин 2",
+            "iconUrl": "{% static 'images/magazine_Map/Rectangle 525.png' %}",
+            "x": 295,
+            "y": 495
+        }
+    },
+    {
+        "model": "users.shop",
+        "pk": 19,
+        "fields": {
+            "mall": 1,
+            "name": "Магазин 2",
+            "iconUrl": "{% static 'images/magazine_Map/Rectangle 524.png' %}",
+            "x": 270,
+            "y": 490
+        }
+    },
+    {
+        "model": "users.shop",
+        "pk": 20,
+        "fields": {
+            "mall": 1,
+            "name": "Магазин 2",
+            "iconUrl": "{% static 'images/magazine_Map/Rectangle 523.png' %}",
+            "x": 255,
+            "y": 485
+        }
+    },
+    {
+        "model": "users.shop",
+        "pk": 21,
+        "fields": {
+            "mall": 1,
+            "name": "Магазин 2",
+            "iconUrl": "{% static 'images/magazine_Map/Rectangle 522.png' %}",
+            "x": 240,
+            "y": 480
+        }
+    },
+    {
+        "model": "users.shop",
+        "pk": 22,
+        "fields": {
+            "mall": 1,
+            "name": "Магазин 2",
+            "iconUrl": "{% static 'images/magazine_Map/Rectangle 472.png' %}",
+            "x": 435,
+            "y": 482
+        }
+    },
+    {
+        "model": "users.shop",
+        "pk": 23,
+        "fields": {
+            "mall": 1,
+            "name": "Магазин 2",
+            "iconUrl": "{% static 'images/magazine_Map/Rectangle 473.png' %}",
+            "x": 435,
+            "y": 480
+        }
+    },
+    {
+        "model": "users.shop",
+        "pk": 24,
+        "fields": {
+            "mall": 1,
+            "name": "Магазин 2",
+            "iconUrl": "{% static 'images/magazine_Map/Rectangle 474.png' %}",
+            "x": 475,
+            "y": 475
+        }
+    },
+    {
+        "model": "users.shop",
+        "pk": 25,
+        "fields": {
+            "mall": 1,
+            "name": "Магазин 2",
+            "iconUrl": "{% static 'images/magazine_Map/Rectangle 475.png' %}",
+            "x": 500,
+            "y": 470
+        }
+    },
+    {
+        "model": "users.shop",
+        "pk": 26,
+        "fields": {
+            "mall": 1,
+            "name": "Магазин 2",
+            "iconUrl": "{% static 'images/magazine_Map/Rectangle 476.png' %}",
+            "x": 525,
+            "y": 465
+        }
+    },
+    {
+        "model": "users.shop",
+        "pk": 27,
+        "fields": {
+            "mall": 1,
+            "name": "Магазин 2",
+            "iconUrl": "{% static 'images/magazine_Map/Rectangle 477.png' %}",
+            "x": 554,
+            "y": 458
+        }
+    },
+    {
+        "model": "users.shop",
+        "pk": 28,
+        "fields": {
+            "mall": 1,
+            "name": "Магазин 2",
+            "iconUrl": "{% static 'images/magazine_Map/Rectangle 478.png' %}",
+            "x": 583,
+            "y": 452
+        }
+    },
+    {
+        "model": "users.shop",
+        "pk": 29,
+        "fields": {
+            "mall": 1,
+            "name": "Магазин 2",
+            "iconUrl": "{% static 'images/magazine_Map/Rectangle 479.png' %}",
+            "x": 611,
+            "y": 447
+        }
+    },
+    {
+        "model": "users.shop",
+        "pk": 30,
+        "fields": {
+            "mall": 1,
+            "name": "Магазин 2",
+            "iconUrl": "{% static 'images/magazine_Map/Rectangle 492.png' %}",
+            "x": 632,
+            "y": 435
+        }
+    },
+    {
+        "model": "users.shop",
+        "pk": 31,
+        "fields": {
+            "mall": 1,
+            "name": "Магазин 2",
+            "iconUrl": "{% static 'images/magazine_Map/Rectangle 493.png' %}",
+            "x": 632,
+            "y": 442
+        }
+    },
+    {
+        "model": "users.shop",
+        "pk": 32,
+        "fields": {
+            "mall": 1,
+            "name": "Магазин 2",
+            "iconUrl": "{% static 'images/magazine_Map/Rectangle 493.png' %}",
+            "x": 692,
+            "y": 432
+        }
+    },
+    {
+        "model": "users.shop",
+        "pk": 33,
+        "fields": {
+            "mall": 1,
+            "name": "Магазин 2",
+            "iconUrl": "{% static 'images/magazine_Map/Rectangle 490.png' %}",
+            "x": 690,
+            "y": 426
+        }
+    },
+    {
+        "model": "users.shop",
+        "pk": 34,
+        "fields": {
+            "mall": 1,
+            "name": "sinsay",
+            "iconUrl": "{% static 'images/magazine_Map/sinsay.png' %}",
+            "x": 745,
+            "y": 421
+        }
+    },
+    {
+        "model": "users.shop",
+        "pk": 35,
+        "fields": {
+            "mall": 1,
+            "name": "H&M",
+            "iconUrl": "{% static 'images/magazine_Map/H&M.png' %}",
+            "x": 850,
+            "y": 407
+        }
+    },
+    {
+        "model": "users.shop",
+        "pk": 36,
+        "fields": {
+            "mall": 1,
+            "name": "RESERVED",
+            "iconUrl": "{% static 'images/magazine_Map/RESERVED.png' %}",
+            "x": 822,
+            "y": 250
+        }
+    },
+    {
+        "model": "users.shop",
+        "pk": 37,
+        "fields": {
+            "mall": 1,
+            "name": "NEWYORKER",
+            "iconUrl": "{% static 'images/magazine_Map/NEWYORKER.png' %}",
+            "x": 758,
+            "y": 246
+        }
+    },
+    {
+        "model": "users.shop",
+        "pk": 38,
+        "fields": {
+            "mall": 1,
+            "name": "Магазин 2",
+            "iconUrl": "{% static 'images/magazine_Map/Ellipse 44.png' %}",
+            "x": 822,
+            "y": 406
+        }
+    },
+    {
+        "model": "users.shop",
+        "pk": 39,
+        "fields": {
+            "mall": 1,
+            "name": "Магазин 2",
+            "iconUrl": "{% static 'images/magazine_Map/Rectangle 485.png' %}",
+            "x": 737,
+            "y": 293
+        }
+    },
+    {
+        "model": "users.shop",
+        "pk": 40,
+        "fields": {
+            "mall": 1,
+            "name": "BROCARD",
+            "iconUrl": "{% static 'images/magazine_Map/BROCARD.png' %}",
+            "x": 679,
+            "y": 246
+        }
+    },
+    {
+        "model": "users.shop",
+        "pk": 41,
+        "fields": {
+            "mall": 1,
+            "name": "Магазин 2",
+            "iconUrl": "{% static 'images/magazine_Map/Rectangle 483.png' %}",
+            "x": 651,
+            "y": 244
+        }
+    },
+    {
+        "model": "users.shop",
+        "pk": 42,
+        "fields": {
+            "mall": 1,
+            "name": "CHILIA",
+            "iconUrl": "{% static 'images/magazine_Map/CHILIA.png' %}",
+            "x": 623,
+            "y": 243
+        }
+    },
+    {
+        "model": "users.shop",
+        "pk": 43,
+        "fields": {
+            "mall": 1,
+            "name": "Магазин 2",
+            "iconUrl": "{% static 'images/magazine_Map/Rectangle 481.png' %}",
+            "x": 595,
+            "y": 242
+        }
+    },
+    {
+        "model": "users.shop",
+        "pk": 44,
+        "fields": {
+            "mall": 1,
+            "name": "Магазин 2",
+            "iconUrl": "{% static 'images/magazine_Map/Rectangle 480.png' %}",
+            "x": 582,
+            "y": 241
+        }
+    },
+    {
+        "model": "users.shop",
+        "pk": 45,
+        "fields": {
+            "mall": 1,
+            "name": "Магазин 2",
+            "iconUrl": "{% static 'images/magazine_Map/Rectangle 471.png' %}",
+            "x": 562,
+            "y": 235
+        }
+    },
+    {
+        "model": "users.shop",
+        "pk": 46,
+        "fields": {
+            "mall": 1,
+            "name": "INTERTOP",
+            "iconUrl": "{% static 'images/magazine_Map/INTERTOP.png' %}",
+            "x": 520,
+            "y": 189
+        }
+    },
+    {
+        "model": "users.shop",
+        "pk": 47,
+        "fields": {
+            "mall": 1,
+            "name": "Магазин 2",
+            "iconUrl": "{% static 'images/magazine_Map/ROYROBSON.png' %}",
+            "x": 463,
+            "y": 187
+        }
+    },
+    {
+        "model": "users.shop",
+        "pk": 48,
+        "fields": {
+            "mall": 1,
+            "name": "Магазин 2",
+            "iconUrl": "{% static 'images/magazine_Map/ALLO.png' %}",
+            "x": 406,
+            "y": 187
+        }
+    },
+    {
+        "model": "users.shop",
+        "pk": 49,
+        "fields": {
+            "mall": 1,
+            "name": "Магазин 2",
+            "iconUrl": "{% static 'images/magazine_Map/Rectangle 532.png' %}",
+            "x": 753,
+            "y": 366
+        }
+    },
+    {
+        "model": "users.shop",
+        "pk": 50,
+        "fields": {
+            "mall": 1,
+            "name": "Магазин 2",
+            "iconUrl": "{% static 'images/magazine_Map/Ellipse 46.png' %}",
+            "x": 748,
+            "y": 353
+        }
+    },
+    {
+        "model": "users.shop",
+        "pk": 51,
+        "fields": {
+            "mall": 1,
+            "name": "Магазин 2",
+            "iconUrl": "{% static 'images/magazine_Map/Ellipse 45.png' %}",
+            "x": 726,
+            "y": 350
+        }
+    },
+    {
+        "model": "users.shop",
+        "pk": 52,
+        "fields": {
+            "mall": 1,
+            "name": "Магазин 2",
+            "iconUrl": "{% static 'images/magazine_Map/Rectangle 467.png' %}",
+            "x": 382,
+            "y": 220
+        }
+    },
+    {
+        "model": "users.shop",
+        "pk": 53,
+        "fields": {
+            "mall": 1,
+            "name": "Магазин 2",
+            "iconUrl": "{% static 'images/magazine_Map/Rectangle 466.png' %}",
+            "x": 345,
+            "y": 231
+        }
+    },
+    {
+        "model": "users.shop",
+        "pk": 54,
+        "fields": {
+            "mall": 1,
+            "name": "Магазин 2",
+            "iconUrl": "{% static 'images/magazine_Map/Rectangle 465.png' %}",
+            "x": 315,
+            "y": 182
+        }
+    },
+    {
+        "model": "users.shop",
+        "pk": 55,
+        "fields": {
+            "mall": 1,
+            "name": "Магазин 2",
+            "iconUrl": "{% static 'images/magazine_Map/Rectangle 462.png' %}",
+            "x": 260,
+            "y": 229
+        }
+    },
+    {
+        "model": "users.shop",
+        "pk": 56,
+        "fields": {
+            "mall": 1,
+            "name": "Магазин 2",
+            "iconUrl": "{% static 'images/magazine_Map/Rectangle 463.png' %}",
+            "x": 272,
+            "y": 229
+        }
+    },
+    {
+        "model": "users.shop",
+        "pk": 57,
+        "fields": {
+            "mall": 1,
+            "name": "Магазин 2",
+            "iconUrl": "{% static 'images/magazine_Map/Rectangle 464.png' %}",
+            "x": 260,
+            "y": 182
+        }
+    },
+    {
+        "model": "users.shop",
+        "pk": 58,
+        "fields": {
+            "mall": 1,
+            "name": "Магазин 2",
+            "iconUrl": "{% static 'images/magazine_Map/EVA.png' %}",
+            "x": 232,
+            "y": 176
+        }
+    },
+    {
+        "model": "users.shop",
+        "pk": 59,
+        "fields": {
+            "mall": 1,
+            "name": "Магазин 2",
+            "iconUrl": "{% static 'images/magazine_Map/Group 53.png' %}",
+            "x": 203,
+            "y": 203
+        }
+    },
+    {
+        "model": "users.shop",
+        "pk": 60,
+        "fields": {
+            "mall": 1,
+            "name": "Магазин 2",
+            "iconUrl": "{% static 'images/magazine_Map/Rectangle 457.png' %}",
+            "x": 205,
+            "y": 176
+        }
+    },
+    {
+        "model": "users.shop",
+        "pk": 61,
+        "fields": {
+            "mall": 1,
+            "name": "Магазин 2",
+            "iconUrl": "{% static 'images/magazine_Map/Rectangle 458.png' %}",
+            "x": 205,
+            "y": 203
+        }
+    },
+    {
+        "model": "users.shop",
+        "pk": 62,
+        "fields": {
+            "mall": 1,
+            "name": "Магазин 2",
+            "iconUrl": "{% static 'images/magazine_Map/Rectangle 459.png' %}",
+            "x": 205,
+            "y": 229
+        }
+    },
+    {
+        "model": "users.shop",
+        "pk": 63,
+        "fields": {
+            "mall": 1,
+            "name": "Магазин 2",
+            "iconUrl": "{% static 'images/magazine_Map/Rectangle 460.png' %}",
+            "x": 205,
+            "y": 247
+        }
+    },
+    {
+        "model": "users.shop",
+        "pk": 64,
+        "fields": {
+            "mall": 1,
+            "name": "Магазин 2",
+            "iconUrl": "{% static 'images/magazine_Map/Rectangle 536.png' %}",
+            "x": 208,
+            "y": 267
+        }
+    },
+    {
+        "model": "users.shop",
+        "pk": 65,
+        "fields": {
+            "mall": 1,
+            "name": "Магазин 2",
+            "iconUrl": "{% static 'images/magazine_Map/Rectangle 537.png' %}",
+            "x": 235,
+            "y": 265
+        }
+    },
+    {
+        "model": "users.shop",
+        "pk": 66,
+        "fields": {
+            "mall": 1,
+            "name": "Магазин 2",
+            "iconUrl": "{% static 'images/magazine_Map/Rectangle 538.png' %}",
+            "x": 264,
+            "y": 261
+        }
+    },
+    {
+        "model": "users.shop",
+        "pk": 67,
+        "fields": {
+            "mall": 1,
+            "name": "Магазин 2",
+            "iconUrl": "{% static 'images/magazine_Map/Rectangle 539.png' %}",
+            "x": 294,
+            "y": 261
+        }
+    },
+    {
+        "model": "users.shop",
+        "pk": 68,
+        "fields": {
+            "mall": 1,
+            "name": "Магазин 2",
+            "iconUrl": "{% static 'images/magazine_Map/Rectangle 540.png' %}",
+            "x": 313,
+            "y": 260
+        }
+    },
+    {
+        "model": "users.shop",
+        "pk": 69,
+        "fields": {
+            "mall": 1,
+            "name": "Магазин 2",
+            "iconUrl": "{% static 'images/magazine_Map/Rectangle 541.png' %}",
+            "x": 347,
+            "y": 264
+        }
+    },
+    {
+        "model": "users.shop",
+        "pk": 70,
+        "fields": {
+            "mall": 1,
+            "name": "Магазин 2",
+            "iconUrl": "{% static 'images/magazine_Map/Rectangle 542.png' %}",
+            "x": 370,
+            "y": 264
+        }
+    },
+    {
+        "model": "users.shop",
+        "pk": 71,
+        "fields": {
+            "mall": 1,
+            "name": "Магазин 2",
+            "iconUrl": "{% static 'images/magazine_Map/Rectangle 543.png' %}",
+            "x": 417,
+            "y": 270
+        }
+    },
+    {
+        "model": "users.shop",
+        "pk": 72,
+        "fields": {
+            "mall": 1,
+            "name": "Магазин 2",
+            "iconUrl": "{% static 'images/magazine_Map/Rectangle 544.png' %}",
+            "x": 404,
+            "y": 272
+        }
+    },
+    {
+        "model": "users.shop",
+        "pk": 73,
+        "fields": {
+            "mall": 1,
+            "name": "Магазин 2",
+            "iconUrl": "{% static 'images/magazine_Map/bugatti.png' %}",
+            "x": 342,
+            "y": 275
+        }
+    },
+    {
+        "model": "users.shop",
+        "pk": 74,
+        "fields": {
+            "mall": 1,
+            "name": "Магазин 2",
+            "iconUrl": "{% static 'images/magazine_Map/Rectangle 444.png' %}",
+            "x": 313,
+            "y": 278
+        }
+    },
+    {
+        "model": "users.shop",
+        "pk": 75,
+        "fields": {
+            "mall": 1,
+            "name": "Магазин 2",
+            "iconUrl": "{% static 'images/magazine_Map/Rectangle 442.png' %}",
+            "x": 319,
+            "y": 307
+        }
+    },
+    {
+        "model": "users.shop",
+        "pk": 76,
+        "fields": {
+            "mall": 1,
+            "name": "Магазин 2",
+            "iconUrl": "{% static 'images/magazine_Map/Rectangle 441.png' %}",
+            "x": 319,
+            "y": 334
+        }
+    },
+    {
+        "model": "users.shop",
+        "pk": 77,
+        "fields": {
+            "mall": 1,
+            "name": "Магазин 2",
+            "iconUrl": "{% static 'images/magazine_Map/Rectangle 440.png' %}",
+            "x": 317,
+            "y": 361
+        }
+    },
+    {
+        "model": "users.shop",
+        "pk": 78,
+        "fields": {
+            "mall": 1,
+            "name": "Магазин 2",
+            "iconUrl": "{% static 'images/magazine_Map/Rectangle 439.png' %}",
+            "x": 353,
+            "y": 388
+        }
+    },
+    {
+        "model": "users.shop",
+        "pk": 79,
+        "fields": {
+            "mall": 1,
+            "name": "Магазин 2",
+            "iconUrl": "{% static 'images/magazine_Map/Rectangle 436.png' %}",
+            "x": 313,
+            "y": 404
+        }
+    },
+    {
+        "model": "users.shop",
+        "pk": 80,
+        "fields": {
+            "mall": 1,
+            "name": "Магазин 2",
+            "iconUrl": "{% static 'images/magazine_Map/Rectangle 439.png' %}",
+            "x": 353,
+            "y": 388
+        }
+    },
+    {
+        "model": "users.shop",
+        "pk": 81,
+        "fields": {
+            "mall": 1,
+            "name": "Магазин 2",
+            "iconUrl": "{% static 'images/magazine_Map/Rectangle 438.png' %}",
+            "x": 370,
+            "y": 402
+        }
+    },
+    {
+        "model": "users.shop",
+        "pk": 82,
+        "fields": {
+            "mall": 1,
+            "name": "Магазин 2",
+            "iconUrl": "{% static 'images/magazine_Map/Rectangle 437.png' %}",
+            "x": 370,
+            "y": 450
+        }
+    },
+    {
+        "model": "users.shop",
+        "pk": 83,
+        "fields": {
+            "mall": 1,
+            "name": "Магазин 2",
+            "iconUrl": "{% static 'images/magazine_Map/Rectangle 435.png' %}",
+            "x": 310,
+            "y": 458
+        }
+    },
+    {
+        "model": "users.shop",
+        "pk": 84,
+        "fields": {
+            "mall": 1,
+            "name": "Магазин 2",
+            "iconUrl": "{% static 'images/magazine_Map/Rectangle 434.png' %}",
+            "x": 295,
+            "y": 458
+        }
+    },
+    {
+        "model": "users.shop",
+        "pk": 85,
+        "fields": {
+            "mall": 1,
+            "name": "Магазин 2",
+            "iconUrl": "{% static 'images/magazine_Map/Rectangle 433.png' %}",
+            "x": 263,
+            "y": 396
+        }
+    },
+    {
+        "model": "users.shop",
+        "pk": 86,
+        "fields": {
+            "mall": 1,
+            "name": "Магазин 2",
+            "iconUrl": "{% static 'images/magazine_Map/WC.png' %}",
+            "x": 203,
+            "y": 352
+        }
+    },
+    {
+        "model": "users.shop",
+        "pk": 87,
+        "fields": {
+            "mall": 1,
+            "name": "Магазин 2",
+            "iconUrl": "{% static 'images/magazine_Map/Rectangle 445.png' %}",
+            "x": 262,
+            "y": 280
+        }
+    },
+    {
+        "model": "users.shop",
+        "pk": 88,
+        "fields": {
+            "mall": 1,
+            "name": "Магазин 2",
+            "iconUrl": "{% static 'images/magazine_Map/Rectangle 446.png' %}",
+            "x": 264,
+            "y": 280
+        }
+    },
+    {
+        "model": "users.shop",
+        "pk": 89,
+        "fields": {
+            "mall": 1,
+            "name": "Магазин 2",
+            "iconUrl": "{% static 'images/magazine_Map/Rectangle 434.png' %}",
+            "x": 295,
+            "y": 458
+        }
+    },
+    {
+        "model": "users.shop",
+        "pk": 90,
+        "fields": {
+            "mall": 1,
+            "name": "Магазин 2",
+            "iconUrl": "{% static 'images/magazine_Map/Rectangle 431.png' %}",
+            "x": 236,
+            "y": 416
+        }
+    },
+    {
+        "model": "users.shop",
+        "pk": 91,
+        "fields": {
+            "mall": 1,
+            "name": "Магазин 2",
+            "iconUrl": "{% static 'images/magazine_Map/Rectangle 428.png' %}",
+            "x": 208,
+            "y": 444
+        }
+    },
+    {
+        "model": "users.shop",
+        "pk": 92,
+        "fields": {
+            "mall": 1,
+            "name": "Магазин 2",
+            "iconUrl": "{% static 'images/magazine_Map/Rectangle 429.png' %}",
+            "x": 208,
+            "y": 430
+        }
+    },
+    {
+        "model": "users.shop",
+        "pk": 93,
+        "fields": {
+            "mall": 1,
+            "name": "Магазин 2",
+            "iconUrl": "{% static 'images/magazine_Map/Rectangle 430.png' %}",
+            "x": 207,
+            "y": 415
+        }
+    },
+    {
+        "model": "users.shop",
+        "pk": 94,
+        "fields": {
+            "mall": 1,
+            "name": "Магазин 2",
+            "iconUrl": "{% static 'images/magazine_Map/Rectangle 432.png' %}",
+            "x": 205,
+            "y": 378
+        }
+    },
+    {
+        "model": "users.shop",
+        "pk": 95,
+        "fields": {
+            "mall": 1,
+            "name": "Магазин 2",
+            "iconUrl": "{% static 'images/magazine_Map/Rectangle 453.png' %}",
+            "x": 203,
+            "y": 345
+        }
+    },
+    {
+        "model": "users.shop",
+        "pk": 96,
+        "fields": {
+            "mall": 1,
+            "name": "Магазин 2",
+            "iconUrl": "{% static 'images/magazine_Map/Rectangle 454.png' %}",
+            "x": 203,
+            "y": 358
+        }
+    },
+    {
+        "model": "users.shop",
+        "pk": 97,
+        "fields": {
+            "mall": 1,
+            "name": "Магазин 2",
+            "iconUrl": "{% static 'images/magazine_Map/Rectangle 455.png' %}",
+            "x": 234,
+            "y": 333
+        }
+    },
+    {
+        "model": "users.shop",
+        "pk": 98,
+        "fields": {
+            "mall": 1,
+            "name": "Магазин 2",
+            "iconUrl": "{% static 'images/magazine_Map/Rectangle 452.png' %}",
+            "x": 203,
+            "y": 332
+        }
+    },
+    {
+        "model": "users.shop",
+        "pk": 99,
+        "fields": {
+            "mall": 1,
+            "name": "Магазин 2",
+            "iconUrl": "{% static 'images/magazine_Map/Rectangle 451.png' %}",
+            "x": 206,
+            "y": 320
+        }
+    },
+    {
+        "model": "users.shop",
+        "pk": 100,
+        "fields": {
+            "mall": 1,
+            "name": "Магазин 2",
+            "iconUrl": "{% static 'images/magazine_Map/Rectangle 450.png' %}",
+            "x": 205,
+            "y": 307
+        }
+    },
+    {
+        "model": "users.shop",
+        "pk": 101,
+        "fields": {
+            "mall": 1,
+            "name": "Магазин 2",
+            "iconUrl": "{% static 'images/magazine_Map/Rectangle 449.png' %}",
+            "x": 220,
+            "y": 286
+        }
+    },
+    {
+        "model": "users.shop",
+        "pk": 102,
+        "fields": {
+            "mall": 1,
+            "name": "Магазин 2",
+            "iconUrl": "{% static 'images/magazine_Map/Rectangle 448.png' %}",
+            "x": 205,
+            "y": 286
+        }
+    },
+    {
+        "model": "users.shop",
+        "pk": 103,
+        "fields": {
+            "mall": 1,
+            "name": "Магазин 2",
+            "iconUrl": "{% static 'images/magazine_Map/Rectangle 447.png' %}",
+            "x": 238,
+            "y": 285
+        }
+    },
+    {
+        "model": "users.shop",
+        "pk": 104,
+        "fields": {
+            "mall": 1,
+            "name": "Магазин 2",
+            "iconUrl": "{% static 'images/magazine_Map/Ellipse 38.png' %}",
+            "x": 390,
+            "y": 355
+        }
+    },
+    {
+        "model": "users.shop",
+        "pk": 105,
+        "fields": {
+            "mall": 1,
+            "name": "Магазин 2",
+            "iconUrl": "{% static 'images/magazine_Map/Ellipse 39.png' %}",
+            "x": 390,
+            "y": 300
+        }
+    },
+    {
+        "model": "users.shop",
+        "pk": 106,
+        "fields": {
+            "mall": 1,
+            "name": "Магазин 2",
+            "iconUrl": "{% static 'images/magazine_Map/Rectangle 527.png' %}",
+            "x": 393,
+            "y": 450
+        }
+    },
+    {
+        "model": "users.shop",
+        "pk": 107,
+        "fields": {
+            "mall": 1,
+            "name": "Магазин 2",
+            "iconUrl": "{% static 'images/magazine_Map/Ellipse 36.png' %}",
+            "x": 393,
+            "y": 475
+        }
+    },
+    {
+        "model": "users.shop",
+        "pk": 108,
+        "fields": {
+            "mall": 1,
+            "name": "Магазин 2",
+            "iconUrl": "{% static 'images/magazine_Map/Rectangle 528.png' %}",
+            "x": 378,
+            "y": 485
+        }
+    },
+    {
+        "model": "users.shop",
+        "pk": 109,
+        "fields": {
+            "mall": 1,
+            "name": "Магазин 2",
+            "iconUrl": "{% static 'images/magazine_Map/ZolotVIk.png' %}",
+            "x": 464,
+            "y": 425
+        }
+    },
+    {
+        "model": "users.shop",
+        "pk": 110,
+        "fields": {
+            "mall": 1,
+            "name": "Магазин 2",
+            "iconUrl": "{% static 'images/magazine_Map/Baldinini.png' %}",
+            "x": 464,
+            "y": 401
+        }
+    },
+    {
+        "model": "users.shop",
+        "pk": 111,
+        "fields": {
+            "mall": 1,
+            "name": "Магазин 2",
+            "iconUrl": "{% static 'images/magazine_Map/Rectangle 500.png' %}",
+            "x": 464,
+            "y": 392
+        }
+    },
+    {
+        "model": "users.shop",
+        "pk": 112,
+        "fields": {
+            "mall": 1,
+            "name": "Магазин 2",
+            "iconUrl": "{% static 'images/magazine_Map/Rectangle 503.png' %}",
+            "x": 507,
+            "y": 400
+        }
+    },
+    {
+        "model": "users.shop",
+        "pk": 113,
+        "fields": {
+            "mall": 1,
+            "name": "Магазин 2",
+            "iconUrl": "{% static 'images/magazine_Map/Rectangle 508.png' %}",
+            "x": 533,
+            "y": 401
+        }
+    },
+    {
+        "model": "users.shop",
+        "pk": 114,
+        "fields": {
+            "mall": 1,
+            "name": "Магазин 2",
+            "iconUrl": "{% static 'images/magazine_Map/Rectangle 507.png' %}",
+            "x": 560,
+            "y": 397
+        }
+    },
+    {
+        "model": "users.shop",
+        "pk": 115,
+        "fields": {
+            "mall": 1,
+            "name": "Магазин 2",
+            "iconUrl": "{% static 'images/magazine_Map/GUESS.png' %}",
+            "x": 463,
+            "y": 347
+        }
+    },
+    {
+        "model": "users.shop",
+        "pk": 116,
+        "fields": {
+            "mall": 1,
+            "name": "Магазин 2",
+            "iconUrl": "{% static 'images/magazine_Map/WC2.png' %}",
+            "x": 533,
+            "y": 350
+        }
+    },
+    {
+        "model": "users.shop",
+        "pk": 117,
+        "fields": {
+            "mall": 1,
+            "name": "Магазин 2",
+            "iconUrl": "{% static 'images/magazine_Map/Rectangle 509.png' %}",
+            "x": 592,
+            "y": 359
+        }
+    },
+    {
+        "model": "users.shop",
+        "pk": 118,
+        "fields": {
+            "mall": 1,
+            "name": "Магазин 2",
+            "iconUrl": "{% static 'images/magazine_Map/Rectangle 510.png' %}",
+            "x": 619,
+            "y": 359
+        }
+    },
+    {
+        "model": "users.shop",
+        "pk": 119,
+        "fields": {
+            "mall": 1,
+            "name": "Магазин 2",
+            "iconUrl": "{% static 'images/magazine_Map/JADOR.png' %}",
+            "x": 646,
+            "y": 360
+        }
+    },
+    {
+        "model": "users.shop",
+        "pk": 120,
+        "fields": {
+            "mall": 1,
+            "name": "Магазин 2",
+            "iconUrl": "{% static 'images/magazine_Map/Rectangle 512.png' %}",
+            "x": 673,
+            "y": 360
+        }
+    },
+    {
+        "model": "users.shop",
+        "pk": 121,
+        "fields": {
+            "mall": 1,
+            "name": "Магазин 2",
+            "iconUrl": "{% static 'images/magazine_Map/Rectangle 513.png' %}",
+            "x": 700,
+            "y": 360
+        }
+    },
+    {
+        "model": "users.shop",
+        "pk": 122,
+        "fields": {
+            "mall": 1,
+            "name": "Магазин 2",
+            "iconUrl": "{% static 'images/magazine_Map/Rectangle 514.png' %}",
+            "x": 729,
+            "y": 366
+        }
+    },
+    {
+        "model": "users.shop",
+        "pk": 123,
+        "fields": {
+            "mall": 1,
+            "name": "Магазин 2",
+            "iconUrl": "{% static 'images/magazine_Map/Rectangle 520.png' %}",
+            "x": 702,
+            "y": 339
+        }
+    },
+    {
+        "model": "users.shop",
+        "pk": 124,
+        "fields": {
+            "mall": 1,
+            "name": "Магазин 2",
+            "iconUrl": "{% static 'images/magazine_Map/Rectangle 519.png' %}",
+            "x": 702,
+            "y": 337
+        }
+    },
+    {
+        "model": "users.shop",
+        "pk": 125,
+        "fields": {
+            "mall": 1,
+            "name": "Магазин 2",
+            "iconUrl": "{% static 'images/magazine_Map/Rectangle 518.png' %}",
+            "x": 673,
+            "y": 324
+        }
+    },
+    {
+        "model": "users.shop",
+        "pk": 126,
+        "fields": {
+            "mall": 1,
+            "name": "Магазин 2",
+            "iconUrl": "{% static 'images/magazine_Map/Rectangle 517.png' %}",
+            "x": 645,
+            "y": 316
+        }
+    },
+    {
+        "model": "users.shop",
+        "pk": 127,
+        "fields": {
+            "mall": 1,
+            "name": "Магазин 2",
+            "iconUrl": "{% static 'images/magazine_Map/Rectangle 535.png' %}",
+            "x": 645,
+            "y": 306
+        }
+    },
+    {
+        "model": "users.shop",
+        "pk": 128,
+        "fields": {
+            "mall": 1,
+            "name": "Магазин 2",
+            "iconUrl": "{% static 'images/magazine_Map/Rectangle 534.png' %}",
+            "x": 673,
+            "y": 311
+        }
+    },
+    {
+        "model": "users.shop",
+        "pk": 129,
+        "fields": {
+            "mall": 1,
+            "name": "Магазин 2",
+            "iconUrl": "{% static 'images/magazine_Map/Rectangle 533.png' %}",
+            "x": 703,
+            "y": 321
+        }
+    },
+    {
+        "model": "users.shop",
+        "pk": 130,
+        "fields": {
+            "mall": 1,
+            "name": "Магазин 2",
+            "iconUrl": "{% static 'images/magazine_Map/Rectangle 515.png' %}",
+            "x": 616,
+            "y": 308
+        }
+    },
+    {
+        "model": "users.shop",
+        "pk": 131,
+        "fields": {
+            "mall": 1,
+            "name": "Магазин 2",
+            "iconUrl": "{% static 'images/magazine_Map/Rectangle 505.png' %}",
+            "x": 590,
+            "y": 301
+        }
+    },
+    {
+        "model": "users.shop",
+        "pk": 132,
+        "fields": {
+            "mall": 1,
+            "name": "Магазин 2",
+            "iconUrl": "{% static 'images/magazine_Map/VOVK.png' %}",
+            "x": 569,
+            "y": 296
+        }
+    },
+    {
+        "model": "users.shop",
+        "pk": 133,
+        "fields": {
+            "mall": 1,
+            "name": "Магазин 2",
+            "iconUrl": "{% static 'images/magazine_Map/Rectangle 498.png' %}",
+            "x": 463,
+            "y": 346
+        }
+    },
+    {
+        "model": "users.shop",
+        "pk": 134,
+        "fields": {
+            "mall": 1,
+            "name": "Магазин 2",
+            "iconUrl": "{% static 'images/magazine_Map/Rectangle 496.png' %}",
+            "x": 463,
+            "y": 316
+        }
+    },
+    {
+        "model": "users.shop",
+        "pk": 135,
+        "fields": {
+            "mall": 1,
+            "name": "Магазин 2",
+            "iconUrl": "{% static 'images/magazine_Map/Rectangle 495.png' %}",
+            "x": 463,
+            "y": 296
+        }
+    },
+    {
+        "model": "users.shop",
+        "pk": 136,
+        "fields": {
+            "mall": 1,
+            "name": "Магазин 2",
+            "iconUrl": "{% static 'images/magazine_Map/Rectangle 494.png' %}",
+            "x": 463,
+            "y": 280
+        }
+    },
+    {
+        "model": "users.shop",
+        "pk": 137,
+        "fields": {
+            "mall": 1,
+            "name": "Магазин 2",
+            "iconUrl": "{% static 'images/magazine_Map/Rectangle 497.png' %}",
+            "x": 503,
+            "y": 285
+        }
+    },
+    {
+        "model": "users.shop",
+        "pk": 138,
+        "fields": {
+            "mall": 1,
+            "name": "Магазин 2",
+            "iconUrl": "{% static 'images/magazine_Map/Rectangle 529.png' %}",
+            "x": 416,
+            "y": 330
+        }
+    },
+    {
+        "model": "users.shop",
+        "pk": 139,
+        "fields": {
+            "mall": 1,
+            "name": "Магазин 2",
+            "iconUrl": "{% static 'images/magazine_Map/Rectangle 531.png' %}",
+            "x": 412,
+            "y": 360
+        }
+    },
+    {
+        "model": "users.shop",
+        "pk": 140,
+        "fields": {
+            "mall": 1,
+            "name": "Магазин 2",
+            "iconUrl": "{% static 'images/magazine_Map/Rectangle 530.png' %}",
+            "x": 428,
+            "y": 368
+        }
+    },
+    {
+        "model": "users.shop",
+        "pk": 141,
+        "fields": {
+            "mall": 1,
+            "name": "Магазин 2",
+            "iconUrl": "{% static 'images/magazine_Map/Ellipse 40.png' %}",
+            "x": 435,
+            "y": 435
+        }
+    },
+    {
+        "model": "users.shop",
+        "pk": 142,
+        "fields": {
+            "mall": 1,
+            "name": "Магазин 2",
+            "iconUrl": "{% static 'images/magazine_Map/Ellipse 37.png' %}",
+            "x": 455,
+            "y": 458
+        }
+    },
+    {
+        "model": "users.shop",
+        "pk": 143,
+        "fields": {
+            "mall": 1,
+            "name": "Магазин 2",
+            "iconUrl": "{% static 'images/magazine_Map/Ellipse 41.png' %}",
+            "x": 512,
+            "y": 456
+        }
+    },
+    {
+        "model": "users.shop",
+        "pk": 144,
+        "fields": {
+            "mall": 1,
+            "name": "Магазин 2",
+            "iconUrl": "{% static 'images/magazine_Map/Ellipse 42.png' %}",
+            "x": 557,
+            "y": 445
+        }
+    }
+]

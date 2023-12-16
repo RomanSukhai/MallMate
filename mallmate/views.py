@@ -1,5 +1,6 @@
+from django.http import JsonResponse
 from django.shortcuts import render
-from users.models import User
+from users.models import User, City, Shop
 from django.contrib.auth.decorators import login_required
 
 

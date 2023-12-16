@@ -1,3 +1,4 @@
+from django.http import JsonResponse
 from django.shortcuts import render, redirect
 from .forms import RegisterForm
 from django.contrib import messages
@@ -10,6 +11,7 @@ from django.urls import reverse_lazy
 from .serializers import CitySerializer, MallSerializer, ShopSerializer
 from rest_framework import viewsets
 from .models import City, Mall, Shop
+from django.templatetags.static import static
 from django.utils.safestring import mark_safe
 
 
@@ -265,3 +267,35 @@ class ShopViewSet(viewsets.ReadOnlyModelViewSet):
         if mall_id is not None:
             queryset = queryset.filter(mall__id=mall_id)
         return queryset
+
+def get_malls(request):
+    city_id = request.GET.get('cityId')
+    if city_id:
+        malls = Mall.objects.filter(cities__id=city_id).values('id', 'name')
+        return JsonResponse(list(malls), safe=False)
+    else:
+        return JsonResponse({'error': 'No city ID provided'}, status=400)
+
+def get_shops(request, mall_id):
+    shops = Shop.objects.filter(mall_id=mall_id).values('name', 'iconUrl', 'x', 'y')
+    return JsonResponse(list(shops), safe=False)
+
+def get_cities(request):
+    cities = City.objects.all().values('id', 'name')
+    return JsonResponse(list(cities), safe=False)
+
+# views.py в Django
+
+
+
+def get_shops_by_mall(request, mall_id):
+    shops = Shop.objects.filter(mall_id=mall_id).values('id', 'name', 'iconUrl', 'x', 'y')
+
+    shops_data = [{
+        'name': shop['name'],
+        'iconUrl': static(shop['iconUrl'].lstrip('/').lstrip('map/')),
+        'x': shop['x'],
+        'y': shop['y']
+    } for shop in shops]
+
+    return JsonResponse(shops_data, safe=False)

@@ -146,37 +146,7 @@ $(document).ready(function () {
         speed: 1100,
     });
 });
-$(document).ready(function() {
-    // Отримання списку міст
-    fetch('/get-cities')
-        .then(response => response.json())
-        .then(cities => {
-            var citySelect = $('#city-select');
-            $.each(cities, function(index, city) {
-                citySelect.append($('<option>', {
-                    value: city.id,
-                    text: city.name
-                }));
-            });
-        });
 
-    // Обробник зміни міста
-    $('#city-select').change(function() {
-        var cityId = $(this).val();
-        fetch('/get-malls?cityId=' + cityId)
-            .then(response => response.json())
-            .then(malls => {
-                var mallSelect = $('#mall-select');
-                mallSelect.empty().prop('disabled', false);
-                $.each(malls, function(index, mall) {
-                    mallSelect.append($('<option>', {
-                        value: mall.id,
-                        text: mall.name
-                    }));
-                });
-            });
-    });
-});
 
 $(document).ready(function () {
     var divCreated = false;
@@ -188,21 +158,19 @@ $(document).ready(function () {
             var newDiv = $(
                 '<div class="TRZ_submit d-flex flex-wrap flex-row">' +
                     '<button class="closeDiv d-flex align-content-start justify-content-center">' +
-                        '<img src="../static/icons/cancel.svg" >' +
+                        '<img src="../static/icons/cancel.svg" alt="Закрити">' +
                     '</button>' +
                     '<p>Оберіть спершу місто, <br> а потім ТЦ</p>' +
                     '<div class="dropdown">' +
                         '<label for="city-select"><p>Оберіть місто:</p></label>' +
                         '<select id="city-select">' +
                             '<option value="">Виберіть місто...</option>' +
-                            // Тут буде динамічно додаватися список міст
                         '</select>' +
                     '</div>' +
                     '<div class="dropdown">' +
                         '<label for="mall-select"><p>Оберіть ТЦ:</p></label>' +
                         '<select id="mall-select" disabled>' +
                             '<option value="">Спочатку виберіть місто...</option>' +
-                            // Тут буде динамічно додаватися список ТЦ
                         '</select>' + 
                     '</div>' +
                 '</div>'
@@ -219,20 +187,46 @@ $(document).ready(function () {
                     cities.forEach(function(city) {
                         citySelect.append(new Option(city.name, city.id));
                     });
+
+                    // Відновлення вибору міста
+                    var savedCityId = localStorage.getItem('selectedCityId');
+                    if (savedCityId) {
+                        $('#city-select').val(savedCityId).change();
+                    }
                 });
 
             // Обробник подій для вибору міста
             $('#city-select').change(function() {
                 var cityId = $(this).val();
-                // AJAX запит до сервера для отримання ТЦ за вибраним містом
-                fetch('/get-malls?cityId=' + cityId)
-                    .then(response => response.json())
-                    .then(malls => {
-                        var mallSelect = $('#mall-select').empty().prop('disabled', false);
-                        malls.forEach(function(mall) {
-                            mallSelect.append(new Option(mall.name, mall.id));
+                var mallSelect = $('#mall-select').empty().append('<option value="">Виберіть ТЦ...</option>').prop('disabled', true);
+
+                if (cityId) {
+                    localStorage.setItem('selectedCityId', cityId);
+                    // AJAX запит до сервера для отримання ТЦ за вибраним містом
+                    fetch('/get-malls?cityId=' + cityId)
+                        .then(response => response.json())
+                        .then(malls => {
+                            mallSelect.prop('disabled', false);
+                            malls.forEach(function(mall) {
+                                mallSelect.append(new Option(mall.name, mall.id));
+                            });
+
+                            // Відновлення вибору ТРЦ
+                            var savedMallId = localStorage.getItem('selectedMallId');
+                            if (savedMallId) {
+                                $('#mall-select').val(savedMallId);
+                            }
                         });
-                    });
+                } else {
+                    localStorage.removeItem('selectedCityId');
+                    localStorage.removeItem('selectedMallId');
+                }
+            });
+
+            // Обробник подій для вибору ТРЦ
+            $('#mall-select').change(function() {
+                var mallId = $(this).val();
+                localStorage.setItem('selectedMallId', mallId);
             });
 
             // Обробник подій для кнопки закриття
@@ -243,3 +237,4 @@ $(document).ready(function () {
         }
     });
 });
+

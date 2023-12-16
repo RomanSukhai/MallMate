@@ -29,10 +29,11 @@ router.register(r'cities', users_views.CityViewSet)
 router.register(r'malls', users_views.MallViewSet)
 router.register(r'shops', users_views.ShopViewSet)
 
-urlpatterns = [
 
-]
 urlpatterns = [
+path('get_shops/<int:mall_id>/', users_views.get_shops, name='get_shops'),
+    path('get-malls', users_views.get_malls, name='get-malls'),
+    path('get-cities', users_views.get_cities, name='get-cities'),
     path('api/', include(router.urls)),
     path('', project_views.landing, name='landing'),
 
