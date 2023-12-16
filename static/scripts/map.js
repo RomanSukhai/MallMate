@@ -10,6 +10,11 @@ $(document).ready(function () {
     crs: L.CRS.Simple
   });
 
+  // Отримання реальних координат для src
+  var srcBounds = map.getBounds();
+  var srcTopLeft = srcBounds.getNorthWest();
+  var srcBottomRight = srcBounds.getSouthEast();
+
   var w = 994, h = 706;
   var southWest = map.unproject([0, h], map.getMaxZoom());
   var northEast = map.unproject([w, 0], map.getMaxZoom());
@@ -20,35 +25,42 @@ $(document).ready(function () {
 
   // Отримання вибраного ID ТРЦ
   var selectedMallId = localStorage.getItem('selectedMallId');
-
+  var markers = {};
+  var xOffset =250; // Зсув вправо
+  var yOffset = -170; // Зсув вниз
   // AJAX запит для отримання магазинів
   $.ajax({
     url: '/get_shops/' + selectedMallId,
     method: 'GET',
     success: function (shops) {
       shops.forEach(function (shop) {
-        var pos = L.latLng(shop.y, shop.x); // Використовуємо координати y, x
-        var iconUrl = shop.iconUrl.replace('/map/', '/');
+        // Підрахунок реальних координат на основі src
+        var x = srcTopLeft.lng + (srcBottomRight.lng - srcTopLeft.lng) * (shop.x / w)+ xOffset;
+        var y = srcTopLeft.lat + (srcBottomRight.lat - srcTopLeft.lat) * (shop.y / h)+ yOffset;
+        var pos = L.latLng(y, x);
 
         var icon = L.icon({
-          iconUrl: iconUrl,
+          iconUrl: '/static/' + shop.iconUrl.replace('/map/', '/'),
           iconSize: [shop.iconWidth, shop.iconHeight],
           iconAnchor: [shop.iconWidth / 2, shop.iconHeight / 2]
         });
 
         var marker = L.marker(pos, { icon: icon }).addTo(map);
         marker.bindPopup('<h1>' + shop.name + '</h1><p>Інформація про магазин...</p>');
+        markers[shop.name.toLowerCase()] = marker;  // Зберігаємо маркер за назвою магазину
+
       });
       
       // Оновлюємо автозаповнення пошуку за назвами магазинів
       var availableTags = shops.map(function(shop) { return shop.name; });
       $("#searchInput").autocomplete({
         source: availableTags,
-        open: function () {
-          var ul = $(".ui-autocomplete:visible");
-          var items = ul.find("li").length;
-          var itemHeight = ul.find("li").first().outerHeight();
-          ul.outerHeight(items * itemHeight);
+        select: function(event, ui) {
+          var selectedShop = ui.item.value.toLowerCase();
+          if (markers[selectedShop]) {
+            map.setView(markers[selectedShop].getLatLng(), 5);  // Центруємо карту на маркері
+            markers[selectedShop].openPopup();  // Відкриваємо вікно інформації маркера
+          }
         }
       });
     },

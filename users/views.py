@@ -293,7 +293,7 @@ def get_shops_by_mall(request, mall_id):
 
     shops_data = [{
         'name': shop['name'],
-        'iconUrl': static(shop['iconUrl'].lstrip('/').lstrip('map/')),
+        'iconUrl': static(shop['iconUrl']),
         'x': shop['x'],
         'y': shop['y']
     } for shop in shops]
