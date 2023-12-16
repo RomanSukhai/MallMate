@@ -17,14 +17,23 @@ Including another URLconf
 from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib import admin
-from django.urls import path, include
+from django.urls import include
 from django.contrib.auth import views as auth_views
 import users.views as users_views
-from . import views as project_views
+from rest_framework.routers import DefaultRouter
+from . import views as project_views, views
 from django.urls import path
 from users.views import RememberMeLoginView
+router = DefaultRouter()
+router.register(r'cities', users_views.CityViewSet)
+router.register(r'malls', users_views.MallViewSet)
+router.register(r'shops', users_views.ShopViewSet)
 
 urlpatterns = [
+
+]
+urlpatterns = [
+    path('api/', include(router.urls)),
     path('', project_views.landing, name='landing'),
 
     path('admin/', admin.site.urls),

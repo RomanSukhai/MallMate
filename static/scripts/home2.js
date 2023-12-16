@@ -146,30 +146,63 @@ $(document).ready(function () {
         speed: 1100,
     });
 });
+$(document).ready(function() {
+    // Отримання списку міст
+    fetch('/get-cities')
+        .then(response => response.json())
+        .then(cities => {
+            var citySelect = $('#city-select');
+            $.each(cities, function(index, city) {
+                citySelect.append($('<option>', {
+                    value: city.id,
+                    text: city.name
+                }));
+            });
+        });
+
+    // Обробник зміни міста
+    $('#city-select').change(function() {
+        var cityId = $(this).val();
+        fetch('/get-malls?cityId=' + cityId)
+            .then(response => response.json())
+            .then(malls => {
+                var mallSelect = $('#mall-select');
+                mallSelect.empty().prop('disabled', false);
+                $.each(malls, function(index, mall) {
+                    mallSelect.append($('<option>', {
+                        value: mall.id,
+                        text: mall.name
+                    }));
+                });
+            });
+    });
+});
+
 $(document).ready(function () {
     var divCreated = false;
 
     $('#createDiv').click(function (e) {
-        e.preventDefault(); 
+        e.preventDefault();
 
         if (!divCreated) {
             var newDiv = $(
                 '<div class="TRZ_submit d-flex flex-wrap flex-row">' +
                     '<button class="closeDiv d-flex align-content-start justify-content-center">' +
-                        '<img src="../static/icons/cancel.svg" alt="Закрити">' +
+                        '<img src="../static/icons/cancel.svg" >' +
                     '</button>' +
                     '<p>Оберіть спершу місто, <br> а потім ТЦ</p>' +
                     '<div class="dropdown">' +
-                        '<label for="city-select"> <p>Оберіть місто:</p></label>' +
+                        '<label for="city-select"><p>Оберіть місто:</p></label>' +
                         '<select id="city-select">' +
-                            '<option value="">Виберіть...</option>' +
-                            '<option value="kyiv">Київ</option>' +
-                            '<option value="lviv">Львів</option>' +
+                            '<option value="">Виберіть місто...</option>' +
+                            // Тут буде динамічно додаватися список міст
                         '</select>' +
                     '</div>' +
                     '<div class="dropdown">' +
                         '<label for="mall-select"><p>Оберіть ТЦ:</p></label>' +
                         '<select id="mall-select" disabled>' +
+                            '<option value="">Спочатку виберіть місто...</option>' +
+                            // Тут буде динамічно додаватися список ТЦ
                         '</select>' + 
                     '</div>' +
                 '</div>'
@@ -178,37 +211,35 @@ $(document).ready(function () {
             $('body').append(newDiv);
             divCreated = true;
 
+            // AJAX запит для отримання міст
+            fetch('/get-cities')
+                .then(response => response.json())
+                .then(cities => {
+                    var citySelect = $('#city-select');
+                    cities.forEach(function(city) {
+                        citySelect.append(new Option(city.name, city.id));
+                    });
+                });
+
+            // Обробник подій для вибору міста
             $('#city-select').change(function() {
-                var city = $(this).val().toLowerCase();
-                var mallSelect = $('#mall-select');
-                mallSelect.empty();
-
-                if(city) {
-                    var malls = {
-                        kyiv: ['ТЦ Гулівер', 'ТЦ Ocean Plaza'],
-                        lviv: ['ТЦ Форум', 'ТЦ Victoria Gardens']
-                    };
-
-                    if(malls[city]) {
-                        mallSelect.prop('disabled', false);
-                        $.each(malls[city], function(index, value) {
-                            mallSelect.append($('<option>', {
-                                value: value.toLowerCase().replace(/\s+/g, '-'),
-                                text: value
-                            }));
+                var cityId = $(this).val();
+                // AJAX запит до сервера для отримання ТЦ за вибраним містом
+                fetch('/get-malls?cityId=' + cityId)
+                    .then(response => response.json())
+                    .then(malls => {
+                        var mallSelect = $('#mall-select').empty().prop('disabled', false);
+                        malls.forEach(function(mall) {
+                            mallSelect.append(new Option(mall.name, mall.id));
                         });
-                    } else {
-                        mallSelect.prop('disabled', true);
-                    }
-                } else {
-                    mallSelect.prop('disabled', true);
-                }
+                    });
+            });
+
+            // Обробник подій для кнопки закриття
+            $('body').on('click', '.closeDiv', function () {
+                $(this).parent().remove();
+                divCreated = false;
             });
         }
     });
-    $('body').on('click', '.closeDiv', function () {
-        $(this).parent().remove();
-        divCreated = false;
-    });
 });
-

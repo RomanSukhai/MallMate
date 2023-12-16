@@ -87,25 +87,19 @@ WSGI_APPLICATION = 'mallmate.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
+
+
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'MallMate',
+        'USER': 'root',
+        'PASSWORD': 'namor2004',
+        'HOST': 'localhost',
+        'PORT': '3306',
     }
 }
-
-# MYSQL_PWD = os.environ.get('MYSQL_PWD', 'namor2004')
-
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.mysql',
-#         'NAME': 'MallMate',
-#         'USER': 'root',
-#         'PASSWORD': MYSQL_PWD,
-#         'HOST': 'localhost',
-#         'PORT': '3306',
-#     }
-# }
 
 
 # Password validation

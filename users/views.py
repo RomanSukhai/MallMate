@@ -7,6 +7,9 @@ from .forms import RememberMeAuthenticationForm
 from django.contrib.auth.views import LoginView
 from django.contrib.auth.views import PasswordResetDoneView, PasswordResetView, PasswordChangeDoneView, PasswordResetConfirmView, PasswordChangeView, PasswordResetConfirmView
 from django.urls import reverse_lazy
+from .serializers import CitySerializer, MallSerializer, ShopSerializer
+from rest_framework import viewsets
+from .models import City, Mall, Shop
 from django.utils.safestring import mark_safe
 
 
@@ -203,3 +206,62 @@ class CustomPasswordResetConfirmView(PasswordResetConfirmView):
         response = super().form_invalid(form)
         messages.error(self.request, 'There was an error resetting your password. Please make sure the link is valid and try again.')
         return response
+
+    from rest_framework import viewsets
+    from .models import City, Mall, Shop
+    from .serializers import CitySerializer, MallSerializer, ShopSerializer
+
+    class CityViewSet(viewsets.ReadOnlyModelViewSet):
+        queryset = City.objects.all()
+        serializer_class = CitySerializer
+
+    class MallViewSet(viewsets.ReadOnlyModelViewSet):
+        queryset = Mall.objects.all()
+        serializer_class = MallSerializer
+
+        def get_queryset(self):
+            queryset = super().get_queryset()
+            city_id = self.request.query_params.get('city_id')
+            if city_id is not None:
+                queryset = queryset.filter(cities__id=city_id)
+            return queryset
+
+    class ShopViewSet(viewsets.ReadOnlyModelViewSet):
+        queryset = Shop.objects.all()
+        serializer_class = ShopSerializer
+
+        def get_queryset(self):
+            queryset = super().get_queryset()
+            mall_id = self.request.query_params.get('mall_id')
+            if mall_id is not None:
+                queryset = queryset.filter(mall__id=mall_id)
+            return queryset
+
+
+
+
+class CityViewSet(viewsets.ReadOnlyModelViewSet):
+    queryset = City.objects.all()
+    serializer_class = CitySerializer
+
+class MallViewSet(viewsets.ReadOnlyModelViewSet):
+    queryset = Mall.objects.all()
+    serializer_class = MallSerializer
+
+    def get_queryset(self):
+        queryset = super().get_queryset()
+        city_id = self.request.query_params.get('city_id')
+        if city_id is not None:
+            queryset = queryset.filter(cities__id=city_id)
+        return queryset
+
+class ShopViewSet(viewsets.ReadOnlyModelViewSet):
+    queryset = Shop.objects.all()
+    serializer_class = ShopSerializer
+
+    def get_queryset(self):
+        queryset = super().get_queryset()
+        mall_id = self.request.query_params.get('mall_id')
+        if mall_id is not None:
+            queryset = queryset.filter(mall__id=mall_id)
+        return queryset
