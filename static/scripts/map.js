@@ -43,28 +43,43 @@ $(document).ready(function () {
           iconUrl: '/static/' + shop.iconUrl.replace('/map/', '/'),
           iconSize: [shop.iconWidth, shop.iconHeight],
           iconAnchor: [shop.iconWidth / 2, shop.iconHeight / 2]
+          
         });
 
-        var marker = L.marker(pos, { icon: icon }).addTo(map);
-        marker.bindPopup('<h1>' + shop.name + '</h1><p>Інформація про магазин...</p>');
-        markers[shop.name.toLowerCase()] = marker;  // Зберігаємо маркер за назвою магазину
+        // Створення маркера і додавання його на карту
+        var popupOptions = {
+          keepInView: true, // Забезпечує, що спливаюче вікно залишається в полі зору
+          closeButton: false // Можна відключити кнопку закриття, якщо потрібно
+        };
 
+        // Створення маркера і додавання його на карту
+        var marker = L.marker(pos, { icon: icon }).addTo(map);
+        marker.bindPopup('<h1>' + shop.name + '</h1><p>Інформація про магазин...</p>', popupOptions);
+
+        // Обробники подій для маркера
+        marker.on('mouseover', function (e) {
+          this.openPopup();
+        });
+        marker.on('mouseout', function (e) {
+          this.closePopup();
+        });
+
+        // Зберігання маркера за назвою магазину
+        markers[shop.name.toLowerCase()] = marker;
       });
       
       // Оновлюємо автозаповнення пошуку за назвами магазинів
-      var availableTags = shops.map(function(shop) { return shop.name; });
+      var availableTags = shops.map(function (shop) { return shop.name; });
       $("#searchInput").autocomplete({
         source: availableTags,
-        select: function(event, ui) {
+        select: function (event, ui) {
           var selectedShop = ui.item.value.toLowerCase();
-          if (markers[selectedShop]) {
-            map.setView(markers[selectedShop].getLatLng(), 5);  // Центруємо карту на маркері
-            markers[selectedShop].openPopup();  // Відкриваємо вікно інформації маркера
-          }
+          map.setView(markers[selectedShop].getLatLng(), 5);
+          markers[selectedShop].openPopup();
         }
       });
     },
-    error: function(xhr, status, error) {
+    error: function (xhr, status, error) {
       console.log("Помилка отримання даних: ", error);
     }
   });
